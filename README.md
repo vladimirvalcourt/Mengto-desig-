@@ -262,4 +262,4 @@ git push origin main
 ---
 
 ## License
-TBD.
+MIT License. See [LICENSE](LICENSE).
