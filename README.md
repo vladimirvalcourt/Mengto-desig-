@@ -2,11 +2,9 @@
 
 A curated collection of **agent skills** for designers/builders using **Codex**, **Claude Code**, **Cursor**, and other AI coding agents to build rich user interfaces, frontend systems, agent loops, automations, and reusable workflows.
 
-Use them with **Codex**, **Claude Design**, [**Aura Build**](https://aura.build), **Lovable**, and the rest of your agent stack.
-
 ![Aura Build super prompt workflow](assets/aura-build-superprompt.gif)
 
-Use these skills to turn references into prompts, then run those prompts in [Aura Build](https://aura.build) to generate detailed landing pages.
+Use these skills with **Codex**, **Claude Design**, [**Aura Build**](https://aura.build), **Lovable**, and the rest of your agent stack to turn references into prompts, generate detailed landing pages, and build reusable frontend workflows.
 
 Start with the flagship web-design workflow:
 
