@@ -1,6 +1,6 @@
 ---
 name: html-to-interaction-prompts
-description: Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple reusable interaction prompts. Use when the user provides an HTML file, exported page, generated-page.html, or local/live reference and asks to extract animation/interactions, create prompts, capture screenshots for each prompt, add them to a Content article, or commit the resulting article/assets.
+description: Convert a supplied HTML page or generated HTML reference into a screenshot-backed article containing multiple reusable interaction prompts. Use when the user provides an HTML file, exported page, generated-page.html, or local/live reference and asks to extract animation/interactions, create prompts, capture screenshots for each prompt, add them to an article, or commit the resulting article/assets.
 ---
 
 # HTML To Interaction Prompts
@@ -11,7 +11,7 @@ Turn an HTML reference into an article-ready prompt pack: identify the important
 
 ## Daily UI Inspiration Capture Contract
 
-When this skill is used for the Content repo daily UI inspiration workflow:
+When this skill is used for a daily UI inspiration workflow:
 
 - Each daily inspiration article must contain exactly 5 inspirations, not 20.
 - Do not ship a screenshot gallery or append 20 shallow prompts.
@@ -88,7 +88,7 @@ When this skill is used for the Content repo daily UI inspiration workflow:
 
 6. Create or update the article.
    - If the user points to an existing article, update that article's `content.md`.
-   - If no article exists and the task is in the Content repo, create a dated article folder under `articles/YYYY-MM-DD-.../content.md`.
+   - If no article exists and the task is in an article/content workspace, create a dated article folder under `articles/YYYY-MM-DD-.../content.md`.
    - Keep local markdown image paths relative to the article folder.
    - Do not leave a standalone prompt file as the only deliverable when the user asked for an article.
 

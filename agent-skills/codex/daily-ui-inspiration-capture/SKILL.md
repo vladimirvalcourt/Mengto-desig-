@@ -1,17 +1,17 @@
 ---
 name: daily-ui-inspiration-capture
-description: Create the recurring Content repo daily UI inspiration capture. Use when the user asks to run, refresh, package, or validate the daily UI inspiration capture, especially for dated `articles/YYYY-MM-DD-ui-inspiration-capture/` bundles, Framer/Dribbble landing-page inspiration, motion-study screenshots/videos, AI-builder prompts, duplicate checking, or converting the existing capture runbook into repeatable Codex workflow.
+description: Create a recurring daily UI inspiration capture. Use when the user asks to run, refresh, package, or validate dated UI inspiration bundles, especially for `articles/YYYY-MM-DD-ui-inspiration-capture/` outputs, Framer/Dribbble landing-page inspiration, motion-study screenshots/videos, AI-builder prompts, duplicate checking, or converting a project runbook into repeatable workflow.
 ---
 
 # Daily UI Inspiration Capture
 
 ## Overview
 
-Run the Content repo's daily UI inspiration workflow as an article-ready bundle, not a screenshot dump or README. Treat the current repo runbook as source of truth, but keep the contract below as the default unless the user updates it.
+Run the current project's daily UI inspiration workflow as an article-ready bundle, not a screenshot dump or README. Treat the active project runbook as source of truth, but keep the contract below as the default unless the user updates it.
 
 ## Start
 
-Work from `/Users/mengto/Downloads/Projects/Content` unless the user names another checkout.
+Work from the content/article project named by the user. If no project is named, use the current workspace and say which directory you used.
 
 Before collecting, read:
 

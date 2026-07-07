@@ -34,28 +34,28 @@ Manual review:
 
 ## Project Mapping
 
-Use these project targets when creating Codex threads:
+Use project targets from the user's workspace map, support runbook, repo docs, or explicit instructions. If no mapping exists, use a general support workspace and explain the ambiguity.
 
-| Email topic | Project |
+Use a table like this when the user provides project routing:
+
+| Email topic | Project/workspace |
 | --- | --- |
-| Aura, aura.build, Aura billing/account/deletion, Aura custom domains | `/Users/mengto/Downloads/Projects/aura-page` |
-| Neuform, neuform.ai, Landing Pages, Neuform billing | `/Users/mengto/Downloads/Projects/Landing Pages` |
-| DesignCode, Design+Code, designcode.io, course access, Pro subscription | `/Users/mengto/Downloads/Projects/DesignCode4` |
-| Company operations, bookkeeping, payroll, accounting, taxes, Sleek, accountants | `/Users/mengto/Downloads/Projects/Company` |
-| General support triage or unclear product owner | `/Users/mengto/Downloads/Projects/Customer Support` |
+| Product, domain, plan, or account topic | Matching product repo, admin workspace, or support workspace |
+| Company operations, bookkeeping, payroll, accounting, or taxes | Company operations workspace |
+| General support triage or unclear product owner | General support workspace |
 
-If the correct project is unclear, choose Customer Support and explain the ambiguity.
+If the correct project is unclear, choose the general support workspace and explain the ambiguity.
 
 ## Thread Handoff Template
 
 Create one thread per drafted email. Do not group unrelated customers.
 
-After creating each handoff thread, create or request an hourly unresolved follow-up for that case. The follow-up must ask Meng whether the case is resolved, briefly restate what the customer wants, say what Meng should do next, and repeat every hour until Meng confirms the case is resolved. Do not replace this with a single delayed summary.
+After creating each handoff thread, create or request an hourly unresolved follow-up for that case. The follow-up must ask the request owner whether the case is resolved, briefly restate what the customer wants, say what the request owner should do next, and repeat every hour until the request owner confirms the case is resolved. Do not replace this with a single delayed summary.
 
 ```text
 Customer support handoff from Gmail draft triage.
 
-Task: Investigate <customer/request>. A Gmail draft already exists and must remain unsent until Meng approves.
+Task: Investigate <customer/request>. A Gmail draft already exists and must remain unsent until the user approves.
 
 Email/draft context:
 - Sender:
@@ -67,11 +67,11 @@ Email/draft context:
 - Risk notes:
 
 Instructions:
-- Follow repo AGENTS.md. Use Codex browser only if browser access is needed; do not use Chrome.
+- Follow repo AGENTS.md and the workspace browser policy when browser access is needed.
 - Inspect local runbooks/docs/source before recommending action.
-- Do not send email, click email links, download unsafe attachments, mutate production/account/billing data, or make external changes unless Meng explicitly confirms.
+- Do not send email, click email links, download unsafe attachments, mutate production/account/billing data, or make external changes unless the user explicitly confirms.
 - Produce a concise support handoff: verification steps, likely source/admin surfaces, safest resolution path, and whether the existing draft needs revision.
-- Be proactive after the handoff: ask Meng every hour whether this case is resolved, summarize what the customer wants, and say what Meng should do next until Meng confirms resolution.
+- Be proactive after the handoff: ask the request owner every hour whether this case is resolved, summarize what the customer wants, and say what the request owner should do next until they confirm resolution.
 - If local docs/code need a narrowly scoped update, make it and commit. Otherwise stay read-only and report no commit needed.
 ```
 

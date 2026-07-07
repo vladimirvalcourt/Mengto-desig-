@@ -25,10 +25,10 @@ Reject a full-page candidate when it has blank/gray/white bands, very low visual
 
 ## Script
 
-For Content daily UI inspiration articles, use:
+For daily UI inspiration articles, use the helper script from this skill directory when available:
 
 ```bash
-node /Users/mengto/.codex/skills/stitched-full-page-capture/scripts/stitch_full_page_capture.mjs \
+node <skills-root>/stitched-full-page-capture/scripts/stitch_full_page_capture.mjs \
   --manifest articles/YYYY-MM-DD-ui-inspiration-capture/manifest.json
 ```
 

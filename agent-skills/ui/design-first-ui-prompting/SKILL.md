@@ -1,16 +1,16 @@
 ---
-name: mengto-ui-prompting
-description: Use when you need to prompt AI for UI like Meng To: design-first, spec-driven, skimmable. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workflow for consistent UI outputs.
+name: design-first-ui-prompting
+description: Use when you need design-first, spec-driven, skimmable prompts for UI generation. Covers prompt structure, constraints, variations, typography/spacing rules, and iteration workflow for consistent UI outputs.
 ---
 
-# Meng To’s UI Prompting Skill
+# Design-First UI Prompting Skill
 
 This skill is for **design-first prompting**: turn fuzzy ideas into a tight spec that produces consistent UI.
 
 ## Core principle
 **Prompt like a design system, not a wish.**
 
-## The Meng To prompt structure (copy/paste)
+## Prompt Structure (copy/paste)
 Use this skeleton, then fill the blanks.
 
 ```text
@@ -90,9 +90,9 @@ STYLE  MINIMAL
 MODE  DARK
 ```
 
-### 4) Keep a private reference pack
+### 4) Keep a local reference pack
 Don’t ask the model to “remember” taste.
-- Save references into `refs/...` (gitignored)
+- Save references into a gitignored local reference folder, such as `refs/...`
 - Point prompts to the reference style
 
 ## Fast iteration checklist (what to tweak)

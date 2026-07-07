@@ -1,8 +1,8 @@
-# MengTo/skills
+# Agent Skills
 
 A growing library of **Claude Code Skills** (Clawdbot AgentSkills) — written for designers.
 
-Built for [Aura.Build](https://aura.build).
+Portable by default: each skill should work for any user, repo, or workspace unless the user supplies project-specific context.
 
 These skills are meant to feel like Claude Code skills, but tuned for **web design + prompting + shipping**:
 - practical workflows
@@ -40,7 +40,7 @@ Screenshots and examples carry:
 ```txt
 agent-skills/
   ui/
-    mengto-ui-prompting/
+    design-first-ui-prompting/
       SKILL.md
       ARTICLE.md
       REFERENCES.md
@@ -94,7 +94,7 @@ Conventions:
 
 ### UI
 
-#### `mengto-ui-prompting`
+#### `design-first-ui-prompting`
 Design-first UI prompting system:
 - prompt template (goal → format → layout → type → color → constraints)
 - “variants > rerolls” workflow
@@ -102,8 +102,8 @@ Design-first UI prompting system:
 - 2-pass typography workflow (generate layout, typeset in Figma)
 
 Files:
-- `agent-skills/ui/mengto-ui-prompting/SKILL.md`
-- `agent-skills/ui/mengto-ui-prompting/ARTICLE.md`
+- `agent-skills/ui/design-first-ui-prompting/SKILL.md`
+- `agent-skills/ui/design-first-ui-prompting/ARTICLE.md`
 
 ### Web design
 
@@ -228,11 +228,11 @@ Design ops:
 
 ## Repository
 
-GitHub: [MengTo/Skills](https://github.com/MengTo/Skills)
+GitHub: `<your-org>/Skills`
 
 Push updates:
 ```bash
-cd /Users/mengto/clawd/@MengTo/Skills
+cd <path-to-your-skills-repo>
 git push origin main
 ```
 

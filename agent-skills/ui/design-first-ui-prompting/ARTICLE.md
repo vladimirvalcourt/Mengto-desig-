@@ -1,4 +1,4 @@
-# Meng To’s UI Prompting Playbook (Draft)
+# Design-First UI Prompting Playbook (Draft)
 
 AI doesn’t make great design.
 It makes **average design fast**.
@@ -67,7 +67,7 @@ No more manual logo scavenger hunts.
 ---
 
 ## 7) Work section-by-section (not full-page)
-Build in Aura / v0 / Cursor:
+Build in your preferred AI builder, prototyping tool, or code editor:
 - hero → features → footer
 
 **Benefit:** faster iterations + better creative control.

@@ -35,14 +35,14 @@ Use the detailed workflow in [references/runbook.md](references/runbook.md) when
 
 5. Create one Codex thread per drafted email:
    - For every saved Gmail draft, create a separate project thread for that specific email unless an existing matching thread is already present.
-   - Choose the most relevant project. If uncertain, use Customer Support.
+   - Choose the most relevant project or workspace. If uncertain, use the user's general support workspace and explain the ambiguity.
    - Pass the thread the sender, subject, Gmail thread id, latest message id, draft id, customer ask, risk notes, and next investigation/action.
    - The project thread must not send email, mutate production/account/billing data, click email links, download unsafe attachments, or make external changes without explicit user confirmation.
 
 6. Set an hourly unresolved follow-up for each drafted support case:
-   - The follow-up must ask Meng whether the case is resolved yet.
-   - It must briefly restate what the customer wants and what Meng should do next.
-   - It must repeat every hour until Meng confirms the case is resolved; do not use a single delayed summary.
+   - The follow-up must ask the request owner whether the case is resolved yet.
+   - It must briefly restate what the customer wants and what the request owner should do next.
+   - It must repeat every hour until the request owner confirms the case is resolved; do not use a single delayed summary.
 
 7. Report cleanly:
    - Use a markdown table with: Sender, Subject, Action, Draft Status, Risk, Next Step.
