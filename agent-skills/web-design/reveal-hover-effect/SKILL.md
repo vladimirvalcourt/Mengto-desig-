@@ -208,6 +208,20 @@ function initRevealHover(element) {
 
   const onPointerMove = (event) => {
     updateTarget(event.clientX, event.clientY);
+
+    // A page can load with the pointer already over this element, so the
+    // first pointermove may arrive without a preceding pointerenter.
+    if (!state.inside) {
+      state.inside = true;
+
+      if (state.radius < 0.5) {
+        state.x = state.targetX;
+        state.y = state.targetY;
+      }
+
+      state.targetRadius = getRadius();
+    }
+
     schedule();
   };
 
@@ -298,6 +312,7 @@ When a foreground card must reveal the same alternate treatment:
 
 - Base and reveal assets remain pixel-aligned at every breakpoint.
 - The reveal begins under the pointer rather than sweeping in from the component center.
+- The first pointer movement reveals correctly when the page loads under a stationary cursor.
 - The full-strength core holds through `40%` of the radius.
 - The feather reaches full transparency at the edge without a visible ring.
 - Pointer exit and window blur collapse the mask.
