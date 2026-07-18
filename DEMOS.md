@@ -54,11 +54,11 @@ Use --force only when every locally generated demo should be intentionally regen
 
 ## Library coverage
 
-- Total: 84
+- Total: 88
 - codex: 12
 - media: 2
 - ui: 1
-- web-design: 69
+- web-design: 73
 
 ## Demo index
 
@@ -80,6 +80,7 @@ Use --force only when every locally generated demo should be intentionally regen
 | unsplash-asset-images | media | [Open](agent-skills/media/unsplash-asset-images/demo/index.html) | [Preview](agent-skills/media/unsplash-asset-images/demo/preview.jpg) | [Prompt](agent-skills/media/unsplash-asset-images/demo/PROMPT.md) | Local |
 | design-first-ui-prompting | ui | [Open](agent-skills/ui/design-first-ui-prompting/demo/index.html) | [Preview](agent-skills/ui/design-first-ui-prompting/demo/preview.jpg) | [Prompt](agent-skills/ui/design-first-ui-prompting/demo/PROMPT.md) | Local |
 | agency-grid-layout-minimal | web-design | [Open](agent-skills/web-design/agency-grid-layout-minimal/demo/index.html) | [Preview](agent-skills/web-design/agency-grid-layout-minimal/demo/preview.jpg) | [Prompt](agent-skills/web-design/agency-grid-layout-minimal/demo/PROMPT.md) | [Neuform #1 · 731 views](agent-skills/web-design/agency-grid-layout-minimal/demo/source.json) |
+| ambient-section-particles | web-design | [Open](agent-skills/web-design/ambient-section-particles/demo/index.html) | [Preview](agent-skills/web-design/ambient-section-particles/demo/preview.jpg) | [Prompt](agent-skills/web-design/ambient-section-particles/demo/PROMPT.md) | Local |
 | animation-on-scroll | web-design | [Open](agent-skills/web-design/animation-on-scroll/demo/index.html) | [Preview](agent-skills/web-design/animation-on-scroll/demo/preview.jpg) | [Prompt](agent-skills/web-design/animation-on-scroll/demo/PROMPT.md) | Local |
 | animation-systems | web-design | [Open](agent-skills/web-design/animation-systems/demo/index.html) | [Preview](agent-skills/web-design/animation-systems/demo/preview.jpg) | [Prompt](agent-skills/web-design/animation-systems/demo/PROMPT.md) | Local |
 | atmosphere-background | web-design | [Open](agent-skills/web-design/atmosphere-background/demo/index.html) | [Preview](agent-skills/web-design/atmosphere-background/demo/preview.jpg) | [Prompt](agent-skills/web-design/atmosphere-background/demo/PROMPT.md) | Local |
@@ -134,6 +135,9 @@ Use --force only when every locally generated demo should be intentionally regen
 | product-proof-saas | web-design | [Open](agent-skills/web-design/product-proof-saas/demo/index.html) | [Preview](agent-skills/web-design/product-proof-saas/demo/preview.jpg) | [Prompt](agent-skills/web-design/product-proof-saas/demo/PROMPT.md) | Local |
 | progressive-blur | web-design | [Open](agent-skills/web-design/progressive-blur/demo/index.html) | [Preview](agent-skills/web-design/progressive-blur/demo/preview.jpg) | [Prompt](agent-skills/web-design/progressive-blur/demo/PROMPT.md) | [Neuform #1 · 381 views](agent-skills/web-design/progressive-blur/demo/source.json) |
 | reveal-hover-effect | web-design | [Open](agent-skills/web-design/reveal-hover-effect/demo/index.html) | [Preview](agent-skills/web-design/reveal-hover-effect/demo/preview.jpg) | [Prompt](agent-skills/web-design/reveal-hover-effect/demo/PROMPT.md) | Local |
+| scroll-progress-timeline | web-design | [Open](agent-skills/web-design/scroll-progress-timeline/demo/index.html) | [Preview](agent-skills/web-design/scroll-progress-timeline/demo/preview.jpg) | [Prompt](agent-skills/web-design/scroll-progress-timeline/demo/PROMPT.md) | Local |
+| scroll-scrubbed-visual-sequence | web-design | [Open](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/index.html) | [Preview](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/preview.jpg) | [Prompt](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/PROMPT.md) | Local |
+| scroll-scrubbed-word-reveal | web-design | [Open](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/index.html) | [Preview](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/preview.jpg) | [Prompt](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/PROMPT.md) | Local |
 | scroll-world-storytelling | web-design | [Open](agent-skills/web-design/scroll-world-storytelling/demo/index.html) | [Preview](agent-skills/web-design/scroll-world-storytelling/demo/preview.jpg) | [Prompt](agent-skills/web-design/scroll-world-storytelling/demo/PROMPT.md) | Local |
 | skeuomorphic-ui | web-design | [Open](agent-skills/web-design/skeuomorphic-ui/demo/index.html) | [Preview](agent-skills/web-design/skeuomorphic-ui/demo/preview.jpg) | [Prompt](agent-skills/web-design/skeuomorphic-ui/demo/PROMPT.md) | [Neuform #1 · 2,154 views](agent-skills/web-design/skeuomorphic-ui/demo/source.json) |
 | solar-duotone-bold | web-design | [Open](agent-skills/web-design/solar-duotone-bold/demo/index.html) | [Preview](agent-skills/web-design/solar-duotone-bold/demo/preview.jpg) | [Prompt](agent-skills/web-design/solar-duotone-bold/demo/PROMPT.md) | [Neuform #1 · 351 views](agent-skills/web-design/solar-duotone-bold/demo/source.json) |

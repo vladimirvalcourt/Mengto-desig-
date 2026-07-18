@@ -2,7 +2,7 @@
 
 Every tracked skill is shown as a real browser rendering of its local `demo/index.html`.
 
-- Captured demos: 84
+- Captured demos: 88
 - Browser viewport: 1280 x 720 (a few source pages export a slightly scaled JPEG)
 - Format: JPEG
 - Reveal hover effect: includes both default and interaction states
@@ -135,7 +135,7 @@ Use when you need design-first, spec-driven, skimmable prompts for UI generation
 
 ![design-first-ui-prompting preview screenshot](agent-skills/ui/design-first-ui-prompting/demo/preview.jpg)
 
-## web-design (69)
+## web-design (73)
 
 ### agency-grid-layout-minimal
 
@@ -144,6 +144,14 @@ Create a minimal agency design system with a disciplined editorial grid, oversiz
 [Open demo](agent-skills/web-design/agency-grid-layout-minimal/demo/index.html) · [Skill](agent-skills/web-design/agency-grid-layout-minimal/SKILL.md) · [Prompt](agent-skills/web-design/agency-grid-layout-minimal/demo/PROMPT.md) · Neuform #1 · 731 views
 
 ![agency-grid-layout-minimal preview screenshot](agent-skills/web-design/agency-grid-layout-minimal/demo/preview.jpg)
+
+### ambient-section-particles
+
+Add a restrained particle atmosphere inside one section with configurable shapes, density, gravity, wind, sway, rotation, recycling or settling, pointer disturbance, visibility pausing, responsive limits, and reduced-motion fallbacks. Use for petals, leaves, snow, sparks, confetti, dots, paper, icons, or brand fragments that support a section's mood without obscuring content.
+
+[Open demo](agent-skills/web-design/ambient-section-particles/demo/index.html) · [Skill](agent-skills/web-design/ambient-section-particles/SKILL.md) · [Prompt](agent-skills/web-design/ambient-section-particles/demo/PROMPT.md) · Local demo
+
+![ambient-section-particles preview screenshot](agent-skills/web-design/ambient-section-particles/demo/preview.jpg)
 
 ### animation-on-scroll
 
@@ -580,6 +588,30 @@ Build cursor-following spotlight reveals that expose a second aligned image thro
 #### Interaction state
 
 ![reveal-hover-effect interaction preview](agent-skills/web-design/reveal-hover-effect/demo/preview-feature.jpg)
+
+### scroll-progress-timeline
+
+Turn any ordered process into a data-driven vertical or horizontal scroll story with a base line, progress fill, active step states, responsive collapse, semantic fallback, and reduced-motion behavior. Use for onboarding, checkout, roadmaps, recipes, case studies, service processes, histories, or narratives where progress through the sequence should become visible while scrolling.
+
+[Open demo](agent-skills/web-design/scroll-progress-timeline/demo/index.html) · [Skill](agent-skills/web-design/scroll-progress-timeline/SKILL.md) · [Prompt](agent-skills/web-design/scroll-progress-timeline/demo/PROMPT.md) · Local demo
+
+![scroll-progress-timeline preview screenshot](agent-skills/web-design/scroll-progress-timeline/demo/preview.jpg)
+
+### scroll-scrubbed-visual-sequence
+
+Build reversible scroll-controlled visual transformations with a pinned or sticky stage, normalized progress, and video, image-sequence, canvas, SVG, or DOM renderers. Use for hero transformations, product assembly, interface state walkthroughs, object rotation, diagrams, or photo sequences that must move forward and backward with native scrolling.
+
+[Open demo](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/index.html) · [Skill](agent-skills/web-design/scroll-scrubbed-visual-sequence/SKILL.md) · [Prompt](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/PROMPT.md) · Local demo
+
+![scroll-scrubbed-visual-sequence preview screenshot](agent-skills/web-design/scroll-scrubbed-visual-sequence/demo/preview.jpg)
+
+### scroll-scrubbed-word-reveal
+
+Reveal marked-up text word by word as scroll progress advances, while preserving semantic inline links, emphasis, responsive line wrapping, and reduced-motion readability. Use for headlines, quotes, manifestos, product statements, onboarding messages, or editorial passages where scrolling should pace comprehension rather than simulate typing.
+
+[Open demo](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/index.html) · [Skill](agent-skills/web-design/scroll-scrubbed-word-reveal/SKILL.md) · [Prompt](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/PROMPT.md) · Local demo
+
+![scroll-scrubbed-word-reveal preview screenshot](agent-skills/web-design/scroll-scrubbed-word-reveal/demo/preview.jpg)
 
 ### scroll-world-storytelling
 
