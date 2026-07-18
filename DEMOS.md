@@ -37,11 +37,11 @@ Use --force only when every generated demo should be intentionally regenerated.
 
 ## Library coverage
 
-- Total: 78
+- Total: 79
 - codex: 12
 - media: 2
 - ui: 1
-- web-design: 63
+- web-design: 64
 
 ## Demo index
 
@@ -112,6 +112,7 @@ Use --force only when every generated demo should be intentionally regenerated.
 | pricing-page | web-design | [Open](agent-skills/web-design/pricing-page/demo/index.html) | [Prompt](agent-skills/web-design/pricing-page/demo/PROMPT.md) |
 | progressive-blur | web-design | [Open](agent-skills/web-design/progressive-blur/demo/index.html) | [Prompt](agent-skills/web-design/progressive-blur/demo/PROMPT.md) |
 | reveal-hover-effect | web-design | [Open](agent-skills/web-design/reveal-hover-effect/demo/index.html) | [Prompt](agent-skills/web-design/reveal-hover-effect/demo/PROMPT.md) |
+| scroll-world-storytelling | web-design | [Open](agent-skills/web-design/scroll-world-storytelling/demo/index.html) | [Prompt](agent-skills/web-design/scroll-world-storytelling/demo/PROMPT.md) |
 | skeuomorphic-ui | web-design | [Open](agent-skills/web-design/skeuomorphic-ui/demo/index.html) | [Prompt](agent-skills/web-design/skeuomorphic-ui/demo/PROMPT.md) |
 | solar-duotone-bold | web-design | [Open](agent-skills/web-design/solar-duotone-bold/demo/index.html) | [Prompt](agent-skills/web-design/solar-duotone-bold/demo/PROMPT.md) |
 | split-layout-technical | web-design | [Open](agent-skills/web-design/split-layout-technical/demo/index.html) | [Prompt](agent-skills/web-design/split-layout-technical/demo/PROMPT.md) |
