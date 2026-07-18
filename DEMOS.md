@@ -27,6 +27,14 @@ Run any demo with:
 python3 -m http.server 4173 -d agent-skills/<category>/<skill-name>/demo
 ```
 
+Fill missing demo files without replacing hand-tuned examples:
+
+```bash
+node scripts/backfill-skill-demos.mjs
+```
+
+Use --force only when every generated demo should be intentionally regenerated.
+
 ## Library coverage
 
 - Total: 78

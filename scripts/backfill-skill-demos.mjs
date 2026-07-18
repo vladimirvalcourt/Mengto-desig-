@@ -1,10 +1,12 @@
 #!/usr/bin/env node
 
 import { execFileSync } from "node:child_process";
+import { existsSync } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
 import path from "node:path";
 
 const root = process.cwd();
+const force = process.argv.includes("--force");
 const skillFiles = execFileSync(
   "git",
   ["ls-files", "agent-skills/**/SKILL.md"],
@@ -856,15 +858,18 @@ async function writeDemo(skillFile) {
   const kind = kindFor(skill.name, category);
   const demoDirectory = path.join(skillDirectory, "demo");
   await mkdir(demoDirectory, { recursive: true });
-  await writeFile(path.join(demoDirectory, "PROMPT.md"), promptMarkdown(skill, kind));
+  const writeGenerated = async (file, content) => {
+    if (force || !existsSync(file)) await writeFile(file, content);
+  };
+  await writeGenerated(path.join(demoDirectory, "PROMPT.md"), promptMarkdown(skill, kind));
   if (kind === "workflow") {
     const example = workflowExamples[skill.name];
     if (!example) throw new Error("Missing workflow example for " + skill.name);
-    await writeFile(path.join(demoDirectory, "input.md"), example.input + "\n");
-    await writeFile(path.join(demoDirectory, "expected-output.md"), example.output + "\n");
-    await writeFile(path.join(demoDirectory, "index.html"), workflowHtml(skill, example));
+    await writeGenerated(path.join(demoDirectory, "input.md"), example.input + "\n");
+    await writeGenerated(path.join(demoDirectory, "expected-output.md"), example.output + "\n");
+    await writeGenerated(path.join(demoDirectory, "index.html"), workflowHtml(skill, example));
   } else {
-    await writeFile(path.join(demoDirectory, "index.html"), visualHtml(skill, category, kind));
+    await writeGenerated(path.join(demoDirectory, "index.html"), visualHtml(skill, category, kind));
   }
   return { category, kind, name: skill.name, skillFile };
 }
@@ -907,6 +912,14 @@ const index = [
   "python3 -m http.server 4173 -d agent-skills/<category>/<skill-name>/demo",
   fence,
   "",
+  "Fill missing demo files without replacing hand-tuned examples:",
+  "",
+  fence + "bash",
+  "node scripts/backfill-skill-demos.mjs",
+  fence,
+  "",
+  "Use --force only when every generated demo should be intentionally regenerated.",
+  "",
   "## Library coverage",
   "",
   "- Total: " + demos.length,
@@ -924,7 +937,7 @@ const index = [
 ].join("\n");
 await writeFile(path.join(root, "DEMOS.md"), index);
 
-console.log("Backfilled " + demos.length + " skill demos.");
+console.log((force ? "Regenerated " : "Checked and filled ") + demos.length + " skill demos.");
 for (const [category, count] of Object.entries(counts).sort()) {
   console.log("- " + category + ": " + count);
 }
