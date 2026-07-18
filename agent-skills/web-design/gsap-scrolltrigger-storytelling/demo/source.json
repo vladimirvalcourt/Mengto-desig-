@@ -1,0 +1,67 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:54.980Z",
+  "skill": {
+    "id": "gsap-scrolltrigger-storytelling",
+    "label": "GSAP ScrollTrigger Storytelling",
+    "usage_count": 39,
+    "url": "https://neuform.ai/skill/gsap-scrolltrigger-storytelling"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "24ebea2c-688b-47fa-b444-5791eaaa7039",
+    "slug": "cleopatra-ultimate-lp-markets-partner",
+    "title": "Cleopatra — Ultimate LP Markets Partner",
+    "url": "https://neuform.ai/pages/cleopatra-ultimate-lp-markets-partner/index.html",
+    "view_count": 78,
+    "favorite_count": 4,
+    "remix_count": 2
+  },
+  "html": {
+    "original_sha256": "7604d7e9abd484fcac59df4d3b6e1945f81a340db57537610ab42229c2bc1eb9",
+    "bundled_sha256": "294648f7d7f19a621a76761f3775bea208b605f06e08553427c839cf48199140",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&amp;family=Plus+Jakarta+Sans:wght@200;300;400;500;600&amp;display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 5218447,
+        "file": "assets/page-03-1779243686348-eb642d26-a435-4dff-bb2f-0003b03f70.png",
+        "original_url": "https://wypspaektjjiccarxrgy.supabase.co/storage/v1/object/public/generated-page-media/302e86e0-80d8-4ba5-82e8-004220675655/2026-05-20/1779243686348-eb642d26-a435-4dff-bb2f-0003b03f706d.png"
+      },
+      {
+        "bytes": 4404485,
+        "file": "assets/page-04-1779243717410-ddca821f-6595-4a25-8269-cc90ddb2c1.png",
+        "original_url": "https://wypspaektjjiccarxrgy.supabase.co/storage/v1/object/public/generated-page-media/302e86e0-80d8-4ba5-82e8-004220675655/2026-05-20/1779243717410-ddca821f-6595-4a25-8269-cc90ddb2c1af.png"
+      }
+    ],
+    "skipped": [
+      {
+        "reason": "over-5mb",
+        "url": "https://wypspaektjjiccarxrgy.supabase.co/storage/v1/object/public/generated-page-media/302e86e0-80d8-4ba5-82e8-004220675655/2026-05-20/1779243654120-270ef285-2ef0-482f-9961-90ad2d30603a.png"
+      },
+      {
+        "reason": "over-5mb",
+        "url": "https://wypspaektjjiccarxrgy.supabase.co/storage/v1/object/public/generated-page-media/302e86e0-80d8-4ba5-82e8-004220675655/2026-05-20/1779243884373-c6bdef42-f3eb-47e3-9186-1ff57dd4346e.mp4"
+      }
+    ]
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:41:00.717Z",
+  "skill": {
+    "id": "marquee-loop",
+    "label": "Marquee",
+    "usage_count": 114,
+    "url": "https://neuform.ai/skill/marquee-loop"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "24ca04a4-30fa-42e8-9dc6-71bf0f308e5d",
+    "slug": "landing-page-13",
+    "title": "Landing Page",
+    "url": "https://neuform.ai/pages/landing-page-13/index.html",
+    "view_count": 353,
+    "favorite_count": 34,
+    "remix_count": 9
+  },
+  "html": {
+    "original_sha256": "e8b4babf539819ea3ef2f7132a8e12a647e76c6c107ab7d07c03a06afc0ad9d8",
+    "bundled_sha256": "0c68997611b920a3ed8330aa063c5a1b00ece6320d19e9eab58d37e357d9631c",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 1315224,
+        "file": "assets/page-01-6b97b0cc-6b81-4451-aacc-6b928e7d0a69-3840w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/6b97b0cc-6b81-4451-aacc-6b928e7d0a69_3840w.jpg"
+      },
+      {
+        "bytes": 1056637,
+        "file": "assets/page-02-193e1472-0514-44eb-893a-1376091263f3-3840w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/193e1472-0514-44eb-893a-1376091263f3_3840w.jpg"
+      },
+      {
+        "bytes": 55122,
+        "file": "assets/page-03-5180d964-2425-4134-8220-c1528af09124-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5180d964-2425-4134-8220-c1528af09124_800w.jpg"
+      },
+      {
+        "bytes": 217369,
+        "file": "assets/page-04-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4f5668c5-fc4a-44e0-bc5e-a664189d3c31_1600w.jpg"
+      },
+      {
+        "bytes": 33767,
+        "file": "assets/page-05-fbddf75f-e2e3-4552-a710-55e2a5f4d6af-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fbddf75f-e2e3-4552-a710-55e2a5f4d6af_800w.jpg"
+      },
+      {
+        "bytes": 57726,
+        "file": "assets/page-06-16d38370-5873-45cf-bab1-60a7b923dc6e-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/16d38370-5873-45cf-bab1-60a7b923dc6e_800w.jpg"
+      },
+      {
+        "bytes": 2271761,
+        "file": "assets/page-07-8e802a98-b83c-4c5d-99d1-e24406eb4ec9-3840w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/8e802a98-b83c-4c5d-99d1-e24406eb4ec9_3840w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

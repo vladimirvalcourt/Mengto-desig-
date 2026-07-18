@@ -1,40 +1,530 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Company Logos · Skill Demo</title>
-  <style>:root{--bg:#ece9e2;--panel:rgba(255,255,255,.68);--panelStrong:#f8f6f1;--ink:#171917;--muted:#686b66;--line:rgba(23,25,23,.16);--accent:hsl(304 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluid Protocol | Flow Analytics</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Instrument Serif', 'serif'],
+                        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'Monaco', 'Consolas', "Liberation Mono", "Courier New", 'monospace'],
+                    },
+                    colors: {
+                        glass: {
+                            50: '#f8fafc',
+                            100: '#f1f5f9',
+                            200: '#e2e8f0',
+                            300: '#cbd5e1',
+                            400: '#94a3b8',
+                            900: '#0f172a',
+                        },
+                        water: {
+                            100: '#e0f2fe',
+                            300: '#7dd3fc',
+                            500: '#0ea5e9',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        * { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        .masked-word {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+        }
+        .masked-word-inner {
+            display: inline-block;
+            transform: translateY(110%);
+        }
+
+        /* Subtle grid texture for the instrument panel */
+        .bg-instrument-grid {
+            background-image: 
+                linear-gradient(to right, rgba(148, 163, 184, 0.05) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(148, 163, 184, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+
+        /* Custom range slider for calibration */
+        input[type=range] {
+            -webkit-appearance: none;
+            width: 100%;
+            background: transparent;
+        }
+        input[type=range]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            height: 16px;
+            width: 8px;
+            border-radius: 2px;
+            background: #0f172a;
+            cursor: pointer;
+            margin-top: -6px;
+            box-shadow: 0 0 10px rgba(255,255,255,1), inset 0 0 0 1px rgba(255,255,255,0.5);
+            border: 1px solid rgba(15, 23, 42, 0.2);
+        }
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 4px;
+            cursor: pointer;
+            background: rgba(15, 23, 42, 0.1);
+            border-radius: 2px;
+            border: 1px solid rgba(255,255,255,0.5);
+        }
+        
+        /* Rotating path text adjustment */
+        .svg-text-path {
+            font-size: 14px;
+        }
+    </style>
 </head>
-<body data-kind="marquee" data-skill="company-logos">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Company Logos</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Company Logos</h1></div>
-      <p>Use Iconify Simple Icons logos (64x64) instead of text logos.</p>
-    </header>
-    <section class="showcase" aria-label="Company Logos demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>marquee</span></div>
-<div class="marquee"><div class="marqueeTrack"><span aria-hidden="true">Aperture</span>
-<span aria-hidden="true">NOVA</span>
-<span aria-hidden="true">ORBIT</span>
-<span aria-hidden="true">MONO</span>
-<span aria-hidden="true">VECTOR</span>
-<span aria-hidden="true">KITE</span>
-<span aria-hidden="true">Aperture</span>
-<span aria-hidden="true">NOVA</span>
-<span aria-hidden="true">ORBIT</span>
-<span aria-hidden="true">MONO</span>
-<span aria-hidden="true">VECTOR</span>
-<span aria-hidden="true">KITE</span></div></div>
+<body class="bg-glass-50 text-glass-900 font-sans antialiased overflow-x-hidden relative selection:bg-water-300/30 bg-instrument-grid min-h-screen">
+
+    <!-- WebGL Fluid Canvas -->
+    <canvas id="webgl-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-80"></canvas>
+
+    <!-- Calibration Crosshairs & Global Framing -->
+    <div class="fixed inset-0 z-0 pointer-events-none flex justify-center px-4 md:px-8 mix-blend-multiply opacity-20">
+        <div class="w-full max-w-7xl h-full border-x border-glass-400/20 flex justify-center relative">
+            <div class="w-[1px] h-full bg-glass-400/20 absolute left-1/4 hidden md:block"></div>
+            <div class="w-[1px] h-full bg-glass-400/20 absolute right-1/4 hidden md:block"></div>
+            <div class="absolute w-full h-[1px] bg-glass-400/20 top-1/3"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-8 left-1/2 -translate-x-1/2 z-50 w-full max-w-xl px-4">
+        <!-- Thin Gradient Border Shell -->
+        <div class="p-[1px] rounded-full bg-gradient-to-b from-white via-glass-200 to-glass-300 shadow-sm relative group">
+            <div class="flex items-center justify-between bg-white/50 backdrop-blur-md px-6 py-3 rounded-full border border-white/60 shadow-[inset_0_2px_10px_rgba(255,255,255,1)]">
+                <div class="flex items-center gap-2">
+                    <iconify-icon icon="solar:waterdrops-linear" class="text-water-500 text-lg" stroke-width="1.5"></iconify-icon>
+                    <span class="text-xs font-semibold text-glass-900 tracking-widest uppercase">Fluid_OS</span>
+                </div>
+                <div class="flex items-center gap-8 text-xs tracking-widest uppercase font-mono text-glass-400">
+                    <a href="#" class="hover:text-glass-900 transition-colors">Telemetry</a>
+                    <a href="#" class="hover:text-glass-900 transition-colors">Systems</a>
+                </div>
+                <div class="w-2 h-2 rounded-full bg-water-500 shadow-[0_0_8px_rgba(14,165,233,0.6)] animate-pulse"></div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="relative z-10 w-full max-w-7xl mx-auto px-4 md:px-8 pt-48 pb-24 flex flex-col items-center">
+        
+        <!-- Hero Section -->
+        <div class="w-full flex flex-col md:flex-row items-center justify-between gap-16 hero-reveal">
+            
+            <!-- Left Copy -->
+            <div class="flex-1 max-w-xl relative">
+                <div class="absolute -left-8 top-0 bottom-0 w-[1px] bg-gradient-to-b from-glass-300/0 via-glass-300 to-glass-300/0 hidden md:block"></div>
+                
+                <div class="inline-flex items-center gap-3 p-[1px] rounded-full bg-gradient-to-r from-white to-glass-200 mb-10 shadow-sm">
+                    <div class="bg-white/60 backdrop-blur-sm px-4 py-1.5 rounded-full flex items-center gap-2 border border-white">
+                        <iconify-icon icon="solar:radar-linear" class="text-glass-400 text-sm" stroke-width="1.5"></iconify-icon>
+                        <span class="text-xs tracking-widest uppercase text-glass-500 font-mono">Calibration Complete</span>
+                    </div>
+                </div>
+                
+                <h1 class="font-serif text-5xl md:text-7xl tracking-tight text-glass-900 leading-[1.1] mb-8">
+                    Orchestrate the <br> <span class="italic text-glass-400 font-normal">flow of capital.</span>
+                </h1>
+                
+                <p class="text-base text-glass-500 font-normal leading-relaxed mb-10">
+                    Channel liquidity through crystalline streams with sub-millisecond precision. A strict, calibrated instrument panel for unified asset navigation.
+                </p>
+
+                <div class="flex items-center gap-6">
+                    <button class="p-[1px] rounded-full bg-gradient-to-b from-glass-400 to-glass-900 group shadow-md hover:shadow-lg transition-all">
+                        <div class="bg-glass-900 px-8 py-3 rounded-full flex items-center gap-2 text-xs font-semibold text-white group-hover:bg-glass-800 transition-colors uppercase tracking-widest">
+                            Initialize Sync
+                            <iconify-icon icon="solar:arrow-right-linear" class="text-sm group-hover:translate-x-1 transition-transform" stroke-width="1.5"></iconify-icon>
+                        </div>
+                    </button>
+                    <div class="flex flex-col gap-1 font-mono text-xs text-glass-400 uppercase tracking-widest">
+                        <span>Latency</span>
+                        <span class="text-glass-900 font-semibold">12ms <span class="text-water-500 animate-pulse">●</span></span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Clock/Dial Focal Element -->
+            <div class="flex-1 flex justify-center items-center relative w-full max-w-md aspect-square">
+                <!-- Glowing backdrop -->
+                <div class="absolute inset-0 bg-white/20 blur-3xl rounded-full"></div>
+                
+                <div class="relative w-full h-full p-[1px] rounded-full bg-gradient-to-br from-white via-glass-200 to-glass-100 shadow-[0_20px_40px_rgba(0,0,0,0.03)]">
+                    <div class="w-full h-full rounded-full bg-white/30 backdrop-blur-xl border border-white shadow-[inset_0_0_30px_rgba(255,255,255,0.8)] relative flex justify-center items-center overflow-hidden">
+                        
+                        <!-- Crosshairs -->
+                        <div class="absolute w-full h-[1px] bg-glass-300/40"></div>
+                        <div class="absolute h-full w-[1px] bg-glass-300/40"></div>
+                        
+                        <!-- Outer Rotating Text Ring -->
+                        <div class="absolute inset-4 animate-[spin_40s_linear_infinite] opacity-60">
+                            <svg viewBox="0 0 200 200" class="w-full h-full overflow-visible text-glass-500">
+                                <path id="textPath" d="M 100, 100 m -80, 0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0" fill="none" />
+                                <text class="svg-text-path uppercase tracking-[0.3em] font-mono fill-current font-medium">
+                                    <textPath href="#textPath" startOffset="0%">SYSTEM CALIBRATION • LIQUIDITY FLOW • SYSTEM CALIBRATION • LIQUIDITY FLOW • </textPath>
+                                </text>
+                            </svg>
+                        </div>
+
+                        <!-- Calibration Ticks -->
+                        <div class="absolute inset-12 rounded-full border-[1px] border-dashed border-glass-400/40 animate-[spin_60s_linear_infinite_reverse]"></div>
+                        
+                        <!-- Inner Rings -->
+                        <div class="absolute inset-20 rounded-full border border-glass-300/50 shadow-[inset_0_4px_20px_rgba(255,255,255,0.6)] flex items-center justify-center bg-white/40 backdrop-blur-md">
+                            <!-- Center Emblem -->
+                            <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-glass-100 to-white shadow-sm border border-white flex items-center justify-center relative group cursor-pointer">
+                                <div class="absolute inset-0 rounded-full border border-water-300/0 group-hover:border-water-300/100 transition-colors duration-500 scale-110"></div>
+                                <iconify-icon icon="solar:tuning-square-linear" class="text-glass-900 text-3xl group-hover:rotate-90 transition-transform duration-700" stroke-width="1.5"></iconify-icon>
+                            </div>
+                        </div>
+
+                        <!-- Indicator Dots -->
+                        <div class="absolute top-8 left-1/2 -translate-x-1/2 w-1 h-1 bg-glass-900 rounded-full"></div>
+                        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 w-1 h-1 bg-glass-900 rounded-full"></div>
+                        <div class="absolute left-8 top-1/2 -translate-y-1/2 w-1 h-1 bg-glass-900 rounded-full"></div>
+                        <div class="absolute right-8 top-1/2 -translate-y-1/2 w-1 h-1 bg-glass-900 rounded-full"></div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logos Array -->
+        <div class="w-full max-w-5xl mt-32 border-y border-glass-300/30 py-8 hero-reveal flex flex-wrap justify-center items-center gap-12 md:gap-24 opacity-60 mix-blend-multiply">
+            <iconify-icon icon="simple-icons:nasa" class="text-glass-900" width="64" height="64"></iconify-icon>
+            <iconify-icon icon="simple-icons:spacex" class="text-glass-900" width="64" height="64"></iconify-icon>
+            <iconify-icon icon="simple-icons:uber" class="text-glass-900" width="64" height="64"></iconify-icon>
+            <iconify-icon icon="simple-icons:sony" class="text-glass-900" width="64" height="64"></iconify-icon>
+            <iconify-icon icon="simple-icons:nikon" class="text-glass-900" width="64" height="64"></iconify-icon>
+        </div>
+
+        <!-- Features Grid (Instrument Modules) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 w-full mt-24 relative feature-grid max-w-6xl">
+            
+            <!-- Module 1 -->
+            <div class="feature-card relative group p-[1px] rounded-2xl bg-gradient-to-br from-white via-glass-200 to-glass-300 shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white/50 backdrop-blur-xl rounded-2xl h-full p-8 flex flex-col relative z-10 border border-white/60">
+                    <div class="flex items-center justify-between mb-8 border-b border-glass-300/40 pb-4">
+                        <iconify-icon icon="solar:routing-2-linear" class="text-glass-900 text-2xl" stroke-width="1.5"></iconify-icon>
+                        <span class="text-xs font-mono text-glass-400 uppercase tracking-widest">Mod_01</span>
+                    </div>
+                    <h3 class="text-sm font-semibold text-glass-900 tracking-wide uppercase mb-3">Fluid Routing</h3>
+                    <p class="text-xs text-glass-500 font-normal leading-relaxed mb-10">
+                        Navigate the cleanest execution paths across unified pools, circumventing high-turbulence volatility.
+                    </p>
+                    
+                    <div class="mt-auto relative bg-glass-50/80 border border-glass-200 p-4 rounded-lg shadow-inner">
+                        <div class="flex justify-between items-center mb-4 font-mono text-xs text-glass-500 uppercase tracking-wider">
+                            <span>Path</span>
+                            <span class="text-water-500">Active</span>
+                        </div>
+                        <div class="space-y-2 border-l border-glass-300 pl-3 font-mono text-xs">
+                            <p class="text-glass-400">Node_A <span class="text-glass-900 ml-2">Clear</span></p>
+                            <p class="text-glass-400">Node_B <span class="text-glass-900 ml-2">Clear</span></p>
+                            <div class="h-1 w-full bg-glass-200 rounded-full mt-3 overflow-hidden">
+                                <div class="h-full w-3/4 bg-glass-900 rounded-full relative">
+                                    <div class="absolute inset-0 bg-white/20 animate-pulse"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 2 (Dial focus) -->
+            <div class="feature-card relative group md:-translate-y-8 p-[1px] rounded-2xl bg-gradient-to-br from-white via-water-100 to-glass-200 shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white/60 backdrop-blur-xl rounded-2xl h-full p-8 flex flex-col relative z-10 border border-white">
+                    <div class="flex items-center justify-between mb-8 border-b border-glass-300/40 pb-4">
+                        <iconify-icon icon="solar:scale-linear" class="text-water-500 text-2xl" stroke-width="1.5"></iconify-icon>
+                        <span class="text-xs font-mono text-glass-400 uppercase tracking-widest">Mod_02</span>
+                    </div>
+                    <h3 class="text-sm font-semibold text-glass-900 tracking-wide uppercase mb-3">Pressure Control</h3>
+                    <p class="text-xs text-glass-500 font-normal leading-relaxed mb-8">
+                        Adjust calibration parameters smoothly. Cryptographic stability thresholds built for high depth.
+                    </p>
+                    
+                    <div class="mt-auto flex flex-col gap-4">
+                        <div class="flex justify-between items-center font-mono text-xs text-glass-500 uppercase tracking-widest">
+                            <span>Threshold</span>
+                            <span class="text-glass-900 font-semibold">84%</span>
+                        </div>
+                        <!-- Custom Instrument Slider -->
+                        <div class="w-full relative px-1 py-4 flex items-center">
+                            <!-- Calibration ticks for slider -->
+                            <div class="absolute w-full flex justify-between px-2 -top-2">
+                                <div class="w-[1px] h-2 bg-glass-400"></div>
+                                <div class="w-[1px] h-1 bg-glass-300"></div>
+                                <div class="w-[1px] h-2 bg-glass-400"></div>
+                                <div class="w-[1px] h-1 bg-glass-300"></div>
+                                <div class="w-[1px] h-2 bg-glass-400"></div>
+                            </div>
+                            <input type="range" min="0" max="100" value="84">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Module 3 -->
+            <div class="feature-card relative group p-[1px] rounded-2xl bg-gradient-to-br from-white via-glass-200 to-glass-300 shadow-sm hover:shadow-md transition-shadow">
+                <div class="bg-white/50 backdrop-blur-xl rounded-2xl h-full p-8 flex flex-col relative z-10 border border-white/60">
+                    <div class="flex items-center justify-between mb-8 border-b border-glass-300/40 pb-4">
+                        <iconify-icon icon="solar:graph-up-linear" class="text-glass-900 text-2xl" stroke-width="1.5"></iconify-icon>
+                        <span class="text-xs font-mono text-glass-400 uppercase tracking-widest">Mod_03</span>
+                    </div>
+                    <h3 class="text-sm font-semibold text-glass-900 tracking-wide uppercase mb-3">Yield Dynamics</h3>
+                    <p class="text-xs text-glass-500 font-normal leading-relaxed mb-10">
+                        Extract base value from hidden low-visibility environments previously obscured by standard tooling.
+                    </p>
+                    
+                    <div class="mt-auto relative bg-glass-50/80 border border-glass-200 p-4 rounded-lg shadow-inner flex justify-center items-center">
+                        <div class="relative w-24 h-24 rounded-full border border-glass-300 flex items-center justify-center bg-white shadow-sm">
+                            <div class="absolute inset-2 border border-dashed border-glass-400/50 rounded-full animate-[spin_20s_linear_infinite]"></div>
+                            <span class="text-lg font-serif text-glass-900 tracking-tight">4.2<span class="text-xs font-mono text-glass-400 ml-1">APY</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Secondary Statement Section with Masked Reveal -->
+    <section class="relative w-full border-t border-glass-300/30 bg-white/40 backdrop-blur-lg pt-32 pb-40 overflow-hidden mt-24">
+        <div class="relative z-10 w-full max-w-5xl mx-auto px-4 md:px-8">
+            
+            <!-- Frame for Statement -->
+            <div class="relative border-l border-glass-400/30 pl-6 md:pl-12 py-4">
+                <div class="absolute -top-4 -left-[1.5px] w-3 h-3 border-t border-l border-glass-400/60"></div>
+                <div class="absolute -bottom-4 -left-[1.5px] w-3 h-3 border-b border-l border-glass-400/60"></div>
+                
+                <div class="flex items-center gap-4 mb-10">
+                    <div class="w-8 h-[1px] bg-glass-400"></div>
+                    <span class="text-xs tracking-[0.3em] uppercase text-glass-500 font-mono font-medium">Fluid Logic</span>
+                </div>
+
+                <h2 id="statement-text" class="font-serif text-4xl md:text-6xl tracking-tight leading-[1.1] max-w-3xl text-glass-900">
+                    The modern operator orchestrates the current. Through instrumented precision and absolute transparency, <span class="italic text-glass-500 font-normal">complexity becomes clarity.</span>
+                </h2>
+            </div>
+
+            <!-- Footer / Calibration Signature -->
+            <div class="mt-32 w-full flex justify-between items-end border-t border-glass-300/30 pt-8 font-mono text-xs uppercase tracking-widest text-glass-400">
+                <div class="flex items-center gap-2">
+                    <div class="w-2 h-2 border border-glass-400 rounded-full flex items-center justify-center">
+                        <div class="w-[1px] h-[1px] bg-glass-900"></div>
+                    </div>
+                    <span>SYS_ONLINE</span>
+                </div>
+                <span>© Fluid_OS</span>
+            </div>
+
+        </div>
     </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+
+    <script>
+        // --- WebGL Background setup (Light Sea Caustics Simulation) ---
+        const canvas = document.querySelector('#webgl-canvas');
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: false });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        
+        const scene = new THREE.Scene();
+        const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
+        const geometry = new THREE.PlaneGeometry(2, 2);
+        
+        const material = new THREE.ShaderMaterial({
+            uniforms: {
+                uTime: { value: 0 },
+                uResolution: { value: new THREE.Vector2() }
+            },
+            vertexShader: `
+                varying vec2 vUv;
+                void main() {
+                    vUv = uv;
+                    gl_Position = vec4(position, 1.0);
+                }
+            `,
+            fragmentShader: `
+                uniform float uTime;
+                uniform vec2 uResolution;
+                varying vec2 vUv;
+
+                // Simplex noise function
+                vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+                float snoise(vec2 v) {
+                    const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+                    vec2 i  = floor(v + dot(v, C.yy) );
+                    vec2 x0 = v -   i + dot(i, C.xx);
+                    vec2 i1;
+                    i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+                    vec4 x12 = x0.xyxy + C.xxzz;
+                    x12.xy -= i1;
+                    i = mod289(i);
+                    vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+                    vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+                    m = m*m ;
+                    m = m*m ;
+                    vec3 x = 2.0 * fract(p * C.www) - 1.0;
+                    vec3 h = abs(x) - 0.5;
+                    vec3 ox = floor(x + 0.5);
+                    vec3 a0 = x - ox;
+                    m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+                    vec3 g;
+                    g.x  = a0.x  * x0.x  + h.x  * x0.y;
+                    g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+                    return 130.0 * dot(m, g);
+                }
+
+                void main() {
+                    vec2 st = gl_FragCoord.xy / uResolution.xy;
+                    st.x *= uResolution.x / uResolution.y;
+
+                    // Light Instrument Panel Water Base
+                    vec3 baseColor = vec3(0.96, 0.98, 1.0); 
+                    
+                    // Slow, rippling liquid movement
+                    vec2 pos = vec2(st * 3.0);
+                    float n1 = snoise(pos + uTime * 0.04);
+                    float n2 = snoise(pos + vec2(uTime * 0.03, -uTime * 0.05));
+                    float n3 = snoise(pos * 0.6 - uTime * 0.02);
+
+                    // Light fluid highlights (caustics feel)
+                    vec3 highlight1 = vec3(1.0, 1.0, 1.0); // Bright white crests
+                    vec3 highlight2 = vec3(0.88, 0.95, 1.0); // Very light cyan depths
+
+                    vec3 color = baseColor;
+                    
+                    // Create thin caustic-like bands
+                    float caustic = smoothstep(0.7, 0.9, sin(n1 * 10.0)) * 0.5;
+                    color += highlight1 * caustic;
+                    
+                    // Add soft depth shadows
+                    color = mix(color, highlight2, smoothstep(0.2, 0.8, n2) * 0.6);
+                    color -= vec3(0.02) * smoothstep(0.0, 1.0, n3);
+
+                    // Soft vignette framing
+                    float dist = distance(st, vec2(0.5 * uResolution.x/uResolution.y, 0.5));
+                    color = mix(color, vec3(0.94, 0.96, 0.98), smoothstep(0.8, 1.5, dist));
+
+                    gl_FragColor = vec4(color, 1.0);
+                }
+            `
+        });
+
+        const mesh = new THREE.Mesh(geometry, material);
+        scene.add(mesh);
+
+        function resize() {
+            renderer.setSize(window.innerWidth, window.innerHeight);
+            material.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
+        }
+        window.addEventListener('resize', resize);
+        resize();
+
+        function animate(time) {
+            material.uniforms.uTime.value = time * 0.001;
+            renderer.render(scene, camera);
+            requestAnimationFrame(animate);
+        }
+        requestAnimationFrame(animate);
+
+        // --- GSAP Animations ---
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Hero Reveal
+        gsap.from(".hero-reveal", {
+            y: 20,
+            opacity: 0,
+            duration: 1.2,
+            stagger: 0.2,
+            ease: "power2.out",
+            delay: 0.1
+        });
+
+        // Feature Cards Entry
+        gsap.from(".feature-card", {
+            scrollTrigger: {
+                trigger: ".feature-grid",
+                start: "top 85%",
+            },
+            y: 30,
+            opacity: 0,
+            duration: 1,
+            stagger: 0.1,
+            ease: "power1.out"
+        });
+
+        // Masked Word Reveal Logic
+        const textElement = document.getElementById('statement-text');
+        
+        function wrapWordsPreservingHTML(element) {
+            const nodes = Array.from(element.childNodes);
+            element.innerHTML = '';
+            
+            nodes.forEach(node => {
+                if (node.nodeType === 3) {
+                    const words = node.nodeValue.split(/\s+/).filter(w => w.length > 0);
+                    words.forEach(word => {
+                        const outer = document.createElement('span');
+                        outer.className = 'masked-word mr-[0.25em]';
+                        const inner = document.createElement('span');
+                        inner.className = 'masked-word-inner';
+                        inner.textContent = word;
+                        outer.appendChild(inner);
+                        element.appendChild(outer);
+                    });
+                } else if (node.nodeType === 1) {
+                    const clone = node.cloneNode(false);
+                    wrapWordsPreservingHTML(node);
+                    while(node.firstChild) {
+                        clone.appendChild(node.firstChild);
+                    }
+                    element.appendChild(clone);
+                }
+            });
+        }
+
+        wrapWordsPreservingHTML(textElement);
+
+        gsap.to("#statement-text .masked-word-inner", {
+            scrollTrigger: {
+                trigger: "#statement-text",
+                start: "top 80%",
+            },
+            y: "0%",
+            duration: 1.2,
+            stagger: 0.015,
+            ease: "power4.out"
+        });
+
+    </script>
 </body>
 </html>

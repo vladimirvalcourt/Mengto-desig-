@@ -1,0 +1,89 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:48.314Z",
+  "skill": {
+    "id": "dither-laser-dark-mode",
+    "label": "Dither Laser Dark Mode",
+    "usage_count": 103,
+    "url": "https://neuform.ai/skill/dither-laser-dark-mode"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "952cdb7a-bfc0-41ef-b4ec-4d863c9b293f",
+    "slug": "cedar-lodges-where-the-mountains-breathe-6",
+    "title": "Cedar Lodges | Where the Mountains Breathe",
+    "url": "https://neuform.ai/pages/cedar-lodges-where-the-mountains-breathe-6/index.html",
+    "view_count": 322,
+    "favorite_count": 18,
+    "remix_count": 3
+  },
+  "html": {
+    "original_sha256": "b933c642ace8e0bde995ce2f36ece3a93c07435c5b346cfdd3271c6fed69ac5b",
+    "bundled_sha256": "0df6ff14336b91feecc98c4aacf1095e72f710dc03df4c087b84bbedda9bf0d4",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;1,300&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 1238234,
+        "file": "assets/page-01-photo-1542224566-6e85f2e6772f.jpg",
+        "original_url": "https://images.unsplash.com/photo-1542224566-6e85f2e6772f?q=80&w=3840&auto=format&fit=crop"
+      },
+      {
+        "bytes": 186731,
+        "file": "assets/page-02-photo-1518732714860-b62714ce0c59.jpg",
+        "original_url": "https://images.unsplash.com/photo-1518732714860-b62714ce0c59?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 262867,
+        "file": "assets/page-03-photo-1596394516093-501ba68a0ba6.jpg",
+        "original_url": "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 533313,
+        "file": "assets/page-04-photo-1587061949409-02df41d5e562.jpg",
+        "original_url": "https://images.unsplash.com/photo-1587061949409-02df41d5e562?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 238376,
+        "file": "assets/page-05-photo-1522708323590-d24dbb6b0267.jpg",
+        "original_url": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 439306,
+        "file": "assets/page-06-photo-1464822759023-fed622ff2c3b.jpg",
+        "original_url": "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 192865,
+        "file": "assets/page-07-photo-1544161515-4ab6ce6db874.jpg",
+        "original_url": "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=1600&auto=format&fit=crop"
+      },
+      {
+        "bytes": 576747,
+        "file": "assets/page-08-photo-1555396273-367ea4eb4db5.jpg",
+        "original_url": "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=1600&auto=format&fit=crop"
+      }
+    ],
+    "skipped": []
+  }
+}

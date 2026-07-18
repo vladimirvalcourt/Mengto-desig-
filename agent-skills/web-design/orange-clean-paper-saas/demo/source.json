@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:41:04.441Z",
+  "skill": {
+    "id": "orange-clean-paper-saas",
+    "label": "Orange Clean Paper SaaS",
+    "usage_count": 388,
+    "url": "https://neuform.ai/skill/orange-clean-paper-saas"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "4447bc3b-5e17-46ec-8d87-2a6ae279bfe8",
+    "slug": "paperflow-design-layout",
+    "title": "PaperFlow Design Layout",
+    "url": "https://neuform.ai/pages/paperflow-design-layout/index.html",
+    "view_count": 542,
+    "favorite_count": 41,
+    "remix_count": 7
+  },
+  "html": {
+    "original_sha256": "4341fc8dc5ceec9e220c3508bc9f9a103986a03d751b517dafe5efa5bd669bec",
+    "bundled_sha256": "4341fc8dc5ceec9e220c3508bc9f9a103986a03d751b517dafe5efa5bd669bec",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [],
+    "skipped": []
+  }
+}

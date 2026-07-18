@@ -1,32 +1,647 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Book Serif Index · Skill Demo</title>
-  <style>:root{--bg:#ece9e2;--panel:rgba(255,255,255,.68);--panelStrong:#f8f6f1;--ink:#171917;--muted:#686b66;--line:rgba(23,25,23,.16);--accent:hsl(54 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-body{background-image:repeating-linear-gradient(97deg,transparent 0 4px,rgba(90,70,40,.018) 5px 6px)}h1,.layoutHero h2{font-family:Iowan Old Style,Baskerville,Georgia,serif;font-weight:400;letter-spacing:-.06em}
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omni — Corporate Neural Memory</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- GSAP & Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    },
+                    colors: {
+                        navy: {
+                            900: '#020617',
+                            950: '#01030a',
+                        },
+                        emerald: {
+                            400: '#34d399',
+                            500: '#10b981',
+                        }
+                    },
+                    fontSize: {
+                        '2xs': '0.65rem',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Typography adjustments */
+        body { font-family: 'Inter', sans-serif; background-color: #020617; color: #ffffff; overflow-x: hidden; }
+        .font-mono { font-family: 'JetBrains Mono', monospace; }
+        
+        /* Progressive Blur Navigation */
+        .nav-blur { position: fixed; z-index: 50; inset: 0 0 auto 0; height: 12%; pointer-events: none; }
+        .nav-blur > div, .nav-blur::before, .nav-blur::after { position: absolute; inset: 0; }
+        .nav-blur::before { content: ""; z-index: 1; backdrop-filter: blur(0.5px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 37.5%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,0) 37.5%); }
+        .nav-blur > div:nth-of-type(1) { z-index: 2; backdrop-filter: blur(1px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,0) 50%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 12.5%, rgba(0,0,0,1) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,0) 50%); }
+        .nav-blur > div:nth-of-type(2) { z-index: 3; backdrop-filter: blur(2px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 62.5%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 25%, rgba(0,0,0,1) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,0) 62.5%); }
+        .nav-blur > div:nth-of-type(3) { z-index: 4; backdrop-filter: blur(4px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,0) 75%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 37.5%, rgba(0,0,0,1) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,0) 75%); }
+        .nav-blur > div:nth-of-type(4) { z-index: 5; backdrop-filter: blur(8px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 87.5%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 50%, rgba(0,0,0,1) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 87.5%); }
+        .nav-blur > div:nth-of-type(5) { z-index: 6; backdrop-filter: blur(16px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 62.5%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,0) 100%); }
+        .nav-blur > div:nth-of-type(6) { z-index: 7; backdrop-filter: blur(32px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 75%, rgba(0,0,0,1) 87.5%, rgba(0,0,0,1) 100%); }
+        .nav-blur::after { content: ""; z-index: 8; backdrop-filter: blur(64px); mask-image: linear-gradient(to top, rgba(0,0,0,0) 87.5%, rgba(0,0,0,1) 100%); -webkit-mask-image: linear-gradient(to top, rgba(0,0,0,0) 87.5%, rgba(0,0,0,1) 100%); }
+
+        /* Diagonal Corners */
+        .clip-diagonal { clip-path: polygon(12px 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%, 0 12px); }
+        .clip-diagonal-card { clip-path: polygon(24px 0, 100% 0, 100% calc(100% - 24px), calc(100% - 24px) 100%, 0 100%, 0 24px); }
+
+        /* Dither & Grain Overlays */
+        .bg-dither { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 4 4' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 0H0v1h1zM3 2H2v1h1zM0 2h1v1H0zM2 0h1v1H2z' fill='%23ffffff' fill-opacity='0.03'/%3E%3C/svg%3E"); }
+        .bg-noise { background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E"); }
+        
+        /* Grid Background */
+        .bg-tech-grid { background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 40px 40px; }
+
+        /* Masked Reveal Utility */
+        .reveal-mask { display: inline-block; overflow: hidden; vertical-align: bottom; }
+        .reveal-text { display: inline-block; transform: translateY(110%); }
+
+        /* Skeuomorphic Glass */
+        .glass-panel { background: rgba(10, 12, 20, 0.6); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); box-shadow: inset 0 1px 1px rgba(255,255,255,0.1), inset 0 -1px 1px rgba(0,0,0,0.8), 0 24px 24px -12px rgba(0,0,0,0.4); }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #1e293b; border-radius: 10px; }
+    </style>
 </head>
-<body data-kind="layout" data-skill="book-serif-index">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Book Serif Index</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Book Serif Index</h1></div>
-      <p>Create an archival book-reader design system with serif-led pages, mono index navigation, aged paper surfaces, margin notes, and a premium catalog frame.</p>
-    </header>
-    <section class="showcase" aria-label="Book Serif Index demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>layout</span></div>
-<div class="layoutStudy">
-  <div class="layoutHero"><span>Studio system 04</span><h2>Book Serif Index</h2><p>Structure creates the atmosphere before decoration begins.</p></div>
-  <div class="layoutCards"><article><b>01</b><span>Frame</span></article><article><b>02</b><span>Rhythm</span></article><article><b>03</b><span>Signal</span></article></div>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+<body class="selection:bg-emerald-500/30 selection:text-white">
+
+    <!-- WebGL Background Layer -->
+    <canvas id="webgl-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-60"></canvas>
+
+    <!-- Global Overlays -->
+    <div class="fixed inset-0 z-0 pointer-events-none bg-dither"></div>
+    <div class="fixed inset-0 z-0 pointer-events-none bg-noise opacity-[0.04] mix-blend-overlay"></div>
+    <div class="fixed inset-0 z-0 pointer-events-none bg-tech-grid opacity-50"></div>
+
+    <!-- Progressive Blur Header -->
+    <div class="nav-blur">
+        <div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 flex justify-center pt-6 px-4 pointer-events-none">
+        <div class="pointer-events-auto flex items-center justify-between w-full max-w-5xl bg-navy-900/40 backdrop-blur-md border border-white/10 p-[1px] clip-diagonal relative group">
+            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 clip-diagonal"></div>
+            <div class="w-full bg-navy-950/80 clip-diagonal flex items-center justify-between px-6 py-3">
+                <div class="flex items-center gap-3">
+                    <div class="w-2 h-2 bg-emerald-400 border border-emerald-200/50"></div>
+                    <span class="text-sm font-medium tracking-wide">OMNI_SYS</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8 text-xs font-mono tracking-widest text-neutral-400">
+                    <a href="#" class="hover:text-white transition-colors uppercase">Architecture</a>
+                    <a href="#" class="hover:text-white transition-colors uppercase">Intelligence</a>
+                    <a href="#" class="hover:text-white transition-colors uppercase">Security</a>
+                </div>
+                <button class="text-xs font-mono tracking-widest bg-white text-black px-4 py-2 clip-diagonal hover:bg-neutral-200 transition-colors uppercase flex items-center gap-2">
+                    Initialize <iconify-icon icon="solar:arrow-right-linear" stroke-width="1.5"></iconify-icon>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Container Shell (Agency Minimal Grid) -->
+    <main class="relative z-10 w-full max-w-7xl mx-auto border-x border-white/10 min-h-screen pt-32 flex flex-col">
+        <!-- Global Vertical Rails -->
+        <div class="absolute top-0 bottom-0 left-1/4 w-[1px] bg-white/5 pointer-events-none hidden lg:block"></div>
+        <div class="absolute top-0 bottom-0 left-2/4 w-[1px] bg-white/5 pointer-events-none hidden lg:block"></div>
+        <div class="absolute top-0 bottom-0 left-3/4 w-[1px] bg-white/5 pointer-events-none hidden lg:block"></div>
+
+        <!-- HERO SECTION -->
+        <section class="relative px-6 lg:px-16 pt-20 pb-32 border-b border-white/10">
+            <!-- Corner Brackets -->
+            <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/30 -translate-x-[1px] -translate-y-[1px]"></div>
+            <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white/30 translate-x-[1px] -translate-y-[1px]"></div>
+            
+            <div class="flex flex-col lg:flex-row gap-16 lg:gap-8 items-start">
+                <div class="flex-1 w-full relative z-10">
+                    <!-- Metadata Label -->
+                    <div class="flex items-center gap-3 text-2xs font-mono uppercase tracking-[0.15em] text-emerald-400 mb-8">
+                        <span class="w-1.5 h-1.5 bg-emerald-400 shadow-[0_0_8px_rgba(52,211,153,0.8)] animate-pulse"></span>
+                        Status: Active // Core Synced
+                    </div>
+                    
+                    <h1 class="text-4xl sm:text-5xl lg:text-7xl font-light tracking-tight leading-[1.05] text-white">
+                        <span class="reveal-mask"><span class="reveal-text">Corporate</span></span><br>
+                        <span class="reveal-mask"><span class="reveal-text text-neutral-400">Memory,</span></span><br>
+                        <span class="reveal-mask"><span class="reveal-text">Synthesized.</span></span>
+                    </h1>
+                    
+                    <div class="mt-12 max-w-md">
+                        <p class="text-sm font-light text-neutral-400 leading-relaxed">
+                            <span class="reveal-mask"><span class="reveal-text">Omni connects scattered institutional knowledge into a unified, retrieving intelligence. Secure, modular, and instantly accessible.</span></span>
+                        </p>
+                    </div>
+
+                    <div class="mt-12 flex items-center gap-6">
+                        <button class="relative p-[1px] clip-diagonal group inline-block">
+                            <div class="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 opacity-70 group-hover:opacity-100 transition-opacity"></div>
+                            <div class="relative bg-black px-6 py-3 clip-diagonal text-sm font-medium flex items-center gap-3">
+                                Deploy Node
+                                <iconify-icon icon="solar:round-alt-arrow-right-linear" class="text-emerald-400 text-lg group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </button>
+                        <span class="text-xs font-mono text-neutral-500 uppercase tracking-widest">[ Read Docs ]</span>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic/Details Panel -->
+                <div class="lg:w-[400px] w-full shrink-0">
+                    <div class="p-[1px] bg-gradient-to-b from-white/20 to-white/0 clip-diagonal-card">
+                        <div class="bg-navy-950/80 backdrop-blur-md clip-diagonal-card p-6 h-full border border-white/5 shadow-[0px_24px_24px_-12px_rgba(0,0,0,0.4)]">
+                            <div class="flex justify-between items-center border-b border-white/10 pb-4 mb-4">
+                                <span class="text-2xs font-mono uppercase text-neutral-500 tracking-widest">Telemetry</span>
+                                <iconify-icon icon="solar:graph-up-linear" class="text-neutral-400"></iconify-icon>
+                            </div>
+                            <div class="space-y-4">
+                                <div>
+                                    <div class="text-2xs font-mono text-neutral-500 uppercase tracking-wider mb-1">Ingestion Rate</div>
+                                    <div class="text-xl font-light tracking-tight">4.2 PB / ms</div>
+                                </div>
+                                <div class="w-full h-px bg-white/10"></div>
+                                <div>
+                                    <div class="text-2xs font-mono text-neutral-500 uppercase tracking-wider mb-1">Retrieval Latency</div>
+                                    <div class="text-xl font-light tracking-tight text-emerald-400">12.04 ms</div>
+                                </div>
+                                <div class="w-full h-px bg-white/10"></div>
+                                <div class="pt-2">
+                                    <div class="w-full h-1 bg-white/10 overflow-hidden">
+                                        <div class="w-[82%] h-full bg-gradient-to-r from-emerald-500 to-blue-500 relative">
+                                            <div class="absolute right-0 top-0 bottom-0 w-4 bg-white/50 blur-sm animate-pulse"></div>
+                                        </div>
+                                    </div>
+                                    <div class="flex justify-between mt-2 text-2xs font-mono text-neutral-500">
+                                        <span>Capacity</span>
+                                        <span>82%</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- LOGO MARQUEE -->
+        <section class="py-8 border-b border-white/10 overflow-hidden relative bg-black/20">
+            <!-- Fades -->
+            <div class="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-navy-900 to-transparent z-10 pointer-events-none"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-navy-900 to-transparent z-10 pointer-events-none"></div>
+            
+            <div class="flex w-[200%] marquee-container">
+                <div class="flex w-1/2 justify-around items-center opacity-50">
+                    <iconify-icon icon="simple-icons:nasa" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:spacex" width="64"></iconify-icon>
+                    <iconify-icon icon="simple-icons:uber" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:visa" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:dji" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:sony" width="64"></iconify-icon>
+                </div>
+                <div class="flex w-1/2 justify-around items-center opacity-50">
+                    <iconify-icon icon="simple-icons:nasa" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:spacex" width="64"></iconify-icon>
+                    <iconify-icon icon="simple-icons:uber" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:visa" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:dji" width="48"></iconify-icon>
+                    <iconify-icon icon="simple-icons:sony" width="64"></iconify-icon>
+                </div>
+            </div>
+        </section>
+
+        <!-- SPLIT LAYOUT: INTELLIGENCE -->
+        <section class="relative border-b border-white/10">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/30 -translate-x-[1px] -translate-y-[1px]"></div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 min-h-[600px]">
+                <!-- Visual Side -->
+                <div class="relative p-8 lg:p-16 border-b lg:border-b-0 lg:border-r border-white/10 overflow-hidden flex items-center justify-center bg-[#02040a]">
+                    <div class="absolute inset-0 bg-dither opacity-50"></div>
+                    <img src="assets/page-01-e534354d-c5f2-4399-a1d9-2f50338e8c47-1600w.jpg" alt="Abstract Data Wave" class="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-30">
+                    
+                    <!-- Floating Skeuomorphic Widget -->
+                    <div class="relative z-10 w-full max-w-sm p-[1px] rounded-xl bg-gradient-to-br from-white/20 to-transparent transform rotate-y-[-10deg] rotate-x-[5deg] perspective-1000 shadow-[0_41.8px_33.4px_rgba(0,0,0,0.086),0_100px_80px_rgba(0,0,0,0.12)] gsap-float">
+                        <div class="glass-panel rounded-[11px] p-6">
+                            <div class="flex items-center gap-3 mb-6">
+                                <iconify-icon icon="solar:scanner-linear" class="text-xl text-emerald-400"></iconify-icon>
+                                <span class="text-xs font-mono uppercase tracking-widest">Semantic Search</span>
+                            </div>
+                            <div class="space-y-3">
+                                <div class="h-8 bg-black/50 border border-white/10 rounded px-3 flex items-center shadow-[inset_0_1px_3px_rgba(0,0,0,0.5)]">
+                                    <span class="text-xs text-neutral-500 font-mono">Q: Retrieve Q3 architecture decisions...</span>
+                                </div>
+                                <div class="flex gap-2">
+                                    <div class="h-6 w-1/3 bg-emerald-500/20 border border-emerald-500/30 rounded flex items-center justify-center">
+                                        <span class="text-2xs font-mono text-emerald-400">Match 98%</span>
+                                    </div>
+                                    <div class="h-6 w-2/3 bg-white/5 border border-white/10 rounded"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Side -->
+                <div class="p-8 lg:p-16 flex flex-col justify-center relative">
+                    <div class="absolute top-8 right-8 text-xs font-mono text-neutral-600 tracking-widest">[ 01 ]</div>
+                    
+                    <h2 class="text-3xl lg:text-4xl font-light tracking-tight mb-6">
+                        <span class="reveal-mask"><span class="reveal-text">Fractal contextual</span></span><br>
+                        <span class="reveal-mask"><span class="reveal-text text-neutral-400">understanding.</span></span>
+                    </h2>
+                    
+                    <p class="text-sm font-light text-neutral-400 leading-relaxed mb-10 max-w-md">
+                        Omni doesn't just index keywords. It builds a multi-dimensional graph of your organization's logic, mapping intent behind communications, codebases, and strategy documents.
+                    </p>
+                    
+                    <ul class="space-y-6">
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-5 h-5 rounded flex items-center justify-center border border-white/20 bg-white/5">
+                                <iconify-icon icon="solar:database-linear" class="text-xs"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium mb-1">Agnostic Ingestion</h3>
+                                <p class="text-xs font-light text-neutral-500 leading-relaxed">Connects to Slack, Jira, GitHub, and Drive without schema mapping.</p>
+                            </div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="mt-1 w-5 h-5 rounded flex items-center justify-center border border-white/20 bg-white/5">
+                                <iconify-icon icon="solar:cpu-linear" class="text-xs"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="text-sm font-medium mb-1">Neural Synthesis</h3>
+                                <p class="text-xs font-light text-neutral-500 leading-relaxed">Automatically resolves contradictions between legacy documentation and recent pull requests.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- NESTED CONTAINERS: ARCHITECTURE -->
+        <section class="p-4 lg:p-8 border-b border-white/10 relative">
+            <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white/30 translate-x-[1px] -translate-y-[1px]"></div>
+            
+            <div class="p-[1px] bg-gradient-to-b from-white/10 to-transparent clip-diagonal-card">
+                <div class="bg-navy-950 clip-diagonal-card p-8 lg:p-16 relative overflow-hidden">
+                    <!-- Background texture inside nested container -->
+                    <div class="absolute inset-0 bg-tech-grid opacity-30"></div>
+                    
+                    <div class="relative z-10 flex flex-col lg:flex-row justify-between items-end mb-16 gap-8">
+                        <div>
+                            <div class="text-xs font-mono text-neutral-600 tracking-widest mb-4">[ 02 ]</div>
+                            <h2 class="text-3xl lg:text-4xl font-light tracking-tight max-w-lg">
+                                Zero-trust by design.<br>
+                                <span class="text-neutral-500">Air-gapped capability.</span>
+                            </h2>
+                        </div>
+                        <button class="text-xs font-mono bg-transparent border border-white/20 text-white px-4 py-2 clip-diagonal hover:bg-white/5 transition-colors uppercase">
+                            View Security Brief
+                        </button>
+                    </div>
+
+                    <!-- Grid Modules -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 relative z-10">
+                        <!-- Card 1 -->
+                        <div class="group relative p-[1px] rounded-lg bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
+                            <!-- Flashlight effect setup -->
+                            <div class="absolute inset-0 bg-[conic-gradient(from_var(--cursor-angle,0deg),#fff,transparent_60deg,transparent_300deg,#fff)] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            
+                            <div class="relative h-full bg-[#05070f] rounded-[7px] p-8 flex flex-col border border-white/5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.5)]">
+                                <iconify-icon icon="solar:shield-keyhole-linear" class="text-2xl text-neutral-400 mb-6"></iconify-icon>
+                                <h3 class="text-sm font-medium mb-2">VPC Deployment</h3>
+                                <p class="text-xs font-light text-neutral-500 leading-relaxed mt-auto">Run the entire LLM and vector database within your own cloud boundary. No data phones home.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="group relative p-[1px] rounded-lg bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
+                            <div class="absolute inset-0 bg-[conic-gradient(from_var(--cursor-angle,0deg),#fff,transparent_60deg,transparent_300deg,#fff)] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            <div class="relative h-full bg-[#05070f] rounded-[7px] p-8 flex flex-col border border-white/5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.5)]">
+                                <iconify-icon icon="solar:users-group-two-rounded-linear" class="text-2xl text-neutral-400 mb-6"></iconify-icon>
+                                <h3 class="text-sm font-medium mb-2">RBAC Enforcement</h3>
+                                <p class="text-xs font-light text-neutral-500 leading-relaxed mt-auto">Memory retrieval strictly respects source-system permissions. If a user can't see it in Drive, they can't ask Omni.</p>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="group relative p-[1px] rounded-lg bg-gradient-to-b from-white/10 to-transparent overflow-hidden">
+                            <div class="absolute inset-0 bg-[conic-gradient(from_var(--cursor-angle,0deg),#fff,transparent_60deg,transparent_300deg,#fff)] opacity-0 group-hover:opacity-20 transition-opacity duration-300"></div>
+                            <div class="relative h-full bg-[#05070f] rounded-[7px] p-8 flex flex-col border border-white/5 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_12px_12px_-6px_rgba(0,0,0,0.5)]">
+                                <iconify-icon icon="solar:history-linear" class="text-2xl text-neutral-400 mb-6"></iconify-icon>
+                                <h3 class="text-sm font-medium mb-2">Immutable Audit</h3>
+                                <p class="text-xs font-light text-neutral-500 leading-relaxed mt-auto">Cryptographically signed logs of every query, synthesis, and source retrieval for compliance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EDITORIAL TECH: THE CORE -->
+        <section class="py-24 px-6 lg:px-16 relative">
+            <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/30 -translate-x-[1px] -translate-y-[1px]"></div>
+            <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/30 translate-x-[1px] translate-y-[1px]"></div>
+            
+            <div class="flex flex-col lg:flex-row gap-16 items-center">
+                <div class="flex-1 order-2 lg:order-1">
+                    <div class="text-xs font-mono text-neutral-600 tracking-widest mb-6">[ 03 ]</div>
+                    <h2 class="text-4xl lg:text-5xl font-light tracking-tight mb-8 leading-[1.1]">
+                        <span class="reveal-mask"><span class="reveal-text">Built for the</span></span><br>
+                        <span class="reveal-mask"><span class="reveal-text">complexity of scale.</span></span>
+                    </h2>
+                    
+                    <div class="space-y-6 text-sm font-light text-neutral-400 max-w-md">
+                        <p>Unlike generic AI wrappers, Omni is built on a custom deterministic retrieval engine that prioritizes factual accuracy over conversational fluency.</p>
+                        <p>It generates citations for every assertion, linking directly to the specific lines of code, Slack threads, or policy documents that informed its response.</p>
+                    </div>
+
+                    <div class="mt-10 pt-10 border-t border-white/10 grid grid-cols-2 gap-8">
+                        <div>
+                            <div class="text-3xl font-light text-white tracking-tight">100M+</div>
+                            <div class="text-2xs font-mono uppercase text-neutral-500 mt-2">Tokens Context Window</div>
+                        </div>
+                        <div>
+                            <div class="text-3xl font-light text-white tracking-tight">0%</div>
+                            <div class="text-2xs font-mono uppercase text-neutral-500 mt-2">Hallucination Guarantee*</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 order-1 lg:order-2 w-full">
+                    <!-- Image framed as a technical plate -->
+                    <div class="p-[1px] bg-gradient-to-bl from-white/20 to-transparent relative">
+                        <div class="absolute -top-3 -right-3 text-2xs font-mono text-neutral-600">FIG_01</div>
+                        <div class="bg-black p-2 border border-white/5">
+                            <img src="assets/page-02-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg" alt="Futuristic Structure" class="w-full aspect-[4/3] object-cover grayscale opacity-80">
+                        </div>
+                        <!-- Technical overlay lines -->
+                        <div class="absolute top-10 -left-6 w-12 h-[1px] bg-white/20"></div>
+                        <div class="absolute bottom-10 -right-6 w-12 h-[1px] bg-white/20"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="border-t border-white/10 py-8 px-8 flex flex-col md:flex-row justify-between items-center gap-4 bg-[#010205] relative z-20">
+            <div class="flex items-center gap-3">
+                <div class="w-1.5 h-1.5 bg-neutral-600"></div>
+                <span class="text-xs font-mono uppercase tracking-widest text-neutral-500">Omni Systems Inc. © 2024</span>
+            </div>
+            <div class="flex gap-6 text-xs font-mono uppercase tracking-widest text-neutral-500">
+                <a href="#" class="hover:text-white transition-colors">Documentation</a>
+                <a href="#" class="hover:text-white transition-colors">Status</a>
+                <a href="#" class="hover:text-white transition-colors">Privacy</a>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Scripts -->
+    <script>
+        // --- 1. Three.js WebGL Background (Organic Morphing Entity / AI Core) ---
+        const initWebGL = () => {
+            const canvas = document.getElementById('webgl-canvas');
+            const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true });
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            renderer.setSize(window.innerWidth, window.innerHeight);
+
+            const scene = new THREE.Scene();
+            scene.fog = new THREE.Fog('#020617', 3, 10);
+
+            // Shift camera right on desktop to leave room for text
+            const camera = new THREE.PerspectiveCamera(45, window.innerWidth / window.innerHeight, 0.1, 100);
+            camera.position.z = 5;
+            camera.position.x = window.innerWidth > 1024 ? 1.5 : 0;
+
+            // Geometry: High segment sphere for smooth noise displacement
+            const geometry = new THREE.SphereGeometry(1.5, 128, 128);
+
+            // Shader Material (Simplex Noise + Iridescent Fresnel)
+            const material = new THREE.ShaderMaterial({
+                uniforms: {
+                    uTime: { value: 0 },
+                    uMouse: { value: new THREE.Vector2(0, 0) }
+                },
+                vertexShader: `
+                    uniform float uTime;
+                    varying vec2 vUv;
+                    varying vec3 vNormal;
+                    varying vec3 vPosition;
+
+                    // Simplex 3D Noise function (compact)
+                    vec4 permute(vec4 x){return mod(((x*34.0)+1.0)*x, 289.0);}
+                    vec4 taylorInvSqrt(vec4 r){return 1.79284291400159 - 0.85373472095314 * r;}
+                    float snoise(vec3 v){ 
+                        const vec2  C = vec2(1.0/6.0, 1.0/3.0) ;
+                        const vec4  D = vec4(0.0, 0.5, 1.0, 2.0);
+                        vec3 i  = floor(v + dot(v, C.yyy) );
+                        vec3 x0 = v - i + dot(i, C.xxx) ;
+                        vec3 g = step(x0.yzx, x0.xyz);
+                        vec3 l = 1.0 - g;
+                        vec3 i1 = min( g.xyz, l.zxy );
+                        vec3 i2 = max( g.xyz, l.zxy );
+                        vec3 x1 = x0 - i1 + 1.0 * C.xxx;
+                        vec3 x2 = x0 - i2 + 2.0 * C.xxx;
+                        vec3 x3 = x0 - 1.0 + 3.0 * C.xxx;
+                        i = mod(i, 289.0 ); 
+                        vec4 p = permute( permute( permute( 
+                                    i.z + vec4(0.0, i1.z, i2.z, 1.0 ))
+                                + i.y + vec4(0.0, i1.y, i2.y, 1.0 )) 
+                                + i.x + vec4(0.0, i1.x, i2.x, 1.0 ));
+                        float n_ = 1.0/7.0;
+                        vec3  ns = n_ * D.wyz - D.xzx;
+                        vec4 j = p - 49.0 * floor(p * ns.z *ns.z);
+                        vec4 x_ = floor(j * ns.z);
+                        vec4 y_ = floor(j - 7.0 * x_ );
+                        vec4 x = x_ *ns.x + ns.yyyy;
+                        vec4 y = y_ *ns.x + ns.yyyy;
+                        vec4 h = 1.0 - abs(x) - abs(y);
+                        vec4 b0 = vec4( x.xy, y.xy );
+                        vec4 b1 = vec4( x.zw, y.zw );
+                        vec4 s0 = floor(b0)*2.0 + 1.0;
+                        vec4 s1 = floor(b1)*2.0 + 1.0;
+                        vec4 sh = -step(h, vec4(0.0));
+                        vec4 a0 = b0.xzyw + s0.xzyw*sh.xxyy ;
+                        vec4 a1 = b1.xzyw + s1.xzyw*sh.zzww ;
+                        vec3 p0 = vec3(a0.xy,h.x);
+                        vec3 p1 = vec3(a0.zw,h.y);
+                        vec3 p2 = vec3(a1.xy,h.z);
+                        vec3 p3 = vec3(a1.zw,h.w);
+                        vec4 norm = taylorInvSqrt(vec4(dot(p0,p0), dot(p1,p1), dot(p2, p2), dot(p3,p3)));
+                        p0 *= norm.x; p1 *= norm.y; p2 *= norm.z; p3 *= norm.w;
+                        vec4 m = max(0.6 - vec4(dot(x0,x0), dot(x1,x1), dot(x2,x2), dot(x3,x3)), 0.0);
+                        m = m * m;
+                        return 42.0 * dot( m*m, vec4( dot(p0,x0), dot(p1,x1), dot(p2,x2), dot(p3,x3) ) );
+                    }
+
+                    void main() {
+                        vUv = uv;
+                        vNormal = normalize(normalMatrix * normal);
+                        
+                        // Displacement
+                        float noise = snoise(vec3(position.x * 1.2 + uTime * 0.15, position.y * 1.2, position.z * 1.2));
+                        vec3 newPosition = position + normal * (noise * 0.3);
+                        
+                        vPosition = (modelViewMatrix * vec4(newPosition, 1.0)).xyz;
+                        gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
+                    }
+                `,
+                fragmentShader: `
+                    varying vec2 vUv;
+                    varying vec3 vNormal;
+                    varying vec3 vPosition;
+
+                    void main() {
+                        // Calculate Fresnel
+                        vec3 viewDir = normalize(-vPosition);
+                        float fresnel = pow(1.0 - clamp(dot(viewDir, vNormal), 0.0, 1.0), 2.5);
+                        
+                        // Iridescent Palette (Dark core, Emerald/Blue edges)
+                        vec3 coreColor = vec3(0.01, 0.02, 0.05);
+                        vec3 edgeColor = mix(vec3(0.1, 0.5, 0.8), vec3(0.2, 0.9, 0.6), vUv.y);
+                        
+                        vec3 finalColor = mix(coreColor, edgeColor, fresnel * 1.5);
+                        
+                        gl_FragColor = vec4(finalColor, 0.8);
+                    }
+                `,
+                transparent: true,
+                wireframe: false
+            });
+
+            const mesh = new THREE.Mesh(geometry, material);
+            scene.add(mesh);
+
+            // Interaction state
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+
+            document.addEventListener('mousemove', (e) => {
+                mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+                mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+            });
+
+            const clock = new THREE.Clock();
+
+            const tick = () => {
+                const elapsedTime = clock.getElapsedTime();
+                
+                // Update Shader Time
+                material.uniforms.uTime.value = elapsedTime;
+
+                // Breathing Y oscillation
+                mesh.position.y = Math.sin(elapsedTime * 0.5) * 0.1;
+
+                // Mouse parallax smoothing
+                targetX = mouseX * 0.2;
+                targetY = mouseY * 0.2;
+                mesh.rotation.y += 0.05 * (targetX - mesh.rotation.y);
+                mesh.rotation.x += 0.05 * (targetY - mesh.rotation.x);
+
+                renderer.render(scene, camera);
+                window.requestAnimationFrame(tick);
+            };
+
+            tick();
+
+            window.addEventListener('resize', () => {
+                camera.aspect = window.innerWidth / window.innerHeight;
+                camera.position.x = window.innerWidth > 1024 ? 1.5 : 0;
+                camera.updateProjectionMatrix();
+                renderer.setSize(window.innerWidth, window.innerHeight);
+            });
+        };
+
+        // --- 2. GSAP Animations & Interactions ---
+        const initGSAP = () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            // Masked Word Reveals
+            const revealTexts = document.querySelectorAll('.reveal-text');
+            revealTexts.forEach((text) => {
+                gsap.to(text, {
+                    y: "0%",
+                    ease: "power4.out",
+                    duration: 1.2,
+                    scrollTrigger: {
+                        trigger: text.parentElement,
+                        start: "top 90%",
+                    }
+                });
+            });
+
+            // Float Animation for elements
+            gsap.to(".gsap-float", {
+                y: -15,
+                rotationX: "+=2",
+                rotationY: "+=2",
+                duration: 4,
+                repeat: -1,
+                yoyo: true,
+                ease: "sine.inOut"
+            });
+
+            // Logo Marquee Loop
+            gsap.to(".marquee-container", {
+                xPercent: -50,
+                ease: "none",
+                duration: 20,
+                repeat: -1
+            });
+        };
+
+        // --- 3. Dynamic Flashlight Effect ---
+        const initFlashlight = () => {
+            const cards = document.querySelectorAll('.group');
+            cards.forEach(card => {
+                card.addEventListener('mousemove', (e) => {
+                    const rect = card.getBoundingClientRect();
+                    const x = e.clientX - rect.left;
+                    const y = e.clientY - rect.top;
+                    const cx = rect.width / 2;
+                    const cy = rect.height / 2;
+                    
+                    // Calculate angle
+                    let angle = Math.atan2(y - cy, x - cx) * (180 / Math.PI) + 90;
+                    if (angle < 0) angle += 360;
+                    
+                    card.style.setProperty('--cursor-angle', `${angle}deg`);
+                });
+            });
+        };
+
+        // Initialize all
+        document.addEventListener('DOMContentLoaded', () => {
+            initWebGL();
+            initGSAP();
+            initFlashlight();
+        });
+    </script>
 </body>
 </html>

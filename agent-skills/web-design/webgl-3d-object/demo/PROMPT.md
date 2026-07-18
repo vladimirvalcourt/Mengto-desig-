@@ -1,43 +1,40 @@
-# WebGL 3d Object Demo Prompts
+# WebGL 3D Object Demo Prompts
 
 ## Minimal prompt
 
-Use $webgl-3d-object to create a polished standalone HTML example that clearly demonstrates the skill.
+Use $webgl-3d-object to create a responsive standalone HTML design with the same visual confidence, hierarchy, and interaction finish as the included Neuform reference.
 
 ## Recreate the demo
 
-Use $webgl-3d-object to build a responsive reference demo for this capability:
+Use $webgl-3d-object to recreate the design quality and behavior of **PulsoApps | Tu app lista en 5 días.** as a complete responsive HTML document. Treat the included demo/index.html as the visual and interaction reference, not as a loose mood board.
 
-> Create a real 3D WebGL object with geometric mesh depth, physically based material, directional and ambient lighting, perspective camera, subtle rotation, and floating motion. Use when a page needs a faceted 3D hero object or product-like visual with real lighting instead of CSS transform tricks.
+### Product brief
 
-### Direction
+- Page concept: PulsoApps | Tu app lista en 5 días..
+- Purpose: Pulsoapps App Pricing Section is designed for comparing plans and supporting conversion decisions. Key features include plan comparison blocks and conversion-oriented actions. It is suitable for subscription pricing pages and plan comparison experiences.
+- Content anchors: TU APP LISTA EN 5 DÍAS. SIN EXCUSAS. · Lo que hacemos. · Aplicaciones de Negocios · Sitio Web que Vende · Rediseño Express.
+- Useful subject tags: faq, section, animated, cta, bento, billing, support.
 
-Center a lit, rotating geometric object with visible mesh depth and restrained camera motion.
+### Skill direction
 
-Use an art-directed composition with one clear focal point, restrained supporting copy, and enough surrounding interface to show how the technique behaves in a real product or landing page.
+- Create a 3D WebGL object with real lighting and depth. Use a geometric mesh (faceted shape) with physically-based material (metalness, roughness, emissive). Light it with directional and ambient lights to reveal form and edges. Technique: real 3D geometry (not CSS transforms), dynamic lighting for highlights and shadows, subtle rotation and floating motion, and a perspective camera for depth.
+- - WebGL 3D Object: Create a 3D WebGL object with real lighting and depth. Use a geometric mesh (faceted shape) with physically-based material (metalness, roughness, emissive). Light it with directional and ambient lights to reveal form and edges. Technique: real 3D geometry (not CSS transforms), dynamic lighting for highlights and shadows, subtle rotation and floating motion, and a perspective camera for depth.
 
-### Canonical example
+### Fidelity target
 
-- Project and rotate a glowing wireframe cube with eight vertices and visible perspective.
-- Keep the object centered inside a technical measurement frame.
+- Match the reference's composition, information density, type scale, spacing rhythm, surface treatment, color relationships, and motion restraint.
+- Preserve the strongest interaction and animated background behavior instead of replacing it with generic fades or decorative movement.
+- Keep the first screen art-directed, then carry the same design logic through every supporting section.
+- Make the result responsive from mobile to desktop, keyboard accessible, and stable when reduced motion is enabled.
+- Deliver a full index.html. Put page-owned images, video, models, and textures in demo/assets/. External runtime libraries may stay as pinned CDN dependencies when the source relies on them.
 
-### Deliverable
+### Reference snapshot
 
-- Create demo/index.html as a standalone document.
-- Keep CSS and JavaScript inline.
-- Put any required images, fonts, models, textures, or vendor files in demo/assets/.
-- Do not add a framework, package manager, build step, or node_modules.
-- Add controls only when they help inspect or replay the technique.
-
-### Acceptance checks
-
-- Keep the demo responsive from 390px through 1440px.
-- Use semantic HTML, visible focus states, and reduced-motion handling.
-- Keep all HTML, CSS, and JavaScript inside demo/index.html.
-- Use only relative local asset paths.
-- Show real perspective, mesh depth, and a stable rotation axis.
-- Pause rendering when the page is hidden and resize without distortion.
+- Source: https://neuform.ai/pages/pulsoapps-tu-app-lista-en-5-d-as-3/index.html
+- Neuform rank: #1 for webgl-3d-object when synced.
+- Popularity: 405 views · 20 favorites · 10 remixes.
+- Ranking rule: views descending, then favorites descending.
 
 ## Remix prompt
 
-Use $webgl-3d-object and keep the same implementation contract, but change the subject, copy, palette, and content hierarchy. Preserve the core technique, accessibility behavior, responsive rules, and performance constraints demonstrated by the reference.
+Use $webgl-3d-object and the included Neuform demo as the quality bar, but replace the brand, subject, copy, palette, and content. Preserve the underlying layout logic, signature visual treatment, interaction choreography, responsive behavior, and performance constraints so the remix still clearly demonstrates the skill.

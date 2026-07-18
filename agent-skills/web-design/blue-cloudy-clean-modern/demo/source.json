@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:34.703Z",
+  "skill": {
+    "id": "blue-cloudy-clean-modern",
+    "label": "Blue Cloudy Clean Modern",
+    "usage_count": 179,
+    "url": "https://neuform.ai/skill/blue-cloudy-clean-modern"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "df908c30-0ff0-4526-904a-5b599fc83833",
+    "slug": "platform-capabilities",
+    "title": "Platform Capabilities",
+    "url": "https://neuform.ai/pages/platform-capabilities/index.html",
+    "view_count": 351,
+    "favorite_count": 33,
+    "remix_count": 3
+  },
+  "html": {
+    "original_sha256": "b3aaaa31461e0488d17ca65e59fe15eb92d559f862b1abe1e4d334e25444ce6b",
+    "bundled_sha256": "b3aaaa31461e0488d17ca65e59fe15eb92d559f862b1abe1e4d334e25444ce6b",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [],
+    "skipped": []
+  }
+}

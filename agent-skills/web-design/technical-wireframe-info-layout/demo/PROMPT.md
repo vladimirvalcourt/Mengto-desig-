@@ -2,42 +2,46 @@
 
 ## Minimal prompt
 
-Use $technical-wireframe-info-layout to create a polished standalone HTML example that clearly demonstrates the skill.
+Use $technical-wireframe-info-layout to create a responsive standalone HTML design with the same visual confidence, hierarchy, and interaction finish as the included Neuform reference.
 
 ## Recreate the demo
 
-Use $technical-wireframe-info-layout to build a responsive reference demo for this capability:
+Use $technical-wireframe-info-layout to recreate the design quality and behavior of **System Ontology // Diagnostic View** as a complete responsive HTML document. Treat the included demo/index.html as the visual and interaction reference, not as a loose mood board.
 
-> Create a monochrome technical wireframe design system with exploded 3D structure, connector annotations, sparse information labels, and precise dark diagnostic framing.
+### Product brief
 
-### Direction
+- Page concept: System Ontology // Diagnostic View.
+- Purpose: System Ontology Dashboard Section is designed for demonstrating application workflows and interface hierarchy. Key features include clear information density, modular panels, and interface rhythm. It is suitable for product showcases, admin panels, and analytics experiences.
+- Content anchors: System Ontology · Architectural Output · Memory Allocation · Diagnostic Stream.
+- Useful subject tags: dashboard, animated, webgl, threejs, bento, dither, charts, links.
 
-Build a complete editorial hero and supporting card grid that clearly expresses the named visual system.
+### Skill direction
 
-Use an art-directed composition with one clear focal point, restrained supporting copy, and enough surrounding interface to show how the technique behaves in a real product or landing page.
+- Create a monochrome technical wireframe design system with exploded 3D structure, connector annotations, sparse information labels, and precise dark diagnostic framing.
+- - Technical Wireframe Info Layout Skill
+- Scope:
+- - Apply this as a full design-system direction across layout, typography, info labels, widgets, background structure, and the central visualization area.
+- - Use it when the interface should feel like a dark technical diagnostic view, product teardown, systems dashboard, or wireframe specification screen.
+- - This is not generic sci-fi decoration. The wireframe object, annotations, labels, and supporting UI should all feel like one coherent information layout.
+- Visual target:
+- - Build the page on a near-black monochrome foundation with subtle texture, low-contrast patterning, and very restrained tonal shifts.
+- - Use an exploded or layered wireframe object as the main visual anchor, positioned like a structural diagram rather than a decorative hero mesh.
 
-### Canonical example
+### Fidelity target
 
-- Use Technical Wireframe Info Layout as the central system title.
-- Pair the hero with three structural cards labeled Frame, Rhythm, and Signal.
+- Match the reference's composition, information density, type scale, spacing rhythm, surface treatment, color relationships, and motion restraint.
+- Preserve the strongest interaction and animated background behavior instead of replacing it with generic fades or decorative movement.
+- Keep the first screen art-directed, then carry the same design logic through every supporting section.
+- Make the result responsive from mobile to desktop, keyboard accessible, and stable when reduced motion is enabled.
+- Deliver a full index.html. Put page-owned images, video, models, and textures in demo/assets/. External runtime libraries may stay as pinned CDN dependencies when the source relies on them.
 
-### Deliverable
+### Reference snapshot
 
-- Create demo/index.html as a standalone document.
-- Keep CSS and JavaScript inline.
-- Put any required images, fonts, models, textures, or vendor files in demo/assets/.
-- Do not add a framework, package manager, build step, or node_modules.
-- Add controls only when they help inspect or replay the technique.
-
-### Acceptance checks
-
-- Keep the demo responsive from 390px through 1440px.
-- Use semantic HTML, visible focus states, and reduced-motion handling.
-- Keep all HTML, CSS, and JavaScript inside demo/index.html.
-- Use only relative local asset paths.
-- Keep the visual hierarchy obvious without explanatory paragraphs.
-- Use one restrained interaction that supports the design direction.
+- Source: https://neuform.ai/pages/system-ontology-diagnostic-view/index.html
+- Neuform rank: #1 for technical-wireframe-info-layout when synced.
+- Popularity: 1,424 views · 67 favorites · 27 remixes.
+- Ranking rule: views descending, then favorites descending.
 
 ## Remix prompt
 
-Use $technical-wireframe-info-layout and keep the same implementation contract, but change the subject, copy, palette, and content hierarchy. Preserve the core technique, accessibility behavior, responsive rules, and performance constraints demonstrated by the reference.
+Use $technical-wireframe-info-layout and the included Neuform demo as the quality bar, but replace the brand, subject, copy, palette, and content. Preserve the underlying layout logic, signature visual treatment, interaction choreography, responsive behavior, and performance constraints so the remix still clearly demonstrates the skill.

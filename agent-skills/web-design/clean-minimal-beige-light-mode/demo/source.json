@@ -1,0 +1,75 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:41.448Z",
+  "skill": {
+    "id": "clean-minimal-beige-light-mode",
+    "label": "Clean Minimal Beige Light Mode",
+    "usage_count": 699,
+    "url": "https://neuform.ai/skill/clean-minimal-beige-light-mode"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "839676f0-4ee7-4810-a930-797a4844f480",
+    "slug": "mentorbridge-find-a-mentor-to-help-you-grow-your-career",
+    "title": "MentorBridge — Find a mentor to help you grow your career",
+    "url": "https://neuform.ai/pages/mentorbridge-find-a-mentor-to-help-you-grow-your-career/index.html",
+    "view_count": 744,
+    "favorite_count": 39,
+    "remix_count": 15
+  },
+  "html": {
+    "original_sha256": "9f98ddfed3612c2008f1aa4be79de92bcbcea8087fe53aa4c3f2079f1dd53c42",
+    "bundled_sha256": "1f04c7497ca6807993320d1cfb0a00575dff31719ab5573c07df2dce27f1f338",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 599390,
+        "file": "assets/page-01-3186f9ea-5f5a-49f7-8fcf-568ad52f515e-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3186f9ea-5f5a-49f7-8fcf-568ad52f515e_3840w.webp"
+      },
+      {
+        "bytes": 249675,
+        "file": "assets/page-02-eca707cc-a5b7-439a-b4fd-247f6106c2e1-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/eca707cc-a5b7-439a-b4fd-247f6106c2e1_1600w.jpg"
+      },
+      {
+        "bytes": 282854,
+        "file": "assets/page-03-0d868fef-f560-45ca-ab35-5dad4fc29059-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0d868fef-f560-45ca-ab35-5dad4fc29059_3840w.webp"
+      },
+      {
+        "bytes": 511242,
+        "file": "assets/page-04-582afef4-b810-47b8-a047-8b3597c323e1-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/582afef4-b810-47b8-a047-8b3597c323e1_3840w.webp"
+      },
+      {
+        "bytes": 536390,
+        "file": "assets/page-05-65695f80-23f9-46ee-8487-cbb6c93cc48b-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/65695f80-23f9-46ee-8487-cbb6c93cc48b_3840w.webp"
+      },
+      {
+        "bytes": 214106,
+        "file": "assets/page-06-c92852bb-a510-405a-85ab-ffa0fde136a4-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/c92852bb-a510-405a-85ab-ffa0fde136a4_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

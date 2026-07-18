@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:54.185Z",
+  "skill": {
+    "id": "gsap",
+    "label": "GSAP Motion",
+    "usage_count": 2827,
+    "url": "https://neuform.ai/skill/gsap"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "ee9d4a2f-e34e-4a9b-8ec7-eb8c2819ada0",
+    "slug": "aura-fluid-drag-interactions",
+    "title": "Aura - Fluid Drag Interactions",
+    "url": "https://neuform.ai/pages/aura-fluid-drag-interactions/index.html",
+    "view_count": 857,
+    "favorite_count": 19,
+    "remix_count": 3
+  },
+  "html": {
+    "original_sha256": "19f6e2f279b9e33ed5fa47bd4a5df4f934a3b90d8c91ed2e363f745ae6c6df67",
+    "bundled_sha256": "9ef5456ba098f5370af3309ffe545f1dfe568e3cc77b4e3e5123c5c187857282",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 53370,
+        "file": "assets/page-01-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4f5668c5-fc4a-44e0-bc5e-a664189d3c31_800w.jpg"
+      },
+      {
+        "bytes": 55628,
+        "file": "assets/page-02-0d868fef-f560-45ca-ab35-5dad4fc29059-800w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0d868fef-f560-45ca-ab35-5dad4fc29059_800w.webp"
+      }
+    ],
+    "skipped": []
+  }
+}

@@ -17,7 +17,7 @@ const skillFiles = execFileSync(
   .sort();
 
 const failures = [];
-const stats = { skills: skillFiles.length, html: 0, prompts: 0, workflows: 0, assets: 0 };
+const stats = { skills: skillFiles.length, html: 0, prompts: 0, workflows: 0, assets: 0, sources: 0 };
 
 function fail(file, message) {
   failures.push(file + ": " + message);
@@ -38,29 +38,42 @@ for (const skillFile of skillFiles) {
   const demoDirectory = path.join(root, path.dirname(skillFile), "demo");
   const htmlFile = path.join(demoDirectory, "index.html");
   const promptFile = path.join(demoDirectory, "PROMPT.md");
+  const sourceFile = path.join(demoDirectory, "source.json");
+  const sourceDerived = existsSync(sourceFile);
+  let sourceManifest = null;
+  if (sourceDerived) {
+    stats.sources += 1;
+    try {
+      sourceManifest = JSON.parse(readFileSync(sourceFile, "utf8"));
+    } catch (error) {
+      fail(path.relative(root, sourceFile), "invalid JSON: " + error.message);
+    }
+  }
   const html = readRequired(htmlFile);
   const prompt = readRequired(promptFile);
 
   if (html) {
     stats.html += 1;
     if (!/^<!doctype html>/i.test(html)) fail(path.relative(root, htmlFile), "missing doctype");
-    if (!/<html lang="en"/i.test(html)) fail(path.relative(root, htmlFile), "missing language");
+    if (!sourceDerived && !/<html lang="en"/i.test(html)) fail(path.relative(root, htmlFile), "missing language");
     if (!/<meta name="viewport"/i.test(html)) fail(path.relative(root, htmlFile), "missing viewport meta");
     if (!/<title>[^<]+<\/title>/i.test(html)) fail(path.relative(root, htmlFile), "missing title");
-    if (!/<main(?:\s|>)/i.test(html)) fail(path.relative(root, htmlFile), "missing main landmark");
+    if (!sourceDerived && !/<main(?:\s|>)/i.test(html)) fail(path.relative(root, htmlFile), "missing main landmark");
     const headingCount = (html.match(/<h1(?:\s|>)/gi) || []).length;
-    if (headingCount !== 1) fail(path.relative(root, htmlFile), "expected one h1, found " + headingCount);
-    if (category !== "codex" && !html.includes("prefers-reduced-motion")) {
+    if (!sourceDerived && headingCount !== 1) fail(path.relative(root, htmlFile), "expected one h1, found " + headingCount);
+    if (!sourceDerived && category !== "codex" && !html.includes("prefers-reduced-motion")) {
       fail(path.relative(root, htmlFile), "missing reduced-motion fallback");
     }
-    if (/https?:\/\/[^"'\s<>]+/i.test(html)) fail(path.relative(root, htmlFile), "remote URL found; demos must be self-contained");
+    if (!sourceDerived && /https?:\/\/[^"'\s<>]+/i.test(html)) fail(path.relative(root, htmlFile), "remote URL found; demos must be self-contained");
     if (/\/Users\/|file:\/\//i.test(html)) fail(path.relative(root, htmlFile), "personal absolute path found");
-    if (/[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(html)) fail(path.relative(root, htmlFile), "email address found");
+    if (!sourceDerived && /[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}/.test(html)) fail(path.relative(root, htmlFile), "email address found");
 
     const references = [...html.matchAll(/(?:src|href)=["']([^"'#]+)["']/gi)]
       .map((match) => match[1])
       .filter((reference) => !/^(?:data:|javascript:|mailto:)/i.test(reference));
     for (const reference of references) {
+      if (sourceDerived && /^(?:https?:|\/|\?|#)/i.test(reference)) continue;
+      if (sourceDerived && !reference.startsWith("assets/")) continue;
       const decoded = decodeURIComponent(reference.split("?")[0]);
       const target = path.resolve(demoDirectory, decoded);
       if (!target.startsWith(demoDirectory)) {
@@ -75,14 +88,31 @@ for (const skillFile of skillFiles) {
       }
     }
 
-    for (const match of html.matchAll(/<script(?:\s[^>]*)?>([\s\S]*?)<\/script>/gi)) {
-      const script = match[1].trim();
+    for (const match of html.matchAll(/<script(\s[^>]*)?>([\s\S]*?)<\/script>/gi)) {
+      const attributes = match[1] || "";
+      if (/type=["'](?:application\/json|importmap)["']/i.test(attributes)) continue;
+      const script = match[2].trim();
       if (!script) continue;
       try {
         new vm.Script(script, { filename: path.relative(root, htmlFile) });
       } catch (error) {
         fail(path.relative(root, htmlFile), "inline JavaScript syntax error: " + error.message);
       }
+    }
+  }
+
+  if (sourceDerived && sourceManifest) {
+    if (sourceManifest.provider !== "Neuform") fail(path.relative(root, sourceFile), "unexpected provider");
+    if (sourceManifest?.ranking?.position !== 1) fail(path.relative(root, sourceFile), "expected rank 1 source");
+    if (!sourceManifest?.design?.id || !sourceManifest?.design?.title || !sourceManifest?.design?.url) {
+      fail(path.relative(root, sourceFile), "missing design provenance");
+    }
+    if (!/^[a-f0-9]{64}$/.test(String(sourceManifest?.html?.original_sha256 || ""))) {
+      fail(path.relative(root, sourceFile), "missing original HTML checksum");
+    }
+    const preview = String(sourceManifest?.assets?.preview || "").trim();
+    if (preview && !existsSync(path.join(demoDirectory, preview))) {
+      fail(path.relative(root, sourceFile), "missing source preview asset");
     }
   }
 
@@ -127,3 +157,4 @@ console.log("- HTML demos: " + stats.html);
 console.log("- prompt recipes: " + stats.prompts);
 console.log("- workflow examples: " + stats.workflows);
 console.log("- local asset references: " + stats.assets);
+console.log("- Neuform source demos: " + stats.sources);

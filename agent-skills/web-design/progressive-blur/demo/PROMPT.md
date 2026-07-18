@@ -2,42 +2,46 @@
 
 ## Minimal prompt
 
-Use $progressive-blur to create a polished standalone HTML example that clearly demonstrates the skill.
+Use $progressive-blur to create a responsive standalone HTML design with the same visual confidence, hierarchy, and interaction finish as the included Neuform reference.
 
 ## Recreate the demo
 
-Use $progressive-blur to build a responsive reference demo for this capability:
+Use $progressive-blur to recreate the design quality and behavior of **GOLABS | Performance Hydration Collection** as a complete responsive HTML document. Treat the included demo/index.html as the visual and interaction reference, not as a loose mood board.
 
-> Create a layered CSS progressive blur (top or bottom) using multiple backdrop-filter masks for depth and softness. Use when asked for “progressive blur”, “gradient blur overlay”, or stepped blur masks that fade from an edge of the viewport.
+### Product brief
 
-### Direction
+- Page concept: GOLABS | Performance Hydration Collection.
+- Purpose: Golabs Performance Pricing Section is designed for comparing plans and supporting conversion decisions. Key features include plan comparison blocks and conversion-oriented actions. It is suitable for subscription pricing pages and plan comparison experiences.
+- Content anchors: Complete Hydration System · Daily Hydration Sachets - Citrus · Starter Hydration System · Sleep Hydration Sachets · Core Hydration Drink - Citrus.
+- Useful subject tags: pricing, section, animated, cta, billing.
 
-Compare the treatment across a hero surface, compact control, and detail card.
+### Skill direction
 
-Use an art-directed composition with one clear focal point, restrained supporting copy, and enough surrounding interface to show how the technique behaves in a real product or landing page.
+- Use layered edge blur overlays for depth, with top and bottom reference snippets plus tuning guidance.
+- - Progressive Blur Skill
+- Workflow:
+- - Confirm placement (top or bottom), height, and z-index relative to UI.
+- - Provide the matching snippet and a short usage checklist.
+- - Offer only targeted tweaks (height, blur steps, direction, opacity stops).
+- Usage checklist:
+- - Insert the HTML inside <body>.
+- - Keep the .gradient-blur element near the top of the DOM.
 
-### Canonical example
+### Fidelity target
 
-- Show the treatment on a large Depth without noise surface, one compact metric card, and one control.
-- Use the same edge, shadow, blur, or masking logic consistently across all three scales.
+- Match the reference's composition, information density, type scale, spacing rhythm, surface treatment, color relationships, and motion restraint.
+- Preserve the strongest interaction and animated background behavior instead of replacing it with generic fades or decorative movement.
+- Keep the first screen art-directed, then carry the same design logic through every supporting section.
+- Make the result responsive from mobile to desktop, keyboard accessible, and stable when reduced motion is enabled.
+- Deliver a full index.html. Put page-owned images, video, models, and textures in demo/assets/. External runtime libraries may stay as pinned CDN dependencies when the source relies on them.
 
-### Deliverable
+### Reference snapshot
 
-- Create demo/index.html as a standalone document.
-- Keep CSS and JavaScript inline.
-- Put any required images, fonts, models, textures, or vendor files in demo/assets/.
-- Do not add a framework, package manager, build step, or node_modules.
-- Add controls only when they help inspect or replay the technique.
-
-### Acceptance checks
-
-- Keep the demo responsive from 390px through 1440px.
-- Use semantic HTML, visible focus states, and reduced-motion handling.
-- Keep all HTML, CSS, and JavaScript inside demo/index.html.
-- Use only relative local asset paths.
-- Preserve readable contrast at the softest and strongest treatment levels.
-- Avoid clipping focus rings or interactive content.
+- Source: https://neuform.ai/pages/golabs-performance-hydration-collection/index.html
+- Neuform rank: #1 for progressive-blur when synced.
+- Popularity: 381 views · 32 favorites · 2 remixes.
+- Ranking rule: views descending, then favorites descending.
 
 ## Remix prompt
 
-Use $progressive-blur and keep the same implementation contract, but change the subject, copy, palette, and content hierarchy. Preserve the core technique, accessibility behavior, responsive rules, and performance constraints demonstrated by the reference.
+Use $progressive-blur and the included Neuform demo as the quality bar, but replace the brand, subject, copy, palette, and content. Preserve the underlying layout logic, signature visual treatment, interaction choreography, responsive behavior, and performance constraints so the remix still clearly demonstrates the skill.

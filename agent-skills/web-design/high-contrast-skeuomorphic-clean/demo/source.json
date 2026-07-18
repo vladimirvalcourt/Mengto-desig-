@@ -1,0 +1,72 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:55.951Z",
+  "skill": {
+    "id": "high-contrast-skeuomorphic-clean",
+    "label": "High Contrast Skeuomorphic Clean",
+    "usage_count": 462,
+    "url": "https://neuform.ai/skill/high-contrast-skeuomorphic-clean"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "4c49893e-5d44-449e-8253-795a37490d80",
+    "slug": "core-interface",
+    "title": "Core Interface",
+    "url": "https://neuform.ai/pages/core-interface/index.html",
+    "view_count": 851,
+    "favorite_count": 58,
+    "remix_count": 29
+  },
+  "html": {
+    "original_sha256": "759b603ed6544e3d709464cf5859199ee8a848cc7815dfe03b504e401da61c48",
+    "bundled_sha256": "36127d7e018f8a936e33918c853ac443ee94c27427060043ed96a87c699f0771",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 82206,
+        "file": "assets/page-01-77415a2e-dcbc-4748-a29d-fced4821881a-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/77415a2e-dcbc-4748-a29d-fced4821881a_800w.jpg"
+      },
+      {
+        "bytes": 62810,
+        "file": "assets/page-02-eca707cc-a5b7-439a-b4fd-247f6106c2e1-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/eca707cc-a5b7-439a-b4fd-247f6106c2e1_800w.jpg"
+      },
+      {
+        "bytes": 74294,
+        "file": "assets/page-03-3186f9ea-5f5a-49f7-8fcf-568ad52f515e-800w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3186f9ea-5f5a-49f7-8fcf-568ad52f515e_800w.webp"
+      },
+      {
+        "bytes": 17083,
+        "file": "assets/page-04-4734259a-bad7-422f-981e-ce01e79184f2-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_800w.jpg"
+      },
+      {
+        "bytes": 194699,
+        "file": "assets/page-05-005600e5-f6ab-4e59-bc86-eaeb02797dfa-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/005600e5-f6ab-4e59-bc86-eaeb02797dfa_800w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

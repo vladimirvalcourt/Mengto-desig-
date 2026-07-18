@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:40.194Z",
+  "skill": {
+    "id": "book-serif-index",
+    "label": "Book Serif Index",
+    "usage_count": 49,
+    "url": "https://neuform.ai/skill/book-serif-index"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "f817fca3-72b6-4e0d-9a49-dbfb93956398",
+    "slug": "omni-corporate-neural-memory",
+    "title": "Omni — Corporate Neural Memory",
+    "url": "https://neuform.ai/pages/omni-corporate-neural-memory/index.html",
+    "view_count": 80,
+    "favorite_count": 4,
+    "remix_count": 0
+  },
+  "html": {
+    "original_sha256": "d88af8463476c789dcf2f77e1f3fcc2a3290446d18df8baec6c090b5a53f9387",
+    "bundled_sha256": "14110b638405adde0815be71678ede7ee0a148e73a0ecf9916da8f768d9092cc",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=JetBrains+Mono:wght@400&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 85289,
+        "file": "assets/page-01-e534354d-c5f2-4399-a1d9-2f50338e8c47-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/e534354d-c5f2-4399-a1d9-2f50338e8c47_1600w.jpg"
+      },
+      {
+        "bytes": 989406,
+        "file": "assets/page-02-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/724142aa-44a6-48d3-9cf3-761e00d05b78_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

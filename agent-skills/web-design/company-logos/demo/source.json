@@ -1,0 +1,48 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:40.383Z",
+  "skill": {
+    "id": "company-logos",
+    "label": "Company Logos",
+    "usage_count": 311,
+    "url": "https://neuform.ai/skill/company-logos"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "7daac65d-f2cc-4fe5-88ef-3bea795689a9",
+    "slug": "fluid-protocol-flow-analytics",
+    "title": "Fluid Protocol | Flow Analytics",
+    "url": "https://neuform.ai/pages/fluid-protocol-flow-analytics/index.html",
+    "view_count": 435,
+    "favorite_count": 40,
+    "remix_count": 3
+  },
+  "html": {
+    "original_sha256": "447cde958b40f00d5b58a2585f45a1536e78e25cc83c1a3b5633333bbda09bb8",
+    "bundled_sha256": "447cde958b40f00d5b58a2585f45a1536e78e25cc83c1a3b5633333bbda09bb8",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@300;400;500;600&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [],
+    "skipped": []
+  }
+}

@@ -1,32 +1,546 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Globe Particles · Skill Demo</title>
-  <style>:root{--bg:#080a0f;--panel:rgba(18,21,29,.72);--panelStrong:#121620;--ink:#f2f5f7;--muted:#929aa7;--line:rgba(255,255,255,.14);--accent:hsl(309 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEUS | Enterprise Brand Architecture</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <style>
+        /* Hide scrollbar for a cleaner technical look while keeping scroll functionality */
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
 </head>
-<body data-kind="globe" data-skill="globe-particles">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Globe Particles</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Globe Particles</h1></div>
-      <p>Create a globe-like 3D particle visualization with a dense luminous spherical core and thinner orbital ring or flattened disc. Use when a design needs a premium planetary, orbital, synthesized data-globe effect rendered with real WebGL/Three.js particles, not generic starfields or full page layout changes.</p>
-    </header>
-    <section class="showcase" aria-label="Globe Particles demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>globe</span></div>
-<div class="visualization">
-  <canvas aria-label="Globe Particles procedural visualization"></canvas>
-  <div class="vizMeta"><span>Live field</span><strong>72.4</strong><span>Auto orbit</span></div>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="globe";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+<body class="bg-[#030305] text-white/90 antialiased overflow-hidden selection:bg-[#00F0FF]/30 selection:text-white" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Background Layer 0: WebGL Space/Beam Shader -->
+    <canvas id="bg-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-40"></canvas>
+
+    <!-- Background Layer 1: Dither Texture -->
+    <canvas id="dither-canvas" class="fixed inset-0 z-0 pointer-events-none opacity-[0.2]"></canvas>
+
+    <!-- Background Layer 2: SVG Noise DNA -->
+    <div class="fixed inset-0 z-0 pointer-events-none mix-blend-overlay opacity-[0.08]" style="background: url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22noiseFilter%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.8%22 numOctaves=%223%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23noiseFilter)%22/%3E%3C/svg%3E');"></div>
+
+    <!-- Main Application Frame -->
+    <main class="flex h-screen w-full relative z-10">
+
+        <!-- Primary Content Area -->
+        <section class="flex-1 p-8 md:p-16 lg:p-24 border-r border-white/10 overflow-y-auto no-scrollbar relative flex flex-col">
+            
+            <!-- Diagonal Tactical Grid -->
+            <div class="absolute inset-0 pointer-events-none z-0" style="background-image: repeating-linear-gradient(45deg, transparent, transparent 15px, rgba(255,255,255,0.02) 15px, rgba(255,255,255,0.02) 16px);"></div>
+
+            <!-- Content Wrapper -->
+            <div class="relative z-10 max-w-5xl mx-auto w-full pb-32">
+                
+                <!-- Editorial Header -->
+                <header class="flex justify-between items-start mb-24 w-full">
+                    <div class="flex flex-col gap-2">
+                        <div class="w-8 h-8 border border-white/20 flex items-center justify-center bg-black/50 relative">
+                            <div class="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-[#00F0FF]"></div>
+                            <div class="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-[#00F0FF]"></div>
+                            <div class="w-2 h-2 bg-[#00F0FF] shadow-[0_0_8px_#00F0FF]"></div>
+                        </div>
+                        <span class="text-[12px] uppercase tracking-[0.15em] text-white/40 mt-4" style="font-family: 'Roboto Mono', monospace;">NEUS // 2026</span>
+                    </div>
+                    
+                    <nav class="hidden md:flex gap-12 text-[12px] uppercase tracking-[0.15em] text-white/40" style="font-family: 'Roboto Mono', monospace;">
+                        <a href="#" class="hover:text-[#00F0FF] transition-colors">Manifesto</a>
+                        <a href="#" class="hover:text-[#00F0FF] transition-colors">Visual Assets</a>
+                        <a href="#" class="hover:text-[#00F0FF] transition-colors">Components</a>
+                    </nav>
+                </header>
+
+                <!-- Hero Typography -->
+                <div class="mb-24 flex flex-col lg:flex-row gap-12 lg:gap-24 items-end">
+                    <h1 class="text-[64px] md:text-[96px] font-light tracking-[-0.05em] leading-[0.9] text-white reveal-text flex-1">
+                        System<br>Architecture
+                    </h1>
+                    <div class="w-full lg:w-1/3 flex flex-col gap-6">
+                        <p class="text-sm text-white/60 font-light leading-relaxed reveal-fade">
+                            Establishing a technical baseline for cryptographic environments. The NEUS visual system merges engineered precision with immersive atmospheric depth.
+                        </p>
+                        <!-- Button Anatomy -->
+                        <button class="group flex items-stretch w-max reveal-fade cursor-pointer relative">
+                            <!-- Gradient Border Wrapper -->
+                            <div class="absolute inset-0 p-[1px] bg-gradient-to-r from-white/30 to-white/5 z-0"></div>
+                            
+                            <div class="bg-white text-black px-6 py-3 font-medium text-sm flex items-center relative z-10 tracking-tight">
+                                INITIALIZE ASSETS
+                            </div>
+                            <div class="bg-[#0A0A0A] px-5 py-3 flex items-center justify-center border-l border-white/10 relative z-10 transition-colors group-hover:bg-[#111]">
+                                <iconify-icon icon="solar:arrow-right-linear" style="font-size: 1.2rem;" class="text-[#00F0FF] group-hover:translate-x-1 transition-transform"></iconify-icon>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Technical Wireframe Info Layout (Globe Central) -->
+                <div class="relative w-full h-[600px] border border-white/10 bg-black/40 mb-24 reveal-fade overflow-hidden">
+                    <!-- Corner Brackets -->
+                    <div class="absolute top-0 left-0 w-4 h-4 border-t border-l border-white/30"></div>
+                    <div class="absolute top-0 right-0 w-4 h-4 border-t border-r border-white/30"></div>
+                    <div class="absolute bottom-0 left-0 w-4 h-4 border-b border-l border-white/30"></div>
+                    <div class="absolute bottom-0 right-0 w-4 h-4 border-b border-r border-white/30"></div>
+
+                    <!-- WebGL Container -->
+                    <div id="globe-container" class="absolute inset-0 z-10 cursor-crosshair"></div>
+
+                    <!-- Technical Diagnostic Overlay UI -->
+                    <div class="absolute top-8 left-8 z-20">
+                        <span class="text-[12px] uppercase tracking-[0.15em] text-[#00F0FF] flex items-center gap-2" style="font-family: 'Roboto Mono', monospace;">
+                            <div class="w-1.5 h-1.5 bg-[#00F0FF] rounded-full animate-pulse"></div>
+                            Core Diagnostics
+                        </span>
+                    </div>
+
+                    <!-- Floating Label 1 -->
+                    <div class="absolute top-[20%] right-[10%] z-20 flex items-center gap-4 hidden md:flex">
+                        <div class="w-16 h-[1px] bg-white/20 border-t border-dashed border-white/30"></div>
+                        <div class="bg-black/80 backdrop-blur-sm border border-white/10 p-3 flex flex-col gap-1">
+                            <span class="text-[10px] text-white/40 uppercase tracking-widest" style="font-family: 'Roboto Mono', monospace;">Orbital Ring</span>
+                            <span class="text-[12px] text-white font-medium tracking-tight">Consensus Layer Active</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Label 2 -->
+                    <div class="absolute bottom-[20%] left-[10%] z-20 flex items-center gap-4 flex-row-reverse hidden md:flex">
+                        <div class="w-24 h-[1px] bg-white/20 border-t border-dashed border-white/30"></div>
+                        <div class="bg-black/80 backdrop-blur-sm border border-white/10 p-3 flex flex-col gap-1 items-end">
+                            <span class="text-[10px] text-white/40 uppercase tracking-widest" style="font-family: 'Roboto Mono', monospace;">Dense Core</span>
+                            <span class="text-[12px] text-white font-medium tracking-tight">Immutable State</span>
+                        </div>
+                    </div>
+
+                    <!-- Grid overlay in container -->
+                    <div class="absolute inset-0 z-0 pointer-events-none opacity-20" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 40px 40px;"></div>
+                </div>
+
+                <!-- Editorial Media Band (Aura Abstract) -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 reveal-fade items-start">
+                    <div class="md:col-span-4 flex flex-col gap-6">
+                        <h2 class="text-xl font-light text-white tracking-tight border-b border-white/10 pb-4">Cinematic Topologies</h2>
+                        <p class="text-[12px] leading-relaxed text-white/40 uppercase tracking-[0.05em]" style="font-family: 'Roboto Mono', monospace;">
+                            Visuals leverage deep shadow, structured grid noise, and isolated neon vectors to denote operational capacity.
+                        </p>
+                    </div>
+                    
+                    <div class="md:col-span-8 p-[1px] bg-gradient-to-b from-white/20 to-transparent w-full">
+                        <div class="relative w-full aspect-[16/9] bg-[#0A0A0A] overflow-hidden group">
+                            <img src="assets/page-01-fa51902b-c2a4-4c33-a96e-a8f1ef67edc6-1600w.jpg" 
+                                 alt="Abstract Light Wave" 
+                                 class="w-full h-full object-cover opacity-70 group-hover:opacity-100 group-hover:scale-[1.02] transition-all duration-1000 mix-blend-screen" />
+                            <div class="absolute top-4 left-4 border border-white/20 bg-black/60 backdrop-blur-md px-2 py-1 flex items-center gap-2">
+                                <iconify-icon icon="solar:camera-minimalistic-linear" class="text-white/60"></iconify-icon>
+                                <span class="text-[10px] text-white/60 tracking-widest uppercase" style="font-family: 'Roboto Mono', monospace;">Asset_ID: FA519</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Fixed Width Sidebar -->
+        <aside class="w-[320px] lg:w-[400px] flex-shrink-0 backdrop-blur-md bg-black/10 border-l border-white/10 h-full overflow-y-auto no-scrollbar relative hidden md:flex flex-col z-20">
+            
+            <!-- Side Header -->
+            <div class="p-8 border-b border-white/10 flex justify-between items-center bg-[#0A0A0A]/50">
+                <span class="text-[12px] uppercase tracking-[0.15em] text-white/60" style="font-family: 'Roboto Mono', monospace;">Telemetry</span>
+                <div class="flex gap-1">
+                    <div class="w-1.5 h-3 bg-white/20"></div>
+                    <div class="w-1.5 h-3 bg-white/20"></div>
+                    <div class="w-1.5 h-3 bg-[#00F0FF]"></div>
+                </div>
+            </div>
+
+            <!-- Skeuomorphic Status Widget -->
+            <div class="p-8 border-b border-white/10">
+                <div class="p-[1px] rounded-[16px] bg-gradient-to-b from-white/15 to-transparent shadow-[0_8px_30px_rgba(0,0,0,0.8)]">
+                    <div class="bg-[#0A0A0A] rounded-[16px] p-6 shadow-[inset_0_2px_5px_rgba(255,255,255,0.06),_inset_0_-2px_5px_rgba(0,0,0,0.8)] relative overflow-hidden">
+                        
+                        <!-- Internal highlight / glare -->
+                        <div class="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent"></div>
+                        <div class="absolute -top-10 -right-10 w-32 h-32 bg-[#00F0FF]/10 blur-3xl rounded-full"></div>
+
+                        <div class="flex justify-between items-start mb-6 relative z-10">
+                            <iconify-icon icon="solar:server-square-linear" style="font-size: 1.5rem;" class="text-white/80 drop-shadow-[0_2px_2px_rgba(0,0,0,1)]"></iconify-icon>
+                            <span class="text-[10px] text-[#00F0FF] uppercase tracking-widest px-2 py-1 bg-[#00F0FF]/10 rounded border border-[#00F0FF]/30" style="font-family: 'Roboto Mono', monospace;">Active</span>
+                        </div>
+
+                        <div class="space-y-4 relative z-10 text-shadow-[0_1px_2px_rgba(0,0,0,1)]">
+                            <div>
+                                <div class="text-[10px] text-white/40 uppercase tracking-widest mb-1" style="font-family: 'Roboto Mono', monospace;">Network Load</div>
+                                <div class="text-2xl font-light text-white tracking-tight">84.2<span class="text-[12px] text-white/40 ml-1">%</span></div>
+                            </div>
+
+                            <!-- Inset Progress Track -->
+                            <div class="w-full h-2 bg-[#030305] rounded-full shadow-[inset_0_1px_3px_rgba(0,0,0,1),_0_1px_0_rgba(255,255,255,0.05)] overflow-hidden">
+                                <div class="h-full bg-gradient-to-r from-[#00F0FF]/40 to-[#00F0FF] w-[84%] relative">
+                                    <div class="absolute top-0 right-0 bottom-0 w-2 bg-white/50 blur-[2px]"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Leadership / Brand Portraits -->
+            <div class="p-8 flex-1 flex flex-col gap-6">
+                <span class="text-[12px] uppercase tracking-[0.15em] text-white/40" style="font-family: 'Roboto Mono', monospace;">Founding Protocol</span>
+                
+                <!-- Aura Portrait 1 -->
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-sm overflow-hidden p-[1px] bg-gradient-to-b from-white/20 to-transparent shrink-0">
+                        <img src="assets/page-02-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-1600w.jpg" alt="Leadership Portrait" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-medium text-white tracking-tight">Elena Rostova</span>
+                        <span class="text-[10px] text-white/40 uppercase tracking-widest mt-0.5" style="font-family: 'Roboto Mono', monospace;">Chief Architect</span>
+                    </div>
+                </div>
+
+                <!-- Aura Portrait 2 -->
+                <div class="flex items-center gap-4 group cursor-pointer">
+                    <div class="w-12 h-12 rounded-sm overflow-hidden p-[1px] bg-gradient-to-b from-white/20 to-transparent shrink-0">
+                        <img src="assets/page-03-2f563338-39fa-47ea-9761-658d4f3f84db-1600w.jpg" alt="Leadership Portrait" class="w-full h-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-500" />
+                    </div>
+                    <div class="flex flex-col">
+                        <span class="text-sm font-medium text-white tracking-tight">Marcus Vance</span>
+                        <span class="text-[10px] text-white/40 uppercase tracking-widest mt-0.5" style="font-family: 'Roboto Mono', monospace;">Head of Cryptography</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Diagnostic Marquee -->
+            <div class="border-t border-white/10 p-4 bg-[#0A0A0A] overflow-hidden whitespace-nowrap flex">
+                <div class="animate-[pulse_3s_ease-in-out_infinite] flex gap-6 text-[10px] text-white/30 uppercase tracking-widest" style="font-family: 'Roboto Mono', monospace;">
+                    <span>SYS_UPTIME: 99.999%</span>
+                    <span>LATENCY: 4ms</span>
+                    <span>NODES: 2,041</span>
+                    <span>ENCRYPT: AES-256</span>
+                </div>
+            </div>
+
+        </aside>
+
+    </main>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            /* --- GSAP Text Reveal & Fades --- */
+            gsap.registerPlugin(ScrollTrigger);
+            
+            document.querySelectorAll('.reveal-text').forEach(el => {
+                const text = el.innerHTML;
+                // Split by <br> tags to preserve deliberate breaks, then split words
+                const lines = text.split(/<br\s*\/?>/i);
+                el.innerHTML = '';
+                
+                lines.forEach((line, index) => {
+                    const words = line.trim().split(' ');
+                    const lineDiv = document.createElement('div');
+                    lineDiv.style.display = 'block';
+                    
+                    words.forEach(word => {
+                        if(!word) return;
+                        const outer = document.createElement('span');
+                        outer.style.cssText = 'overflow: hidden; display: inline-block; vertical-align: top; margin-right: 0.25em; padding-bottom: 0.1em;';
+                        const inner = document.createElement('span');
+                        inner.className = 'word-inner';
+                        inner.style.cssText = 'display: inline-block; transform: translateY(110%); transform-origin: bottom left;';
+                        inner.innerHTML = word;
+                        outer.appendChild(inner);
+                        lineDiv.appendChild(outer);
+                    });
+                    
+                    el.appendChild(lineDiv);
+                });
+
+                gsap.to(el.querySelectorAll('.word-inner'), {
+                    y: '0%',
+                    duration: 1.4,
+                    stagger: 0.05,
+                    ease: "power4.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%"
+                    }
+                });
+            });
+
+            gsap.from('.reveal-fade', {
+                y: 30,
+                opacity: 0,
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power3.out",
+                delay: 0.4
+            });
+
+            /* --- Procedural Dither Background --- */
+            const ditherCanvas = document.getElementById('dither-canvas');
+            const dctx = ditherCanvas.getContext('2d');
+            
+            function resizeDither() {
+                ditherCanvas.width = window.innerWidth;
+                ditherCanvas.height = window.innerHeight;
+                drawDither();
+            }
+
+            function drawDither() {
+                // 4x4 Bayer Matrix layout
+                const matrix = [
+                    [ 0,  8,  2, 10],
+                    [12,  4, 14,  6],
+                    [ 3, 11,  1,  9],
+                    [15,  7, 13,  5]
+                ];
+                
+                const size = 6; // Enlarged pixel size for visible structure
+                dctx.clearRect(0, 0, ditherCanvas.width, ditherCanvas.height);
+                
+                for(let y = 0; y < ditherCanvas.height; y += size) {
+                    for(let x = 0; x < ditherCanvas.width; x += size) {
+                        const mVal = matrix[(y/size) % 4][(x/size) % 4];
+                        if(mVal < 8 || Math.random() > 0.98) {
+                            dctx.fillStyle = `rgba(255, 255, 255, ${0.015 + (mVal/15)*0.02})`;
+                            dctx.fillRect(x, y, size, size);
+                        }
+                    }
+                }
+                
+                // Vignette falloff
+                const gradient = dctx.createRadialGradient(
+                    ditherCanvas.width/2, ditherCanvas.height/2, ditherCanvas.height/3,
+                    ditherCanvas.width/2, ditherCanvas.height/2, ditherCanvas.height
+                );
+                gradient.addColorStop(0, 'rgba(3,3,5,0)');
+                gradient.addColorStop(1, 'rgba(3,3,5,0.95)');
+                dctx.fillStyle = gradient;
+                dctx.fillRect(0,0,ditherCanvas.width, ditherCanvas.height);
+            }
+            
+            window.addEventListener('resize', resizeDither);
+            resizeDither();
+
+            /* --- Three.js Globe Particles (Technical Diagnostic View) --- */
+            const globeContainer = document.getElementById('globe-container');
+            const scene = new THREE.Scene();
+            
+            // Atmospheric fog
+            scene.fog = new THREE.FogExp2(0x000000, 0.25);
+
+            const camera = new THREE.PerspectiveCamera(50, globeContainer.clientWidth / globeContainer.clientHeight, 0.1, 100);
+            camera.position.set(0, 0, 5);
+
+            const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+            renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+            globeContainer.appendChild(renderer.domElement);
+
+            // Core Dense Sphere
+            const coreGeometry = new THREE.SphereGeometry(1.4, 64, 64);
+            const coreMaterial = new THREE.PointsMaterial({
+                color: 0xaaaaaa, // Neutral core
+                size: 0.012,
+                transparent: true,
+                opacity: 0.5,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+            const coreParticles = new THREE.Points(coreGeometry, coreMaterial);
+            scene.add(coreParticles);
+
+            // Outer Orbital Ring (Accent Color #00F0FF)
+            const ringGeometry = new THREE.TorusGeometry(2.2, 0.6, 24, 150);
+            const positions = ringGeometry.attributes.position.array;
+            // Scramble torus into a particle cloud disc
+            for(let i=0; i<positions.length; i+=3) {
+                positions[i] += (Math.random() - 0.5) * 0.3;
+                positions[i+1] += (Math.random() - 0.5) * 0.3;
+                positions[i+2] += (Math.random() - 0.5) * 0.3;
+            }
+            
+            const ringMaterial = new THREE.PointsMaterial({
+                color: 0x00F0FF, // Brand Accent Cyan
+                size: 0.018,
+                transparent: true,
+                opacity: 0.7,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false
+            });
+            const ringParticles = new THREE.Points(ringGeometry, ringMaterial);
+            ringParticles.rotation.x = Math.PI / 2.8; // Technical tilt
+            scene.add(ringParticles);
+
+            // Interaction state
+            let mX = 0; let mY = 0;
+            let tX = 0; let tY = 0;
+
+            globeContainer.addEventListener('mousemove', (e) => {
+                const rect = globeContainer.getBoundingClientRect();
+                mX = ((e.clientX - rect.left) / rect.width) * 2 - 1;
+                mY = -((e.clientY - rect.top) / rect.height) * 2 + 1;
+            });
+
+            const clock = new THREE.Clock();
+            function animateGlobe() {
+                requestAnimationFrame(animateGlobe);
+                const t = clock.getElapsedTime();
+
+                // Structural Rotation
+                coreParticles.rotation.y += 0.0008;
+                coreParticles.rotation.x += 0.0004;
+                ringParticles.rotation.z -= 0.0015;
+                
+                // Tech Breathing
+                const breath = 1 + Math.sin(t * 0.8) * 0.015;
+                coreParticles.scale.set(breath, breath, breath);
+
+                // Fluid mouse response
+                tX = mX * 0.25;
+                tY = mY * 0.25;
+                scene.rotation.y += (tX - scene.rotation.y) * 0.04;
+                scene.rotation.x += (-tY - scene.rotation.x) * 0.04;
+
+                renderer.render(scene, camera);
+            }
+            animateGlobe();
+
+            window.addEventListener('resize', () => {
+                // Handle resize for split screen
+                if(globeContainer.clientWidth > 0) {
+                    camera.aspect = globeContainer.clientWidth / globeContainer.clientHeight;
+                    camera.updateProjectionMatrix();
+                    renderer.setSize(globeContainer.clientWidth, globeContainer.clientHeight);
+                }
+            });
+
+            /* --- WebGL Background Noise (Blue/Purple Beams) --- */
+            const bgCanvas = document.getElementById('bg-canvas');
+            const gl = bgCanvas.getContext('webgl');
+            
+            if (gl) {
+                function resizeGl() {
+                    bgCanvas.width = window.innerWidth;
+                    bgCanvas.height = window.innerHeight;
+                    gl.viewport(0, 0, bgCanvas.width, bgCanvas.height);
+                }
+                window.addEventListener('resize', resizeGl);
+                resizeGl();
+
+                const vsSource = `
+                    attribute vec4 position;
+                    void main() { gl_Position = position; }
+                `;
+
+                // Simplex noise inspired sweeping beams
+                const fsSource = `
+                    precision mediump float;
+                    uniform float time;
+                    uniform vec2 resolution;
+
+                    vec3 mod289(vec3 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                    vec2 mod289(vec2 x) { return x - floor(x * (1.0 / 289.0)) * 289.0; }
+                    vec3 permute(vec3 x) { return mod289(((x*34.0)+1.0)*x); }
+
+                    float snoise(vec2 v) {
+                        const vec4 C = vec4(0.211324865405187, 0.366025403784439, -0.577350269189626, 0.024390243902439);
+                        vec2 i  = floor(v + dot(v, C.yy) );
+                        vec2 x0 = v -   i + dot(i, C.xx);
+                        vec2 i1;
+                        i1 = (x0.x > x0.y) ? vec2(1.0, 0.0) : vec2(0.0, 1.0);
+                        vec4 x12 = x0.xyxy + C.xxzz;
+                        x12.xy -= i1;
+                        i = mod289(i);
+                        vec3 p = permute( permute( i.y + vec3(0.0, i1.y, 1.0 )) + i.x + vec3(0.0, i1.x, 1.0 ));
+                        vec3 m = max(0.5 - vec3(dot(x0,x0), dot(x12.xy,x12.xy), dot(x12.zw,x12.zw)), 0.0);
+                        m = m*m;
+                        m = m*m;
+                        vec3 x = 2.0 * fract(p * C.www) - 1.0;
+                        vec3 h = abs(x) - 0.5;
+                        vec3 ox = floor(x + 0.5);
+                        vec3 a0 = x - ox;
+                        m *= 1.79284291400159 - 0.85373472095314 * ( a0*a0 + h*h );
+                        vec3 g;
+                        g.x  = a0.x  * x0.x  + h.x  * x0.y;
+                        g.yz = a0.yz * x12.xz + h.yz * x12.yw;
+                        return 130.0 * dot(m, g);
+                    }
+
+                    void main() {
+                        vec2 uv = gl_FragCoord.xy / resolution.xy;
+                        // Animate coordinates
+                        vec2 pos = vec2(uv.x * 2.0 + time * 0.05, uv.y * 2.0 - time * 0.02);
+                        float n = snoise(pos * 1.5) * 0.5 + 0.5;
+                        
+                        // Create sweeping bands
+                        float band = sin(uv.x * 3.0 + uv.y * 2.0 + time * 0.5) * 0.5 + 0.5;
+                        float intensity = smoothstep(0.4, 0.6, n * band);
+                        
+                        // Deep space to Cyan/Purple colors
+                        vec3 col1 = vec3(0.01, 0.01, 0.03); // base dark
+                        vec3 col2 = vec3(0.0, 0.94, 1.0);   // #00F0FF Cyan
+                        vec3 col3 = vec3(0.3, 0.1, 0.6);    // Deep Purple
+                        
+                        vec3 finalColor = mix(col1, col2, intensity * 0.3);
+                        finalColor = mix(finalColor, col3, snoise(pos * 3.0) * 0.2);
+                        
+                        // Falloff edges
+                        float vignette = smoothstep(0.0, 0.5, uv.x) * smoothstep(1.0, 0.5, uv.x);
+                        
+                        gl_FragColor = vec4(finalColor * vignette, 1.0);
+                    }
+                `;
+
+                const createShader = (type, src) => {
+                    const s = gl.createShader(type);
+                    gl.shaderSource(s, src);
+                    gl.compileShader(s);
+                    return s;
+                };
+
+                const prog = gl.createProgram();
+                gl.attachShader(prog, createShader(gl.VERTEX_SHADER, vsSource));
+                gl.attachShader(prog, createShader(gl.FRAGMENT_SHADER, fsSource));
+                gl.linkProgram(prog);
+                gl.useProgram(prog);
+
+                const quad = new Float32Array([-1,1, -1,-1, 1,1, 1,-1]);
+                const buf = gl.createBuffer();
+                gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+                gl.bufferData(gl.ARRAY_BUFFER, quad, gl.STATIC_DRAW);
+
+                const posAttr = gl.getAttribLocation(prog, "position");
+                gl.enableVertexAttribArray(posAttr);
+                gl.vertexAttribPointer(posAttr, 2, gl.FLOAT, false, 0, 0);
+
+                const timeLoc = gl.getUniformLocation(prog, "time");
+                const resLoc = gl.getUniformLocation(prog, "resolution");
+
+                let start = Date.now();
+                function renderBg() {
+                    requestAnimationFrame(renderBg);
+                    gl.uniform1f(timeLoc, (Date.now() - start) / 1000.0);
+                    gl.uniform2f(resLoc, bgCanvas.width, bgCanvas.height);
+                    gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+                }
+                renderBg();
+            }
+        });
+    </script>
 </body>
 </html>

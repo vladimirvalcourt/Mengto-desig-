@@ -1,0 +1,65 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:51.569Z",
+  "skill": {
+    "id": "gooey-blob-system",
+    "label": "Gooey Blob System",
+    "usage_count": 36,
+    "url": "https://neuform.ai/skill/gooey-blob-system"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "60acc30b-501e-4cec-b815-645cf10804d2",
+    "slug": "modern-talent-platform",
+    "title": "Modern Talent Platform",
+    "url": "https://neuform.ai/pages/modern-talent-platform/index.html",
+    "view_count": 170,
+    "favorite_count": 10,
+    "remix_count": 2
+  },
+  "html": {
+    "original_sha256": "c40c369e5b130e9d0050cf150a14015325f8592ccc076cd41d0c31950c5f6de0",
+    "bundled_sha256": "c792129d2e6e2d93f039614dc740db6fc6c06b51cfc99fec6209028752b452ed",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 282854,
+        "file": "assets/page-01-0d868fef-f560-45ca-ab35-5dad4fc29059-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0d868fef-f560-45ca-ab35-5dad4fc29059_3840w.webp"
+      },
+      {
+        "bytes": 599390,
+        "file": "assets/page-02-3186f9ea-5f5a-49f7-8fcf-568ad52f515e-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/3186f9ea-5f5a-49f7-8fcf-568ad52f515e_3840w.webp"
+      },
+      {
+        "bytes": 298959,
+        "file": "assets/page-03-2f563338-39fa-47ea-9761-658d4f3f84db-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2f563338-39fa-47ea-9761-658d4f3f84db_1600w.jpg"
+      },
+      {
+        "bytes": 536390,
+        "file": "assets/page-04-65695f80-23f9-46ee-8487-cbb6c93cc48b-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/65695f80-23f9-46ee-8487-cbb6c93cc48b_3840w.webp"
+      }
+    ],
+    "skipped": []
+  }
+}

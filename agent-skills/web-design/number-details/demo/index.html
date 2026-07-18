@@ -1,33 +1,645 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Number Details · Skill Demo</title>
-  <style>:root{--bg:#080a0f;--panel:rgba(18,21,29,.72);--panelStrong:#121620;--ink:#f2f5f7;--muted:#929aa7;--line:rgba(255,255,255,.14);--accent:hsl(342 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cedar Lodges | Where the Mountains Breathe</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Source+Sans+3:ital,wght@0,300;0,400;1,300&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- GSAP & Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <style>
+        /* Typography System */
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .font-source { font-family: 'Source Sans 3', sans-serif; }
+        
+        /* Smooth Scrolling & Utilities */
+        html { scroll-behavior: smooth; }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        /* Cinematic Ken Burns */
+        @keyframes slow-zoom {
+            0% { transform: scale(1.0); }
+            100% { transform: scale(1.08); }
+        }
+        .animate-zoom { animation: slow-zoom 20s ease-out forwards; }
+        
+        /* Ticker Animation */
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker { animation: ticker 30s linear infinite; }
+
+        /* Custom Form Styling to remove default webkit styles */
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        /* Ambient Rays Background */
+        .ambient-ray-1 {
+            background: radial-gradient(circle at center, rgba(197, 160, 89, 0.15) 0%, transparent 70%);
+        }
+    </style>
 </head>
-<body data-kind="icons" data-skill="number-details">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Number Details</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Number Details</h1></div>
-      <p>Add decorative 01, 02, 03 numeric detail markers.</p>
+<body class="font-source font-light bg-[#FDFBF7] text-[#2C2C2C] antialiased selection:bg-[#6E4B3A] selection:text-[#FDFBF7] overflow-x-hidden">
+
+    <!-- Global Navigation -->
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-500 py-6 px-6 md:px-12 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center gap-2">
+            <iconify-icon icon="solar:tree-linear" class="text-2xl text-[#FDFBF7] logo-text transition-colors duration-300"></iconify-icon>
+            <span class="font-playfair text-lg tracking-widest text-[#FDFBF7] logo-text transition-colors duration-300 uppercase">Cedar Lodges</span>
+        </div>
+        
+        <div class="hidden lg:flex items-center gap-8 font-source text-sm tracking-widest uppercase text-[#FDFBF7] nav-links transition-colors duration-300">
+            <a href="#" class="hover:text-[#C5A059] transition-colors relative group">
+                Suites
+                <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#C5A059] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="hover:text-[#C5A059] transition-colors relative group">
+                Experiences
+                <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#C5A059] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="hover:text-[#C5A059] transition-colors relative group">
+                Dining
+                <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#C5A059] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#" class="hover:text-[#C5A059] transition-colors relative group">
+                Contact
+                <span class="absolute -bottom-1 left-0 w-0 h-[1px] bg-[#C5A059] transition-all duration-300 group-hover:w-full"></span>
+            </a>
+        </div>
+
+        <button class="hidden md:flex items-center gap-2 bg-[#6E4B3A] text-[#FDFBF7] px-6 py-2.5 rounded-full text-xs tracking-widest uppercase hover:bg-[#5A3D2F] transition-all duration-300 hover:scale-105 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+            Reserve
+        </button>
+
+        <button class="lg:hidden text-[#FDFBF7] text-3xl logo-text">
+            <iconify-icon icon="solar:hamburger-menu-linear"></iconify-icon>
+        </button>
+    </nav>
+
+    <!-- Page 1: Homepage Hero -->
+    <header class="relative h-[100svh] w-full flex flex-col justify-end bg-[#102018] overflow-hidden">
+        <!-- Cinematic Background -->
+        <div class="absolute inset-0 z-0 overflow-hidden">
+            <img src="assets/page-01-photo-1542224566-6e85f2e6772f.jpg" alt="Misty Mountain Forest" class="w-full h-full object-cover opacity-80 animate-zoom origin-center">
+            <!-- Gradients for depth and text readability -->
+            <div class="absolute inset-0 bg-gradient-to-t from-[#102018]/90 via-[#102018]/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-r from-[#102018]/60 to-transparent"></div>
+        </div>
+
+        <!-- Hero Text -->
+        <div class="relative z-10 px-6 md:px-12 pb-12 w-full max-w-7xl mx-auto">
+            <div class="gsap-reveal opacity-0 translate-y-8">
+                <h1 class="font-playfair text-5xl md:text-7xl lg:text-8xl tracking-tight text-[#FDFBF7] mb-4" style="text-shadow: 0 4px 24px rgba(0,0,0,0.4);">
+                    Cedar Lodges
+                </h1>
+                <p class="font-source text-xs md:text-sm tracking-[0.2em] uppercase text-[#C5A059]">
+                    Where the mountains breathe
+                </p>
+            </div>
+        </div>
+
+        <!-- Integrated Booking Form Shell -->
+        <div class="relative z-20 w-full px-4 md:px-12 pb-6 md:pb-12 max-w-7xl mx-auto gsap-reveal opacity-0 translate-y-8 delay-200">
+            <div class="p-[1px] rounded-2xl bg-gradient-to-br from-white/20 via-white/5 to-transparent shadow-[0_2.8px_2.2px_rgba(0,_0,_0,_0.034),_0_6.7px_5.3px_rgba(0,_0,_0,_0.048),_0_12.5px_10px_rgba(0,_0,_0,_0.06),_0_22.3px_17.9px_rgba(0,_0,_0,_0.072),_0_100px_80px_rgba(0,_0,_0,_0.12)]">
+                <div class="bg-[#1A2F24]/80 backdrop-blur-xl rounded-[15px] p-4 md:p-6 flex flex-col md:flex-row gap-4 items-center justify-between">
+                    
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 w-full flex-grow">
+                        <!-- Check In -->
+                        <div class="relative flex flex-col border-r border-white/10 pr-4">
+                            <label class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Check In</label>
+                            <div class="flex items-center text-[#FDFBF7] text-sm relative">
+                                <span>Select Date</span>
+                                <iconify-icon icon="solar:calendar-linear" class="ml-auto text-white/50"></iconify-icon>
+                                <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                            </div>
+                        </div>
+                        
+                        <!-- Check Out -->
+                        <div class="relative flex flex-col border-r border-white/10 pr-4 pl-4 md:pl-0">
+                            <label class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Check Out</label>
+                            <div class="flex items-center text-[#FDFBF7] text-sm relative">
+                                <span>Select Date</span>
+                                <iconify-icon icon="solar:calendar-linear" class="ml-auto text-white/50"></iconify-icon>
+                                <input type="date" class="absolute inset-0 opacity-0 cursor-pointer w-full h-full">
+                            </div>
+                        </div>
+
+                        <!-- Room Type -->
+                        <div class="relative flex flex-col border-r border-white/10 pr-4 col-span-2 md:col-span-1">
+                            <label class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Suite / Chalet</label>
+                            <div class="flex items-center text-[#FDFBF7] text-sm relative">
+                                <select class="appearance-none bg-transparent w-full outline-none cursor-pointer">
+                                    <option value="any" class="bg-[#1A2F24]">Any Available</option>
+                                    <option value="presidential" class="bg-[#1A2F24]">Presidential Suite</option>
+                                    <option value="forest" class="bg-[#1A2F24]">Forest Chalet</option>
+                                </select>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="absolute right-0 pointer-events-none text-white/50"></iconify-icon>
+                            </div>
+                        </div>
+
+                        <!-- Guests -->
+                        <div class="relative flex flex-col pr-4 col-span-2 md:col-span-1">
+                            <label class="text-[10px] uppercase tracking-widest text-white/50 mb-1">Guests</label>
+                            <div class="flex items-center text-[#FDFBF7] text-sm cursor-pointer">
+                                <span>2 Adults · 0 Children</span>
+                                <iconify-icon icon="solar:users-group-rounded-linear" class="ml-auto text-white/50"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="w-full md:w-auto bg-[#6E4B3A] text-[#FDFBF7] px-8 py-4 rounded-xl text-xs tracking-widest uppercase hover:bg-[#5A3D2F] transition-all duration-300 shadow-[0px_0px_0px_1px_rgba(0,0,0,0.06),0px_1px_1px_-0.5px_rgba(0,0,0,0.06),0px_3px_3px_-1.5px_rgba(0,0,0,0.06)] flex-shrink-0 group">
+                        Check Availability
+                        <iconify-icon icon="solar:arrow-right-linear" class="inline-block ml-2 transform group-hover:translate-x-1 transition-transform"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+        </div>
     </header>
-    <section class="showcase" aria-label="Number Details demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>icons</span></div>
-<div class="iconGrid">
-  <article><span class="number">01</span><div class="glyph">✦</div><h3>Signal</h3></article>
-  <article><span class="number">02</span><div class="glyph">◈</div><h3>System</h3></article>
-  <article><span class="number">03</span><div class="glyph">◎</div><h3>Orbit</h3></article>
-</div>
+
+    <!-- Section 1: The Lodge (Split Layout Technical) -->
+    <section class="relative bg-[#FDFBF7] py-24 md:py-32 px-6 md:px-12 border-b border-[#E5E0D5]">
+        <!-- Subtle WebGL Canvas Background (Mist/Particles) -->
+        <canvas id="mist-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-40"></canvas>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 relative z-10">
+            <!-- Left: Structural Frame -->
+            <div class="relative aspect-[4/5] p-[1px] bg-gradient-to-br from-[#E5E0D5] to-transparent rounded-sm gsap-reveal">
+                <!-- Corner Brackets -->
+                <div class="absolute -top-1 -left-1 w-3 h-3 border-t border-l border-[#C5A059] z-20"></div>
+                <div class="absolute -bottom-1 -right-1 w-3 h-3 border-b border-r border-[#C5A059] z-20"></div>
+                
+                <div class="w-full h-full bg-[#F4EFE6] rounded-[1px] overflow-hidden relative">
+                    <img src="assets/page-02-photo-1518732714860-b62714ce0c59.jpg" alt="Cedar Lodge Exterior" class="w-full h-full object-cover opacity-90 scale-105 hover:scale-100 transition-transform duration-1000 ease-out">
+                </div>
+            </div>
+
+            <!-- Right: Editorial Copy -->
+            <div class="flex flex-col justify-center">
+                <span class="font-source text-[10px] uppercase tracking-[0.15em] text-[#C5A059] mb-6 block gsap-reveal">01 / The Sanctuary</span>
+                
+                <h2 class="font-playfair text-3xl md:text-4xl lg:text-5xl tracking-tight text-[#1A2F24] leading-snug mb-8 gsap-reveal">
+                    <i class="italic text-[#6E4B3A]">"Eight can sleep here but the mountain feels infinite."</i>
+                </h2>
+                
+                <div class="font-source text-sm md:text-base text-[#555555] space-y-6 max-w-md leading-relaxed gsap-reveal">
+                    <p>Cedar Lodges is not a hotel — it is an act of reverence toward the Galiyat forest. Built from cedar and mountain stone, it sits at the heart of Pakistan's most storied highland belt.</p>
+                    <p>Surrounded by Ayubia National Park, ancient trails, and the kind of silence that cities have forgotten. A world entirely apart, yet only 58 miles from Islamabad.</p>
+                </div>
+
+                <!-- Technical Metric Rail -->
+                <div class="grid grid-cols-3 gap-4 mt-12 pt-8 border-t border-[#E5E0D5] gsap-reveal">
+                    <div>
+                        <span class="block font-playfair text-2xl text-[#1A2F24]">5</span>
+                        <span class="font-source text-[10px] uppercase tracking-widest text-[#555555]">Luxury Suites</span>
+                    </div>
+                    <div>
+                        <span class="block font-playfair text-2xl text-[#1A2F24]">2</span>
+                        <span class="font-source text-[10px] uppercase tracking-widest text-[#555555]">Private Chalets</span>
+                    </div>
+                    <div>
+                        <span class="block font-playfair text-2xl text-[#1A2F24]">24h</span>
+                        <span class="font-source text-[10px] uppercase tracking-widest text-[#555555]">Hospitality</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+
+    <!-- Section 2: Suites & Chalets Showcase (Image First Grid) -->
+    <section class="bg-[#102018] py-24 md:py-32 text-[#FDFBF7] overflow-hidden">
+        <div class="px-6 md:px-12 mb-12 flex justify-between items-end max-w-7xl mx-auto gsap-reveal">
+            <div>
+                <span class="font-source text-[10px] uppercase tracking-[0.15em] text-[#C5A059] mb-4 block">02 / Accommodations</span>
+                <h2 class="font-playfair text-4xl lg:text-5xl tracking-tight">Suites in the Sky</h2>
+            </div>
+            <a href="#" class="hidden md:flex items-center gap-2 text-xs uppercase tracking-widest text-[#C5A059] hover:text-[#FDFBF7] transition-colors group">
+                View All Suites <iconify-icon icon="solar:arrow-right-linear" class="transform group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </a>
+        </div>
+
+        <!-- Horizontal Scroll Track -->
+        <div class="flex overflow-x-auto snap-x snap-mandatory hide-scrollbar gap-6 px-6 md:px-12 pb-12">
+            
+            <!-- Card 1 -->
+            <div class="snap-center shrink-0 w-[85vw] md:w-[45vw] lg:w-[35vw] h-[60vh] relative group cursor-pointer p-[1px] bg-gradient-to-b from-white/10 to-transparent rounded-sm gsap-reveal">
+                <div class="absolute inset-[1px] bg-[#1A2F24] overflow-hidden rounded-[1px]">
+                    <img src="assets/page-03-photo-1596394516093-501ba68a0ba6.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#102018] via-[#102018]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#C5A059]">2 Guests</span>
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#FDFBF7]">Panoramic View</span>
+                        </div>
+                        <h3 class="font-playfair text-3xl tracking-tight mb-2">Presidential Suite</h3>
+                        <p class="font-source text-xs text-white/60 mb-6 line-clamp-2">The summit of Galiyat luxury. Floor-to-ceiling mountain panoramas, walk-in rain shower, and a private terrace fireplace.</p>
+                        <button class="text-xs uppercase tracking-widest text-[#FDFBF7] border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors">Explore Suite</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="snap-center shrink-0 w-[85vw] md:w-[45vw] lg:w-[35vw] h-[60vh] relative group cursor-pointer p-[1px] bg-gradient-to-b from-white/10 to-transparent rounded-sm gsap-reveal delay-100">
+                <div class="absolute inset-[1px] bg-[#1A2F24] overflow-hidden rounded-[1px]">
+                    <img src="assets/page-04-photo-1587061949409-02df41d5e562.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#102018] via-[#102018]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#C5A059]">8 Guests</span>
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#FDFBF7]">Family Retreat</span>
+                        </div>
+                        <h3 class="font-playfair text-3xl tracking-tight mb-2">Forest Chalet</h3>
+                        <p class="font-source text-xs text-white/60 mb-6 line-clamp-2">Eight guests, one sky. Furnished terraces, a crackling fireplace at the heart, and the sound of the wind in the pines.</p>
+                        <button class="text-xs uppercase tracking-widest text-[#FDFBF7] border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors">Explore Chalet</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="snap-center shrink-0 w-[85vw] md:w-[45vw] lg:w-[35vw] h-[60vh] relative group cursor-pointer p-[1px] bg-gradient-to-b from-white/10 to-transparent rounded-sm gsap-reveal delay-200">
+                <div class="absolute inset-[1px] bg-[#1A2F24] overflow-hidden rounded-[1px]">
+                    <img src="assets/page-05-photo-1522708323590-d24dbb6b0267.jpg" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105 opacity-80 group-hover:opacity-100">
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#102018] via-[#102018]/40 to-transparent"></div>
+                    
+                    <div class="absolute bottom-0 left-0 p-8 w-full">
+                        <div class="flex gap-2 mb-4">
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#C5A059]">2 Guests</span>
+                            <span class="px-3 py-1 bg-[#1A2F24]/80 backdrop-blur border border-white/10 rounded-full text-[9px] uppercase tracking-widest text-[#FDFBF7]">Forest Canopy</span>
+                        </div>
+                        <h3 class="font-playfair text-3xl tracking-tight mb-2">Couples Retreat</h3>
+                        <p class="font-source text-xs text-white/60 mb-6 line-clamp-2">Romance at elevation. Intimate balcony, handwoven kilim textiles, and forest canopy views at eye level.</p>
+                        <button class="text-xs uppercase tracking-widest text-[#FDFBF7] border-b border-[#C5A059] pb-1 hover:text-[#C5A059] transition-colors">Explore Suite</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Buffer space for scrolling end -->
+            <div class="snap-center shrink-0 w-[20vw] md:w-[10vw]"></div>
+        </div>
+    </section>
+
+    <!-- Section 3: Experiences (Editorial Tech Split) -->
+    <section class="bg-[#F4EFE6] text-[#2C2C2C]">
+        <!-- Panel 1 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 border-b border-[#E5E0D5]">
+            <div class="order-2 lg:order-1 p-12 md:p-24 flex flex-col justify-center border-r border-[#E5E0D5]">
+                <span class="font-source text-[10px] uppercase tracking-[0.15em] text-[#C5A059] mb-4 block gsap-reveal">Experience</span>
+                <h2 class="font-playfair text-4xl tracking-tight mb-2 gsap-reveal">Cedar Trails</h2>
+                <h3 class="font-source text-sm tracking-widest uppercase text-[#555555] mb-8 gsap-reveal">The forest is yours.</h3>
+                <p class="font-source text-sm text-[#555555] max-w-md leading-relaxed mb-8 gsap-reveal">
+                    Guided hikes to Mushkpuri Top, Miranjani Peak, and Ayubia National Park's ancient forest corridors — packed gourmet desi picnics, local mountaineer guides, and trails that feel unchanged for a thousand years.
+                </p>
+                <button class="self-start text-xs uppercase tracking-widest text-[#1A2F24] border-b border-[#C5A059] pb-1 hover:text-[#6E4B3A] transition-colors gsap-reveal">Explore Trails</button>
+            </div>
+            <div class="order-1 lg:order-2 h-[50vh] lg:h-auto overflow-hidden">
+                <img src="assets/page-06-photo-1464822759023-fed622ff2c3b.jpg" alt="Mountain Trail" class="w-full h-full object-cover parallax-img scale-110">
+            </div>
+        </div>
+
+        <!-- Panel 2 -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 border-b border-[#E5E0D5]">
+            <div class="h-[50vh] lg:h-auto overflow-hidden">
+                <img src="assets/page-07-photo-1544161515-4ab6ce6db874.jpg" alt="Pine Wellness Spa" class="w-full h-full object-cover parallax-img scale-110">
+            </div>
+            <div class="p-12 md:p-24 flex flex-col justify-center">
+                <span class="font-source text-[10px] uppercase tracking-[0.15em] text-[#C5A059] mb-4 block gsap-reveal">Experience</span>
+                <h2 class="font-playfair text-4xl tracking-tight mb-2 gsap-reveal">Pine Wellness</h2>
+                <h3 class="font-source text-sm tracking-widest uppercase text-[#555555] mb-8 gsap-reveal">The forest heals.</h3>
+                <p class="font-source text-sm text-[#555555] max-w-md leading-relaxed mb-8 gsap-reveal">
+                    Herbal hammam treatments infused with local pine resin, wild saffron, and mountain honey — a ritual of restoration wrapped in the scent of the Galiyat forest.
+                </p>
+                <button class="self-start text-xs uppercase tracking-widest text-[#1A2F24] border-b border-[#C5A059] pb-1 hover:text-[#6E4B3A] transition-colors gsap-reveal">Book a Treatment</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Dastarkhwan (Dining - Dark Cinematic) -->
+    <section class="relative bg-[#0A120E] py-32 overflow-hidden flex items-center justify-center min-h-[70vh]">
+        <div class="absolute inset-0 opacity-40">
+            <img src="assets/page-08-photo-1555396273-367ea4eb4db5.jpg" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-[#0A120E]/80"></div>
+        </div>
+        
+        <div class="relative z-10 text-center px-6 max-w-2xl mx-auto gsap-reveal">
+            <span class="font-source text-[10px] uppercase tracking-[0.2em] text-[#C5A059] mb-4 block">Dastarkhwan — The Mountain Table</span>
+            <h2 class="font-playfair text-4xl md:text-5xl lg:text-6xl tracking-tight text-[#FDFBF7] mb-8">Honest Food for the Altitude</h2>
+            <p class="font-source text-sm text-[#E5E0D5] leading-relaxed mb-10">
+                Seasonal menus built around fresh trout, slow-roasted lamb, heirloom vegetables, and wild apricots from the northern valleys. Served by the fire, or on your private terrace.
+            </p>
+            <button class="bg-[#C5A059] text-[#1A2F24] px-8 py-3 rounded-sm text-xs tracking-widest uppercase hover:bg-[#FDFBF7] transition-all duration-300 shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.1),0px_1px_0px_0px_rgba(25,28,33,0.02),0px_0px_0px_1px_rgba(25,28,33,0.08)]">
+                Dine With Us
+            </button>
+        </div>
+
+        <!-- Ticker -->
+        <div class="absolute bottom-0 left-0 w-full bg-[#1A2F24] border-t border-[#C5A059]/20 py-3 overflow-hidden whitespace-nowrap">
+            <div class="inline-block animate-ticker font-source text-[10px] tracking-widest uppercase text-[#C5A059]/80">
+                <span class="mx-4">Fresh Trout</span> · <span class="mx-4">Kashmiri Chai</span> · <span class="mx-4">Heirloom Apricots</span> · <span class="mx-4">Spit-Roasted Lamb</span> · <span class="mx-4">Mountain Honey</span> · <span class="mx-4">Desi Breakfast</span> · <span class="mx-4">Room Service 24hr</span> · 
+                <span class="mx-4">Fresh Trout</span> · <span class="mx-4">Kashmiri Chai</span> · <span class="mx-4">Heirloom Apricots</span> · <span class="mx-4">Spit-Roasted Lamb</span> · <span class="mx-4">Mountain Honey</span> · <span class="mx-4">Desi Breakfast</span> · <span class="mx-4">Room Service 24hr</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Amenities (Clean Paper Minimal) -->
+    <section class="bg-[#FDFBF7] py-24 md:py-32 px-6 md:px-12 border-b border-[#E5E0D5]">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 gsap-reveal">
+                <span class="font-source text-[10px] uppercase tracking-[0.15em] text-[#C5A059] mb-4 block">Curated Comfort</span>
+                <h2 class="font-playfair text-3xl md:text-4xl tracking-tight text-[#1A2F24]">Everything you need.<br>Nothing you don't.</h2>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6">
+                <!-- Amenity Item -->
+                <div class="p-[1px] bg-gradient-to-br from-[#E5E0D5] to-transparent rounded-sm gsap-reveal">
+                    <div class="bg-[#F4EFE6] p-6 h-full flex flex-col items-center justify-center text-center rounded-[1px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.05)]">
+                        <iconify-icon icon="solar:wi-fi-router-linear" class="text-2xl text-[#1A2F24] mb-3"></iconify-icon>
+                        <span class="font-source text-xs tracking-wide text-[#6E4B3A]">High-Speed Wi-Fi</span>
+                    </div>
+                </div>
+                <div class="p-[1px] bg-gradient-to-br from-[#E5E0D5] to-transparent rounded-sm gsap-reveal delay-75">
+                    <div class="bg-[#F4EFE6] p-6 h-full flex flex-col items-center justify-center text-center rounded-[1px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.05)]">
+                        <iconify-icon icon="solar:fire-linear" class="text-2xl text-[#1A2F24] mb-3"></iconify-icon>
+                        <span class="font-source text-xs tracking-wide text-[#6E4B3A]">Fireplaces</span>
+                    </div>
+                </div>
+                <div class="p-[1px] bg-gradient-to-br from-[#E5E0D5] to-transparent rounded-sm gsap-reveal delay-150">
+                    <div class="bg-[#F4EFE6] p-6 h-full flex flex-col items-center justify-center text-center rounded-[1px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.05)]">
+                        <iconify-icon icon="solar:cup-hot-linear" class="text-2xl text-[#1A2F24] mb-3"></iconify-icon>
+                        <span class="font-source text-xs tracking-wide text-[#6E4B3A]">Daily Kashmiri Chai</span>
+                    </div>
+                </div>
+                <div class="p-[1px] bg-gradient-to-br from-[#E5E0D5] to-transparent rounded-sm gsap-reveal delay-200">
+                    <div class="bg-[#F4EFE6] p-6 h-full flex flex-col items-center justify-center text-center rounded-[1px] shadow-[0px_2px_3px_-1px_rgba(0,0,0,0.05)]">
+                        <iconify-icon icon="solar:bell-bing-linear" class="text-2xl text-[#1A2F24] mb-3"></iconify-icon>
+                        <span class="font-source text-xs tracking-wide text-[#6E4B3A]">24hr Room Service</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trust Bar -->
+            <div class="mt-16 flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-60 grayscale gsap-reveal">
+                <div class="flex items-center gap-2">
+                    <iconify-icon icon="solar:star-fall-bold" class="text-[#C5A059]"></iconify-icon>
+                    <span class="font-source text-xs font-medium text-[#2C2C2C]">4.9 / 5 Google</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <iconify-icon icon="solar:star-fall-bold" class="text-[#C5A059]"></iconify-icon>
+                    <span class="font-source text-xs font-medium text-[#2C2C2C]">4.8 / 5 TripAdvisor</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <iconify-icon icon="solar:star-fall-bold" class="text-[#C5A059]"></iconify-icon>
+                    <span class="font-source text-xs font-medium text-[#2C2C2C]">Exceptional Booking.com</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#102018] text-[#E5E0D5] pt-24 pb-12 px-6 md:px-12 relative overflow-hidden">
+        <!-- Watermark -->
+        <iconify-icon icon="solar:tree-bold" class="absolute -right-20 -bottom-20 text-[400px] text-[#1A2F24] opacity-20 pointer-events-none"></iconify-icon>
+        
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 relative z-10 mb-16">
+            <!-- Col 1 -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <iconify-icon icon="solar:tree-linear" class="text-xl text-[#FDFBF7]"></iconify-icon>
+                    <span class="font-playfair text-base tracking-widest text-[#FDFBF7] uppercase">Cedar Lodges</span>
+                </div>
+                <ul class="font-source text-xs tracking-wider space-y-3 text-white/60">
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Suites & Chalets</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Experiences</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Dining</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Amenities</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Book Online</a></li>
+                </ul>
+            </div>
+            
+            <!-- Col 2 -->
+            <div>
+                <h4 class="font-playfair text-sm tracking-widest uppercase text-[#FDFBF7] mb-6">Explore Galiyat</h4>
+                <ul class="font-source text-xs tracking-wider space-y-3 text-white/60">
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Mushkpuri Top</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Ayubia National Park</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Nathia Gali</a></li>
+                    <li><a href="#" class="hover:text-[#C5A059] transition-colors">Changla Gali Bazaar</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3 -->
+            <div>
+                <h4 class="font-playfair text-sm tracking-widest uppercase text-[#FDFBF7] mb-6">Connect</h4>
+                <div class="flex gap-4 mb-6">
+                    <a href="#" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#C5A059] hover:border-[#C5A059] hover:text-[#102018] transition-all">
+                        <iconify-icon icon="solar:camera-linear"></iconify-icon>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#C5A059] hover:border-[#C5A059] hover:text-[#102018] transition-all">
+                        <iconify-icon icon="solar:letter-linear"></iconify-icon>
+                    </a>
+                    <a href="#" class="w-8 h-8 rounded-full border border-white/20 flex items-center justify-center hover:bg-[#C5A059] hover:border-[#C5A059] hover:text-[#102018] transition-all">
+                        <iconify-icon icon="solar:phone-calling-linear"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Col 4 -->
+            <div>
+                <h4 class="font-playfair text-sm tracking-widest uppercase text-[#FDFBF7] mb-6">Newsletter</h4>
+                <p class="font-source text-xs text-white/60 mb-4">Monthly dispatches from the mountain. No noise.</p>
+                <div class="flex border-b border-white/20 pb-2">
+                    <input type="email" placeholder="Email address" class="bg-transparent font-source text-xs w-full outline-none text-[#FDFBF7] placeholder:text-white/30">
+                    <button class="text-xs uppercase tracking-widest text-[#C5A059] hover:text-[#FDFBF7] transition-colors">Join</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 relative z-10">
+            <span class="font-source text-[10px] text-white/40 tracking-wider">© 2025 Cedar Lodges, Changla Gali, Galiyat, Pakistan.</span>
+            <div class="flex gap-4 font-source text-[10px] text-white/40 tracking-wider">
+                <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                <a href="#" class="hover:text-white transition-colors">Terms of Stay</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        const logoTexts = document.querySelectorAll('.logo-text');
+        const navLinks = document.querySelectorAll('.nav-links a');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-[#1A2F24]/90', 'backdrop-blur-md', 'shadow-sm');
+                navbar.classList.remove('border-white/10');
+                navbar.classList.add('border-transparent');
+            } else {
+                navbar.classList.remove('bg-[#1A2F24]/90', 'backdrop-blur-md', 'shadow-sm');
+                navbar.classList.add('border-white/10');
+                navbar.classList.remove('border-transparent');
+            }
+        });
+
+        // GSAP Animations
+        gsap.registerPlugin(ScrollTrigger);
+
+        // Reveal elements on scroll
+        const revealElements = document.querySelectorAll('.gsap-reveal');
+        revealElements.forEach((el) => {
+            gsap.fromTo(el, 
+                { y: 30, opacity: 0 },
+                {
+                    y: 0,
+                    opacity: 1,
+                    duration: 1,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: el,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                }
+            );
+        });
+
+        // Parallax images
+        const parallaxImages = document.querySelectorAll('.parallax-img');
+        parallaxImages.forEach((img) => {
+            gsap.to(img, {
+                yPercent: 15,
+                ease: "none",
+                scrollTrigger: {
+                    trigger: img.parentElement,
+                    start: "top bottom",
+                    end: "bottom top",
+                    scrub: true
+                }
+            });
+        });
+
+        // Three.js Subtle Mist/Dust Background for Section 1
+        const initWebGL = () => {
+            const canvas = document.getElementById('mist-canvas');
+            if (!canvas) return;
+
+            const scene = new THREE.Scene();
+            // Match the ivory background roughly to blend
+            // Make scene transparent
+            
+            const camera = new THREE.PerspectiveCamera(75, canvas.clientWidth / canvas.clientHeight, 0.1, 1000);
+            const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true });
+            
+            renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+            // Particles
+            const particlesGeometry = new THREE.BufferGeometry();
+            const particlesCount = 300; // Sparse
+            const posArray = new Float32Array(particlesCount * 3);
+
+            for(let i = 0; i < particlesCount * 3; i++) {
+                // Spread across a wide area
+                posArray[i] = (Math.random() - 0.5) * 10;
+            }
+
+            particlesGeometry.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+            // Subtle cedar-brown/gold dust
+            const material = new THREE.PointsMaterial({
+                size: 0.015,
+                color: 0x6E4B3A,
+                transparent: true,
+                opacity: 0.3,
+                blending: THREE.AdditiveBlending
+            });
+
+            const particlesMesh = new THREE.Points(particlesGeometry, material);
+            scene.add(particlesMesh);
+
+            camera.position.z = 3;
+
+            // Mouse interaction (subtle)
+            let mouseX = 0;
+            let mouseY = 0;
+            let targetX = 0;
+            let targetY = 0;
+
+            const windowHalfX = window.innerWidth / 2;
+            const windowHalfY = window.innerHeight / 2;
+
+            document.addEventListener('mousemove', (event) => {
+                mouseX = (event.clientX - windowHalfX) * 0.0005;
+                mouseY = (event.clientY - windowHalfY) * 0.0005;
+            });
+
+            // Animation Loop
+            const clock = new THREE.Clock();
+
+            const tick = () => {
+                const elapsedTime = clock.getElapsedTime();
+
+                // Slow rotation
+                particlesMesh.rotation.y = elapsedTime * 0.05;
+                particlesMesh.rotation.x = elapsedTime * 0.02;
+
+                // Subtle wave motion
+                const positions = particlesGeometry.attributes.position.array;
+                for(let i = 0; i < particlesCount; i++) {
+                    const i3 = i * 3;
+                    const x = positions[i3];
+                    // Make them float up slowly and drift
+                    positions[i3 + 1] += Math.sin(elapsedTime * 0.5 + x) * 0.002;
+                }
+                particlesGeometry.attributes.position.needsUpdate = true;
+
+                // Easing mouse parallax
+                targetX = mouseX * 0.5;
+                targetY = mouseY * 0.5;
+                
+                particlesMesh.rotation.y += 0.05 * (targetX - particlesMesh.rotation.y);
+                particlesMesh.rotation.x += 0.05 * (targetY - particlesMesh.rotation.x);
+
+                renderer.render(scene, camera);
+                window.requestAnimationFrame(tick);
+            };
+
+            tick();
+
+            // Resize handler
+            window.addEventListener('resize', () => {
+                camera.aspect = canvas.clientWidth / canvas.clientHeight;
+                camera.updateProjectionMatrix();
+                renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+            });
+        };
+
+        // Initialize WebGL after DOM loads
+        document.addEventListener('DOMContentLoaded', initWebGL);
+    </script>
 </body>
 </html>

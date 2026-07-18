@@ -2,42 +2,39 @@
 
 ## Minimal prompt
 
-Use $number-details to create a polished standalone HTML example that clearly demonstrates the skill.
+Use $number-details to create a responsive standalone HTML design with the same visual confidence, hierarchy, and interaction finish as the included Neuform reference.
 
 ## Recreate the demo
 
-Use $number-details to build a responsive reference demo for this capability:
+Use $number-details to recreate the design quality and behavior of **Cedar Lodges | Where the Mountains Breathe** as a complete responsive HTML document. Treat the included demo/index.html as the visual and interaction reference, not as a loose mood board.
 
-> Add decorative 01, 02, 03 numeric detail markers.
+### Product brief
 
-### Direction
+- Page concept: Cedar Lodges | Where the Mountains Breathe.
+- Purpose: Cedar Lodges Background Effect is designed for delivering a visual treatment or immersive background effect. Key features include atmospheric visuals, motion depth, and flexible presentation layering. It is suitable for visual-first pages, motion studies, and atmospheric hero treatments.
+- Content anchors: Cedar Lodges · "Eight can sleep here but the mountain feels infinite." · Suites in the Sky · Presidential Suite · Forest Chalet.
+- Useful subject tags: background, animated, webgl, threejs, dither, effect.
 
-Show the detail system at multiple scales with consistent alignment and weight.
+### Skill direction
 
-Use an art-directed composition with one clear focal point, restrained supporting copy, and enough surrounding interface to show how the technique behaves in a real product or landing page.
+- Add decorative 01, 02, 03 numeric detail markers.
+- - Number Details: Add decorative 01, 02, 03 numeric detail markers.
 
-### Canonical example
+### Fidelity target
 
-- Show three details numbered 01, 02, and 03.
-- Use the labels Signal, System, and Orbit with consistent glyph framing.
+- Match the reference's composition, information density, type scale, spacing rhythm, surface treatment, color relationships, and motion restraint.
+- Preserve the strongest interaction and animated background behavior instead of replacing it with generic fades or decorative movement.
+- Keep the first screen art-directed, then carry the same design logic through every supporting section.
+- Make the result responsive from mobile to desktop, keyboard accessible, and stable when reduced motion is enabled.
+- Deliver a full index.html. Put page-owned images, video, models, and textures in demo/assets/. External runtime libraries may stay as pinned CDN dependencies when the source relies on them.
 
-### Deliverable
+### Reference snapshot
 
-- Create demo/index.html as a standalone document.
-- Keep CSS and JavaScript inline.
-- Put any required images, fonts, models, textures, or vendor files in demo/assets/.
-- Do not add a framework, package manager, build step, or node_modules.
-- Add controls only when they help inspect or replay the technique.
-
-### Acceptance checks
-
-- Keep the demo responsive from 390px through 1440px.
-- Use semantic HTML, visible focus states, and reduced-motion handling.
-- Keep all HTML, CSS, and JavaScript inside demo/index.html.
-- Use only relative local asset paths.
-- Keep the visual hierarchy obvious without explanatory paragraphs.
-- Use one restrained interaction that supports the design direction.
+- Source: https://neuform.ai/pages/cedar-lodges-where-the-mountains-breathe-6/index.html
+- Neuform rank: #1 for number-details when synced.
+- Popularity: 322 views · 18 favorites · 3 remixes.
+- Ranking rule: views descending, then favorites descending.
 
 ## Remix prompt
 
-Use $number-details and keep the same implementation contract, but change the subject, copy, palette, and content hierarchy. Preserve the core technique, accessibility behavior, responsive rules, and performance constraints demonstrated by the reference.
+Use $number-details and the included Neuform demo as the quality bar, but replace the brand, subject, copy, palette, and content. Preserve the underlying layout logic, signature visual treatment, interaction choreography, responsive behavior, and performance constraints so the remix still clearly demonstrates the skill.

@@ -1,35 +1,361 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Gooey Blob System · Skill Demo</title>
-  <style>:root{--bg:#080a0f;--panel:rgba(18,21,29,.72);--panelStrong:#121620;--ink:#f2f5f7;--muted:#929aa7;--line:rgba(255,255,255,.14);--accent:hsl(197 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Talent Platform</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <style>
+        /* Custom Font Import - Inter */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0A0A0F;
+            overflow-x: hidden;
+        }
+
+        /* Utility for GSAP Split Text Masking */
+        .reveal-wrapper {
+            display: inline-block;
+            overflow: hidden;
+            vertical-align: top;
+            padding-right: 0.25em; /* Space between words */
+            margin-bottom: -0.1em; /* Adjust for line height clipping */
+            padding-bottom: 0.1em;
+        }
+        .reveal-word {
+            display: inline-block;
+            transform: translateY(110%);
+        }
+
+        /* Gradient Border for CTA */
+        .gradient-border-wrapper {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+            padding: 1px;
+            border-radius: 9999px;
+            display: inline-block;
+        }
+
+        /* Hide scrollbar but keep functionality */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Subtle Noise Overlay for premium texture */
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 50;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+        }
+    </style>
 </head>
-<body data-kind="physics" data-skill="gooey-blob-system">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Gooey Blob System</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Gooey Blob System</h1></div>
-      <p>Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter to produce a continuous, organic mass. The forms should visually fuse and separate based on proximity. Focus on filter-driven merging (blur + threshold effect), soft organic boundaries with no hard edges, multiple independent shapes behaving as one system, and smooth continuous motion that feels fluid and cohesive.</p>
-    </header>
-    <section class="showcase" aria-label="Gooey Blob System demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>physics</span></div>
-<div class="simulation">
-  <svg class="goo" viewBox="0 0 800 420" aria-label="Fluid merging shapes">
-    <defs><filter id="goo"><feGaussianBlur in="SourceGraphic" stdDeviation="14" result="blur"/><feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 24 -10" result="goo"/><feBlend in="SourceGraphic" in2="goo"/></filter></defs>
-    <g filter="url(#goo)"><circle cx="310" cy="210" r="92"/><circle class="orb orbA" cx="470" cy="210" r="70"/><circle class="orb orbB" cx="400" cy="125" r="52"/></g>
-  </svg>
-  <button class="reset">Reset study</button>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+<body class="text-white antialiased selection:bg-purple-500/30 min-h-screen relative flex flex-col">
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- SVG Filter Definition for Gooey Blob System -->
+    <svg class="hidden w-0 h-0 absolute">
+        <defs>
+            <filter id="goo" x="-20%" y="-20%" width="140%" height="140%">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="60" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -20" result="goo" />
+                <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Gooey Background System -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none" style="filter: url(#goo);">
+        <!-- Base Dark -->
+        <div class="absolute inset-0 bg-[#0F0D16]"></div>
+        
+        <!-- Animated Blobs -->
+        <div class="blob absolute bg-[#EEDBAC] rounded-full w-[800px] h-[800px] blur-3xl opacity-90 top-[-20%] left-[-10%] mix-blend-normal"></div>
+        <div class="blob absolute bg-[#8B5CF6] rounded-full w-[900px] h-[900px] blur-3xl opacity-80 top-[10%] left-[20%] mix-blend-screen"></div>
+        <div class="blob absolute bg-[#1E1B4B] rounded-full w-[1000px] h-[1000px] blur-3xl opacity-100 bottom-[-30%] right-[-10%] mix-blend-normal"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="w-full relative z-20 flex items-center justify-between px-6 lg:px-12 py-6">
+        <div class="flex items-center gap-2">
+            <iconify-icon icon="solar:widget-add-linear" class="text-gray-900 text-2xl"></iconify-icon>
+            <span class="text-gray-900 font-semibold tracking-tight text-lg">TalentSphere</span>
+        </div>
+        
+        <div class="hidden md:flex items-center gap-8 text-sm text-gray-800">
+            <a href="#" class="hover:text-black transition-colors">Our Network</a>
+            <a href="#" class="hover:text-black transition-colors">Enterprise</a>
+            <a href="#" class="hover:text-black transition-colors">Stories</a>
+            <a href="#" class="hover:text-black transition-colors">Pricing</a>
+        </div>
+
+        <div class="flex items-center gap-6">
+            <a href="#" class="text-sm text-gray-300 hover:text-white transition-colors hidden sm:block">Log In</a>
+            <div class="gradient-border-wrapper">
+                <button class="bg-[#0B0A10] hover:bg-[#151320] transition-colors rounded-full px-5 py-2 text-sm text-white font-medium flex items-center gap-2">
+                    Join Now
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Hero Section -->
+    <main class="flex-grow relative z-10 flex flex-col justify-center px-6 lg:px-12 py-12 lg:py-0">
+        <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
+            
+            <!-- Left Column: Content -->
+            <div class="flex flex-col items-start relative z-20">
+                <h1 class="text-5xl sm:text-6xl lg:text-[4.5rem] leading-[1.05] tracking-tight font-medium max-w-2xl mb-8">
+                    <!-- Split into two color groups based on background contrast -->
+                    <span class="text-gray-900 split-reveal-dark block">Hire Elite</span>
+                    <span class="text-gray-900 split-reveal-dark block">Development Teams</span>
+                    <span class="text-gray-900 split-reveal-dark block">You Assumed Were</span>
+                    <span class="text-gray-900 split-reveal-dark block">Unavailable –</span>
+                    <span class="text-white split-reveal-light block mt-2">Now Ready To</span>
+                    <span class="text-white split-reveal-light block">Deploy Instantly!</span>
+                </h1>
+
+                <div class="gradient-border-wrapper mt-4 group">
+                    <button class="bg-[#0D0B14] group-hover:bg-[#181525] transition-colors rounded-full px-6 py-3 flex items-center gap-3 text-sm text-white font-medium">
+                        Start Building <iconify-icon icon="solar:alt-arrow-right-linear" class="text-lg opacity-70 group-hover:translate-x-1 transition-transform"></iconify-icon>
+                    </button>
+                </div>
+
+                <!-- Floating Cursor Element -->
+                <div class="floating-cursor absolute top-[90%] left-[30%] hidden sm:flex items-center gap-2 pointer-events-none drop-shadow-xl">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="-rotate-12 w-6 h-6 text-[#A78BFA] drop-shadow-lg">
+                        <path d="M4.3314 2.81055L21.3659 10.3703C22.6106 10.9221 22.5186 12.7235 21.2223 13.1517L14.7788 15.28L12.6505 21.7235C12.2223 23.0198 10.4209 23.1118 9.8691 21.8671L2.30932 4.8326C1.73715 3.55169 3.05047 2.23837 4.3314 2.81055Z" fill="currentColor"/>
+                    </svg>
+                    <div class="bg-[#A78BFA] text-white text-xs px-3 py-1.5 rounded-full font-medium shadow-lg">
+                        Sarah
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Column: Visual Graphic -->
+            <div class="relative w-full aspect-square max-w-[600px] mx-auto lg:mr-0 flex items-center justify-center pointer-events-none select-none">
+                
+                <!-- Center Text -->
+                <div class="absolute z-30 text-center">
+                    <div class="text-5xl lg:text-6xl tracking-tight font-medium text-white mb-1">50k+</div>
+                    <div class="text-sm text-gray-300 font-light">Engineers</div>
+                </div>
+
+                <!-- Rings Base -->
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <!-- Ring 1 (Inner) -->
+                    <div class="absolute w-[35%] h-[35%] rounded-full border border-white/10"></div>
+                    <!-- Ring 2 -->
+                    <div class="absolute w-[55%] h-[55%] rounded-full border border-white/[0.07]"></div>
+                    <!-- Ring 3 -->
+                    <div class="absolute w-[75%] h-[75%] rounded-full border border-white/[0.04]"></div>
+                    <!-- Ring 4 (Outer) -->
+                    <div class="absolute w-[95%] h-[95%] rounded-full border border-white/[0.02]"></div>
+                </div>
+
+                <!-- Orbiting Elements Containers -->
+                <!-- Each orbit container rotates, and its inner item counter-rotates to stay upright -->
+                
+                <!-- Orbit Level 1 (Inner) -->
+                <div class="orbit-sys absolute w-[35%] h-[35%] rounded-full z-20" data-duration="25" data-direction="1">
+                    <div class="orbit-item absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full border border-white/20 overflow-hidden shadow-lg">
+                        <img src="assets/page-01-0d868fef-f560-45ca-ab35-5dad4fc29059-3840w.webp" alt="Avatar" class="w-full h-full object-cover object-center" style="transform: scale(1.2) translateY(10%);">
+                    </div>
+                </div>
+
+                <!-- Orbit Level 2 -->
+                <div class="orbit-sys absolute w-[55%] h-[55%] rounded-full z-20 rotate-[45deg]" data-duration="35" data-direction="-1">
+                    <div class="orbit-item absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#12101A] border border-white/10 rounded-2xl w-12 h-12 flex items-center justify-center shadow-2xl relative">
+                        <div class="absolute inset-0 bg-blue-500/30 blur-xl rounded-2xl"></div>
+                        <iconify-icon icon="solar:code-square-linear" class="text-blue-400 text-xl z-10 relative"></iconify-icon>
+                    </div>
+                    
+                    <div class="orbit-item absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-12 h-12 rounded-full border border-white/20 overflow-hidden shadow-lg">
+                        <img src="assets/page-02-3186f9ea-5f5a-49f7-8fcf-568ad52f515e-3840w.webp" alt="Avatar" class="w-full h-full object-cover object-center">
+                    </div>
+                </div>
+
+                <!-- Orbit Level 3 -->
+                <div class="orbit-sys absolute w-[75%] h-[75%] rounded-full z-20 rotate-[120deg]" data-duration="45" data-direction="1">
+                    <div class="orbit-item absolute right-0 top-1/2 translate-x-1/2 -translate-y-1/2 w-11 h-11 rounded-full border border-white/20 overflow-hidden shadow-lg">
+                        <img src="assets/page-03-2f563338-39fa-47ea-9761-658d4f3f84db-1600w.jpg" alt="Avatar" class="w-full h-full object-cover object-center" style="transform: scale(1.5) translateY(5%);">
+                    </div>
+
+                    <div class="orbit-item absolute left-0 top-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#12101A] border border-white/10 rounded-2xl w-14 h-14 flex items-center justify-center shadow-2xl relative">
+                        <div class="absolute inset-0 bg-orange-500/20 blur-xl rounded-2xl"></div>
+                        <iconify-icon icon="solar:shield-check-linear" class="text-orange-400 text-2xl z-10 relative"></iconify-icon>
+                    </div>
+                </div>
+
+                <!-- Orbit Level 4 (Outer) -->
+                <div class="orbit-sys absolute w-[95%] h-[95%] rounded-full z-20 rotate-[-30deg]" data-duration="60" data-direction="-1">
+                    <div class="orbit-item absolute top-[15%] right-[10%] w-14 h-14 rounded-full border border-white/20 overflow-hidden shadow-lg">
+                        <img src="assets/page-04-65695f80-23f9-46ee-8487-cbb6c93cc48b-3840w.webp" alt="Avatar" class="w-full h-full object-cover object-center">
+                    </div>
+
+                    <div class="orbit-item absolute bottom-[20%] left-[5%] bg-[#12101A] border border-white/10 rounded-2xl w-12 h-12 flex items-center justify-center shadow-2xl relative">
+                        <div class="absolute inset-0 bg-pink-500/20 blur-xl rounded-2xl"></div>
+                        <iconify-icon icon="solar:rocket-linear" class="text-pink-400 text-xl z-10 relative"></iconify-icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer Logos -->
+    <div class="w-full relative z-20 py-8 lg:py-12 mt-auto">
+        <div class="max-w-6xl mx-auto px-6 flex flex-wrap justify-center lg:justify-between items-center gap-12 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+            <div class="flex items-center gap-2 text-white font-medium text-lg tracking-tight">
+                <iconify-icon icon="solar:layers-minimalistic-linear" class="text-2xl"></iconify-icon> Structura
+            </div>
+            <div class="flex items-center gap-2 text-white font-medium text-lg tracking-tight">
+                <iconify-icon icon="solar:server-square-linear" class="text-2xl"></iconify-icon> NODE.SYS
+            </div>
+            <div class="flex items-center gap-2 text-white font-medium text-lg tracking-tight">
+                <iconify-icon icon="solar:cpu-bolt-linear" class="text-2xl"></iconify-icon> CoreLogic
+            </div>
+            <div class="flex items-center gap-2 text-white font-medium text-lg tracking-tight">
+                <iconify-icon icon="solar:cloud-storage-linear" class="text-2xl"></iconify-icon> SkyVault
+            </div>
+            <div class="flex items-center gap-2 text-white font-medium text-lg tracking-tight hidden md:flex">
+                <iconify-icon icon="solar:database-linear" class="text-2xl"></iconify-icon> Databridge
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Register GSAP ScrollTrigger
+        gsap.registerPlugin(ScrollTrigger);
+
+        // --- Custom Text Splitter for Masked Reveal ---
+        function splitTextForReveal(selector) {
+            document.querySelectorAll(selector).forEach(element => {
+                const text = element.innerText;
+                const words = text.split(' ');
+                element.innerHTML = '';
+                
+                words.forEach((word, index) => {
+                    const wrapper = document.createElement('span');
+                    wrapper.className = 'reveal-wrapper';
+                    
+                    const inner = document.createElement('span');
+                    inner.className = 'reveal-word';
+                    // Preserve spacing manually
+                    inner.innerHTML = word + (index < words.length - 1 ? '&nbsp;' : '');
+                    
+                    wrapper.appendChild(inner);
+                    element.appendChild(wrapper);
+                });
+            });
+        }
+
+        // Apply splitting to the dark and light text groups
+        splitTextForReveal('.split-reveal-dark');
+        splitTextForReveal('.split-reveal-light');
+
+        // --- GSAP Animations ---
+
+        // Initial Load Timeline
+        const tl = gsap.timeline();
+
+        // Reveal Dark Text (Top part)
+        tl.to('.split-reveal-dark .reveal-word', {
+            y: '0%',
+            duration: 0.8,
+            stagger: 0.04,
+            ease: 'power4.out'
+        }, 0.2);
+
+        // Reveal Light Text (Bottom part)
+        tl.to('.split-reveal-light .reveal-word', {
+            y: '0%',
+            duration: 0.8,
+            stagger: 0.04,
+            ease: 'power4.out'
+        }, 0.5);
+
+        // Fade in button
+        tl.from('button', {
+            y: 20,
+            opacity: 0,
+            duration: 0.8,
+            ease: 'power3.out'
+        }, 0.8);
+
+        // Fade in right side graphic
+        tl.from('.orbit-sys, .center-text', {
+            opacity: 0,
+            scale: 0.9,
+            duration: 1.2,
+            stagger: 0.1,
+            ease: 'power3.out'
+        }, 0.5);
+
+        // --- Orbital Motion Logic ---
+        document.querySelectorAll('.orbit-sys').forEach((sys) => {
+            const duration = parseFloat(sys.dataset.duration);
+            const direction = parseFloat(sys.dataset.direction);
+            const items = sys.querySelectorAll('.orbit-item');
+
+            // Rotate the main container
+            gsap.to(sys, {
+                rotation: 360 * direction,
+                duration: duration,
+                repeat: -1,
+                ease: 'none'
+            });
+
+            // Counter-rotate items to keep them upright
+            items.forEach((item) => {
+                gsap.to(item, {
+                    rotation: -360 * direction,
+                    duration: duration,
+                    repeat: -1,
+                    ease: 'none'
+                });
+            });
+        });
+
+        // --- Floating Cursor Animation ---
+        gsap.to('.floating-cursor', {
+            y: -15,
+            x: 10,
+            rotation: 5,
+            duration: 3,
+            repeat: -1,
+            yoyo: true,
+            ease: 'sine.inOut'
+        });
+
+        // --- Gooey Blob Background Motion ---
+        const blobs = document.querySelectorAll('.blob');
+        
+        blobs.forEach((blob, i) => {
+            gsap.to(blob, {
+                x: () => Math.random() * 200 - 100,
+                y: () => Math.random() * 200 - 100,
+                duration: 10 + i * 2,
+                repeat: -1,
+                yoyo: true,
+                ease: 'sine.inOut'
+            });
+        });
+
+    </script>
 </body>
 </html>

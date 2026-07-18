@@ -1,0 +1,49 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:35.585Z",
+  "skill": {
+    "id": "agency-grid-layout-minimal",
+    "label": "Agency Grid Layout Minimal",
+    "usage_count": 657,
+    "url": "https://neuform.ai/skill/agency-grid-layout-minimal"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "c93f68fa-ad9d-4ef4-bc03-d5385c8ec71c",
+    "slug": "freelance-designer-growth-partner",
+    "title": "Freelance Designer & Growth Partner",
+    "url": "https://neuform.ai/pages/freelance-designer-growth-partner/index.html",
+    "view_count": 731,
+    "favorite_count": 21,
+    "remix_count": 14
+  },
+  "html": {
+    "original_sha256": "429704fb6d8f7ef8456dd7b51efc89d5768184c644e5ba3727554b97d5be2d03",
+    "bundled_sha256": "c5237d3f24743913ff89ba2f5d79bbb4ad32346017fcd707f34302d1e1110d76",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 282854,
+        "file": "assets/page-01-0d868fef-f560-45ca-ab35-5dad4fc29059-3840w.webp",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/0d868fef-f560-45ca-ab35-5dad4fc29059_3840w.webp"
+      }
+    ],
+    "skipped": []
+  }
+}

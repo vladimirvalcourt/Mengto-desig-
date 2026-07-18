@@ -1,33 +1,386 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Progressive Blur · Skill Demo</title>
-  <style>:root{--bg:#080a0f;--panel:rgba(18,21,29,.72);--panelStrong:#121620;--ink:#f2f5f7;--muted:#929aa7;--line:rgba(255,255,255,.14);--accent:hsl(313 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-.showcase::after{position:absolute;right:0;bottom:0;left:0;height:42%;background:linear-gradient(transparent,var(--panelStrong));backdrop-filter:blur(10px);-webkit-mask-image:linear-gradient(transparent,#000);mask-image:linear-gradient(transparent,#000);content:"";pointer-events:none}
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLABS | Performance Hydration Collection</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        /* Progressive Blur - Bottom Fade */
+        .gradient-blur {
+            position: fixed;
+            z-index: 40;
+            inset: auto 0 0 0;
+            height: 10vh;
+            pointer-events: none;
+        }
+        .gradient-blur > div,
+        .gradient-blur::before,
+        .gradient-blur::after {
+            position: absolute;
+            inset: 0;
+        }
+        .gradient-blur::before {
+            content: "";
+            z-index: 1;
+            backdrop-filter: blur(0.5px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 0) 37.5%);
+        }
+        .gradient-blur > div:nth-of-type(1) {
+            z-index: 2;
+            backdrop-filter: blur(1px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 12.5%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 0) 50%);
+        }
+        .gradient-blur > div:nth-of-type(2) {
+            z-index: 3;
+            backdrop-filter: blur(2px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 1) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0) 62.5%);
+        }
+        .gradient-blur > div:nth-of-type(3) {
+            z-index: 4;
+            backdrop-filter: blur(4px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 37.5%, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 0) 75%);
+        }
+        .gradient-blur > div:nth-of-type(4) {
+            z-index: 5;
+            backdrop-filter: blur(8px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 0) 87.5%);
+        }
+        .gradient-blur > div:nth-of-type(5) {
+            z-index: 6;
+            backdrop-filter: blur(16px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 62.5%, rgba(0, 0, 0, 1) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 0) 100%);
+        }
+        .gradient-blur > div:nth-of-type(6) {
+            z-index: 7;
+            backdrop-filter: blur(32px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 1) 87.5%, rgba(0, 0, 0, 1) 100%);
+        }
+        .gradient-blur::after {
+            content: "";
+            z-index: 8;
+            backdrop-filter: blur(64px);
+            mask: linear-gradient(to bottom, rgba(0, 0, 0, 0) 87.5%, rgba(0, 0, 0, 1) 100%);
+        }
+
+        /* Hide Scrollbar for Horizontal Scrollers */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
 </head>
-<body data-kind="surface" data-skill="progressive-blur">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Progressive Blur</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Progressive Blur</h1></div>
-      <p>Create a layered CSS progressive blur (top or bottom) using multiple backdrop-filter masks for depth and softness. Use when asked for “progressive blur”, “gradient blur overlay”, or stepped blur masks that fade from an edge of the viewport.</p>
+<body class="antialiased selection:bg-black selection:text-white pb-24 bg-[#FAFAF7] text-black">
+
+    <!-- Progressive Bottom Blur -->
+    <div class="gradient-blur">
+        <div></div><div></div><div></div><div></div><div></div><div></div>
+    </div>
+
+    <!-- Announcement Bar -->
+    <div class="bg-black text-white text-[11px] font-semibold text-center py-2.5 uppercase tracking-widest">
+        Free Shipping over €50 &nbsp;|&nbsp; Subscribe & Save &nbsp;|&nbsp; Backed by Science
+    </div>
+
+    <!-- Navbar -->
+    <header class="flex items-center justify-between px-6 lg:px-10 py-5 border-b border-black/5 bg-[#FAFAF7] sticky top-0 z-50">
+        <!-- Left Nav -->
+        <nav class="hidden lg:flex space-x-8 text-xs font-semibold uppercase tracking-wide">
+            <a href="#" class="hover:text-gray-500 transition-colors">Shop</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">Science</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">Fuel Club</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">Stores</a>
+            <a href="#" class="hover:text-gray-500 transition-colors">Subscription</a>
+        </nav>
+        
+        <!-- Mobile Menu Icon -->
+        <div class="lg:hidden flex items-center">
+            <iconify-icon icon="solar:hamburger-menu-linear" width="28" stroke-width="1.5" class="cursor-pointer"></iconify-icon>
+        </div>
+
+        <!-- Center Logo -->
+        <div class="text-3xl font-bold tracking-tighter uppercase absolute left-1/2 -translate-x-1/2">
+            GOLABS
+        </div>
+
+        <!-- Right Icons -->
+        <div class="flex items-center space-x-6">
+            <span class="text-xs font-semibold uppercase hidden sm:block hover:text-gray-500 cursor-pointer transition-colors">EN/€</span>
+            <iconify-icon icon="solar:user-linear" width="24" stroke-width="1.5" class="cursor-pointer hover:text-gray-500 transition-colors"></iconify-icon>
+            <iconify-icon icon="solar:magnifer-linear" width="24" stroke-width="1.5" class="cursor-pointer hover:text-gray-500 transition-colors"></iconify-icon>
+            <iconify-icon icon="solar:cart-large-minimalistic-linear" width="24" stroke-width="1.5" class="cursor-pointer hover:text-gray-500 transition-colors"></iconify-icon>
+        </div>
     </header>
-    <section class="showcase" aria-label="Progressive Blur demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>surface</span></div>
-<div class="surfaceStudy">
-  <article class="surfaceHero"><span>Primary surface</span><strong>Depth without noise.</strong></article>
-  <article class="surfaceCard"><span>Compact card</span><b>24</b><small>Active studies</small></article>
-  <button class="surfaceControl">Inspect detail</button>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+
+    <!-- Page Title / Masked Reveal Section -->
+    <div class="px-6 py-16 md:py-24 flex flex-col items-center justify-center text-center overflow-hidden">
+        <h1 class="font-['Bebas_Neue'] text-7xl md:text-9xl tracking-tight uppercase leading-[0.85] flex flex-col items-center">
+            <span class="block overflow-hidden pb-1"><span class="block gs-reveal-word translate-y-full">Complete</span></span>
+            <span class="block overflow-hidden pb-1"><span class="block gs-reveal-word translate-y-full">Hydration System</span></span>
+        </h1>
+        <p class="mt-6 text-sm md:text-base font-medium text-gray-500 max-w-md mx-auto tracking-wide gs-reveal-fade opacity-0 translate-y-4">
+            Engineered for performance, recovery, and daily energy.
+        </p>
+    </div>
+
+    <!-- Category Tabs Segmented Nav -->
+    <div class="flex items-center justify-center pb-8 px-6">
+        <div class="inline-flex items-center gap-1 bg-black/5 p-1 rounded-full overflow-x-auto max-w-full no-scrollbar">
+            <button class="bg-black text-white px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide shrink-0 shadow-sm">Sachets</button>
+            <button class="text-black hover:bg-black/10 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide shrink-0 transition-colors">Cans</button>
+            <button class="text-black hover:bg-black/10 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide shrink-0 transition-colors">Bundles</button>
+            <button class="text-black hover:bg-black/10 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide shrink-0 transition-colors">Gels</button>
+            <button class="text-black hover:bg-black/10 px-6 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wide shrink-0 transition-colors">Fuel</button>
+        </div>
+    </div>
+
+    <!-- Collection Toolbar -->
+    <div class="border-b border-black/10 bg-[#FAFAF7]">
+        <div class="flex items-center justify-between px-6 lg:px-10 h-[64px] max-w-[1920px] mx-auto">
+            <button class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide hover:opacity-60 transition-opacity">
+                <iconify-icon icon="solar:filter-linear" width="18" stroke-width="1.5"></iconify-icon> Filters
+            </button>
+            <button class="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide hover:opacity-60 transition-opacity">
+                Sort By <iconify-icon icon="solar:alt-arrow-down-linear" width="18" stroke-width="1.5"></iconify-icon>
+            </button>
+        </div>
+    </div>
+
+    <!-- Product Grid -->
+    <main class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 px-6 lg:px-10 py-12 w-full max-w-[1920px] mx-auto">
+        
+        <!-- Product 1 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <!-- Image Area -->
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <!-- Badges -->
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Subscribe</span>
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Bestseller</span>
+                </div>
+                <!-- Pack Size -->
+                <div class="absolute top-3 right-3 flex flex-col items-center leading-none z-20 text-black">
+                    <span class="text-sm font-semibold">30</span>
+                    <span class="text-xs uppercase tracking-widest mt-0.5 scale-75 origin-top">Pack</span>
+                </div>
+                <!-- Hover Images -->
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-01-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Daily Hydration Sachets">
+                    <img src="assets/page-02-0d868fef-f560-45ca-ab35-5dad4fc29059-3840w.webp" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Daily Hydration Sachets Lifestyle">
+                </div>
+            </div>
+            <!-- Details Area -->
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Daily Hydration Sachets - Citrus</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Core hydration electrolyte sachets designed to support daily hydration, energy and mineral balance.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €34.99
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 2 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Bestseller</span>
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Subscribe</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-03-005600e5-f6ab-4e59-bc86-eaeb02797dfa-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Starter Hydration System">
+                    <img src="assets/page-04-3186f9ea-5f5a-49f7-8fcf-568ad52f515e-3840w.webp" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Starter Hydration System Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Starter Hydration System</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">The complete introduction to the GOLABS hydration system with sachets, cans, and a training bottle.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €65.00
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 3 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Bestseller</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-05-7f78131e-65e9-49b2-aa1f-ccc33e28df9f-1600w.webp" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Sleep Hydration Sachets">
+                    <img src="assets/page-06-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-1600w.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Sleep Hydration Sachets Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Sleep Hydration Sachets</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Overnight electrolyte blend with sleep-supporting ingredients designed for recovery and restoration.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €34.99
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 4 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Bestseller</span>
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Subscribe</span>
+                </div>
+                <div class="absolute top-3 right-3 flex flex-col items-center leading-none z-20 text-black">
+                    <span class="text-sm font-semibold">12</span>
+                    <span class="text-xs uppercase tracking-widest mt-0.5 scale-75 origin-top">Pack</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-07-d14dc069-558a-4c51-8aad-5cc237f9b61d-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Core Hydration Drink">
+                    <img src="assets/page-08-eca707cc-a5b7-439a-b4fd-247f6106c2e1-1600w.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Core Hydration Drink Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Core Hydration Drink - Citrus</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Ready-to-drink citrus electrolytes with sodium, potassium and magnesium for daily performance.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €24.00
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 5 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Subscribe</span>
+                </div>
+                <div class="absolute top-3 right-3 flex flex-col items-center leading-none z-20 text-black">
+                    <span class="text-sm font-semibold">12</span>
+                    <span class="text-xs uppercase tracking-widest mt-0.5 scale-75 origin-top">Pack</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-09-4734259a-bad7-422f-981e-ce01e79184f2-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Core Hydration Drink Berry">
+                    <img src="assets/page-10-77415a2e-dcbc-4748-a29d-fced4821881a-1600w.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Core Hydration Drink Berry Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Core Hydration Drink - Berry</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Ready-to-drink berry electrolytes for hydration, training and everyday energy.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €24.00
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 6 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">Bestseller</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-11-5ee0a38a-b5d3-4531-8793-98beed4af162-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Electrolyte Bundle">
+                    <img src="assets/page-12-65695f80-23f9-46ee-8487-cbb6c93cc48b-3840w.webp" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Electrolyte Bundle Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Electrolyte Bundle</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">A curated performance hydration bundle made for training, recovery and daily energy.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €49.99
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 7 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">New</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-13-fb6415fd-bf4d-4ccf-8e9d-7ab445e99207-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Fuel Bar">
+                    <img src="assets/page-14-c92852bb-a510-405a-85ab-ffa0fde136a4-1600w.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Fuel Bar Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Fuel Bar</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Functional performance fuel bar for athletes, creators and high-output days.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €19.99
+                </button>
+            </div>
+        </article>
+
+        <!-- Product 8 -->
+        <article class="group relative flex flex-col bg-white rounded-[20px] p-2">
+            <div class="relative w-full aspect-[4/5] bg-[#F4F4F0] rounded-[14px] overflow-hidden">
+                <div class="absolute top-3 left-3 flex flex-col gap-1.5 z-20">
+                    <span class="bg-black text-white text-xs px-2.5 py-1 font-semibold tracking-wider uppercase rounded-sm leading-none">New</span>
+                </div>
+                <div class="absolute inset-0 transition-transform duration-700 ease-[cubic-bezier(0.25,1,0.5,1)] group-hover:scale-[1.04]">
+                    <img src="assets/page-15-e534354d-c5f2-4399-a1d9-2f50338e8c47-1600w.jpg" class="absolute inset-0 w-full h-full object-contain p-6 transition-opacity duration-500 opacity-100 group-hover:opacity-0" alt="Base Gel">
+                    <img src="assets/page-16-2f563338-39fa-47ea-9761-658d4f3f84db-1600w.jpg" class="absolute inset-0 w-full h-full object-cover transition-opacity duration-500 opacity-0 group-hover:opacity-100" alt="Base Gel Lifestyle">
+                </div>
+            </div>
+            <div class="flex flex-col flex-grow pt-5 pb-3 px-3">
+                <h2 class="text-base font-semibold tracking-tight text-black mb-1">Base Gel</h2>
+                <p class="text-sm font-normal text-gray-500 line-clamp-2 mb-5 leading-relaxed">Clean energy gel made for movement, endurance and training sessions.</p>
+                
+                <button class="mt-auto w-full h-[44px] rounded-full border border-black bg-white text-black text-xs font-semibold uppercase tracking-wider flex items-center justify-center transition-all duration-300 group-hover:bg-black group-hover:text-white transform group-hover:scale-[1.01]">
+                    Add to Cart &mdash; €21.99
+                </button>
+            </div>
+        </article>
+
+    </main>
+
+    <!-- Init GSAP Animations -->
+    <script>
+        document.addEventListener("DOMContentLoaded", (event) => {
+            gsap.registerPlugin(ScrollTrigger);
+            
+            // Masked word reveal for the header title
+            gsap.to(".gs-reveal-word", {
+                y: "0%",
+                duration: 1.2,
+                stagger: 0.15,
+                ease: "power4.out",
+                delay: 0.1
+            });
+
+            // Subtle fade up for the subtitle
+            gsap.to(".gs-reveal-fade", {
+                opacity: 1,
+                y: 0,
+                duration: 1,
+                ease: "power3.out",
+                delay: 0.5
+            });
+        });
+    </script>
 </body>
 </html>

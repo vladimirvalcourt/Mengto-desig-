@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:45.330Z",
+  "skill": {
+    "id": "corner-lasers",
+    "label": "Corner Lasers",
+    "usage_count": 146,
+    "url": "https://neuform.ai/skill/corner-lasers"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "c2cb8c46-5968-4a68-a17c-82bffe1b1bdf",
+    "slug": "aura-superintelligence-for-biology",
+    "title": "Aura | Superintelligence for Biology",
+    "url": "https://neuform.ai/pages/aura-superintelligence-for-biology/index.html",
+    "view_count": 278,
+    "favorite_count": 15,
+    "remix_count": 7
+  },
+  "html": {
+    "original_sha256": "f2cac6fb35f239c6b20203dcc6979f41237f84ad0b912e6eca7db94a67a0e05a",
+    "bundled_sha256": "85d04650b5e43ee34ea6d0dc01029585384b212bb0de4cde504de11ed91ea65f",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 76549,
+        "file": "assets/page-01-2f563338-39fa-47ea-9761-658d4f3f84db-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2f563338-39fa-47ea-9761-658d4f3f84db_800w.jpg"
+      },
+      {
+        "bytes": 17835,
+        "file": "assets/page-02-fa51902b-c2a4-4c33-a96e-a8f1ef67edc6-800w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fa51902b-c2a4-4c33-a96e-a8f1ef67edc6_800w.jpg"
+      },
+      {
+        "bytes": 989406,
+        "file": "assets/page-03-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/724142aa-44a6-48d3-9cf3-761e00d05b78_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

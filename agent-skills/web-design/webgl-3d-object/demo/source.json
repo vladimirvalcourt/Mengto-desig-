@@ -1,0 +1,70 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:41:09.677Z",
+  "skill": {
+    "id": "webgl-3d-object",
+    "label": "WebGL 3D Object",
+    "usage_count": 528,
+    "url": "https://neuform.ai/skill/webgl-3d-object"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "1db44695-2581-463a-9950-ed804447cb81",
+    "slug": "pulsoapps-tu-app-lista-en-5-d-as-3",
+    "title": "PulsoApps | Tu app lista en 5 días.",
+    "url": "https://neuform.ai/pages/pulsoapps-tu-app-lista-en-5-d-as-3/index.html",
+    "view_count": 405,
+    "favorite_count": 20,
+    "remix_count": 10
+  },
+  "html": {
+    "original_sha256": "dbf4e385163657aa7647902679ea45fb3bdce587c79d296a0fa11748e955107a",
+    "bundled_sha256": "87659d324954448f59202e837e471a1655db8237a4500e60029614d633104a72",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 44753,
+        "file": "assets/page-01-4734259a-bad7-422f-981e-ce01e79184f2-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4734259a-bad7-422f-981e-ce01e79184f2_1600w.jpg"
+      },
+      {
+        "bytes": 989406,
+        "file": "assets/page-02-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/724142aa-44a6-48d3-9cf3-761e00d05b78_1600w.jpg"
+      },
+      {
+        "bytes": 47486,
+        "file": "assets/page-03-fa51902b-c2a4-4c33-a96e-a8f1ef67edc6-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fa51902b-c2a4-4c33-a96e-a8f1ef67edc6_1600w.jpg"
+      },
+      {
+        "bytes": 728581,
+        "file": "assets/page-04-005600e5-f6ab-4e59-bc86-eaeb02797dfa-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/005600e5-f6ab-4e59-bc86-eaeb02797dfa_1600w.jpg"
+      },
+      {
+        "bytes": 531939,
+        "file": "assets/page-05-5ee0a38a-b5d3-4531-8793-98beed4af162-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/5ee0a38a-b5d3-4531-8793-98beed4af162_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

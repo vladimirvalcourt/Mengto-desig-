@@ -2,42 +2,39 @@
 
 ## Minimal prompt
 
-Use $gooey-blob-system to create a polished standalone HTML example that clearly demonstrates the skill.
+Use $gooey-blob-system to create a responsive standalone HTML design with the same visual confidence, hierarchy, and interaction finish as the included Neuform reference.
 
 ## Recreate the demo
 
-Use $gooey-blob-system to build a responsive reference demo for this capability:
+Use $gooey-blob-system to recreate the design quality and behavior of **Modern Talent Platform** as a complete responsive HTML document. Treat the included demo/index.html as the visual and interaction reference, not as a loose mood board.
 
-> Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter to produce a continuous, organic mass. The forms should visually fuse and separate based on proximity. Focus on filter-driven merging (blur + threshold effect), soft organic boundaries with no hard edges, multiple independent shapes behaving as one system, and smooth continuous motion that feels fluid and cohesive.
+### Product brief
 
-### Direction
+- Page concept: Modern Talent Platform.
+- Purpose: Modern Talent Pricing Section is designed for comparing plans and supporting conversion decisions. Key features include plan comparison blocks and conversion-oriented actions. It is suitable for subscription pricing pages and plan comparison experiences.
+- Content anchors: Hire Elite Development Teams You Assumed Were Unavailable – Now Ready To Deploy Instantly!.
+- Useful subject tags: pricing, section, animated, cta, billing.
 
-Make the central scene visibly responsive, fluid, and continuously simulated.
+### Skill direction
 
-Use an art-directed composition with one clear focal point, restrained supporting copy, and enough surrounding interface to show how the technique behaves in a real product or landing page.
+- Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter to produce a continuous, organic mass. The forms should visually fuse and separate based on proximity. Focus on filter-driven merging (blur + threshold effect), soft organic boundaries with no hard edges, multiple independent shapes behaving as one system, and smooth continuous motion that feels fluid and cohesive.
+- - Gooey Blob System: Create a gooey blob system using SVG filters where multiple shapes merge into a single fluid form. Use overlapping circles combined with a Gaussian blur and color matrix filter to produce a continuous, organic mass. The forms should visually fuse and separate based on proximity. Focus on filter-driven merging (blur + threshold effect), soft organic boundaries with no hard edges, multiple independent shapes behaving as one system, and smooth continuous motion that feels fluid and cohesive.
 
-### Canonical example
+### Fidelity target
 
-- Merge three animated circles with an SVG blur-and-threshold filter.
-- Include a reset control and keep the fluid mass contained inside the stage.
+- Match the reference's composition, information density, type scale, spacing rhythm, surface treatment, color relationships, and motion restraint.
+- Preserve the strongest interaction and animated background behavior instead of replacing it with generic fades or decorative movement.
+- Keep the first screen art-directed, then carry the same design logic through every supporting section.
+- Make the result responsive from mobile to desktop, keyboard accessible, and stable when reduced motion is enabled.
+- Deliver a full index.html. Put page-owned images, video, models, and textures in demo/assets/. External runtime libraries may stay as pinned CDN dependencies when the source relies on them.
 
-### Deliverable
+### Reference snapshot
 
-- Create demo/index.html as a standalone document.
-- Keep CSS and JavaScript inline.
-- Put any required images, fonts, models, textures, or vendor files in demo/assets/.
-- Do not add a framework, package manager, build step, or node_modules.
-- Add controls only when they help inspect or replay the technique.
-
-### Acceptance checks
-
-- Keep the demo responsive from 390px through 1440px.
-- Use semantic HTML, visible focus states, and reduced-motion handling.
-- Keep all HTML, CSS, and JavaScript inside demo/index.html.
-- Use only relative local asset paths.
-- Keep the simulation contained and provide a reset control.
-- Avoid trapping pointer or keyboard input.
+- Source: https://neuform.ai/pages/modern-talent-platform/index.html
+- Neuform rank: #1 for gooey-blob-system when synced.
+- Popularity: 170 views · 10 favorites · 2 remixes.
+- Ranking rule: views descending, then favorites descending.
 
 ## Remix prompt
 
-Use $gooey-blob-system and keep the same implementation contract, but change the subject, copy, palette, and content hierarchy. Preserve the core technique, accessibility behavior, responsive rules, and performance constraints demonstrated by the reference.
+Use $gooey-blob-system and the included Neuform demo as the quality bar, but replace the brand, subject, copy, palette, and content. Preserve the underlying layout logic, signature visual treatment, interaction choreography, responsive behavior, and performance constraints so the remix still clearly demonstrates the skill.

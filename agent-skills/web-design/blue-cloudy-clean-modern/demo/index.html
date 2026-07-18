@@ -1,32 +1,351 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Blue Cloudy Clean Modern · Skill Demo</title>
-  <style>:root{--bg:#ece9e2;--panel:rgba(255,255,255,.68);--panelStrong:#f8f6f1;--ink:#171917;--muted:#686b66;--line:rgba(23,25,23,.16);--accent:#5d8dff;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
-.showcase{background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:48px 48px}
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Platform Capabilities</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500&display=swap" rel="stylesheet">
 </head>
-<body data-kind="layout" data-skill="blue-cloudy-clean-modern">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Blue Cloudy Clean Modern</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Blue Cloudy Clean Modern</h1></div>
-      <p>Create a clean modern design system with a luminous blue sky atmosphere, soft drifting cloud light, minimal white framing, and serene premium typography.</p>
-    </header>
-    <section class="showcase" aria-label="Blue Cloudy Clean Modern demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>layout</span></div>
-<div class="layoutStudy">
-  <div class="layoutHero"><span>Studio system 04</span><h2>Blue Cloudy Clean Modern</h2><p>Structure creates the atmosphere before decoration begins.</p></div>
-  <div class="layoutCards"><article><b>01</b><span>Frame</span></article><article><b>02</b><span>Rhythm</span></article><article><b>03</b><span>Signal</span></article></div>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+<body class="bg-gradient-to-b from-[#0a2342] via-[#1a4b82] to-[#4682b4] relative min-h-screen flex flex-col overflow-x-hidden text-white selection:bg-white/20" style="font-family: 'Inter', sans-serif;">
+
+    <!-- Ambient Cloud Lights Background -->
+    <div id="cloud-1" class="fixed top-[-10%] left-[-20%] w-[80vw] h-[80vw] pointer-events-none mix-blend-screen z-0" style="background: radial-gradient(circle, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0) 60%);"></div>
+    <div id="cloud-2" class="fixed bottom-[-10%] right-[-10%] w-[70vw] h-[70vw] pointer-events-none mix-blend-screen z-0" style="background: radial-gradient(circle, rgba(160,200,255,0.2) 0%, rgba(255,255,255,0) 60%);"></div>
+    <div id="cloud-3" class="fixed top-[30%] left-[30%] w-[90vw] h-[60vw] pointer-events-none mix-blend-screen z-0" style="background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);"></div>
+
+    <!-- Structured Content Shell -->
+    <div class="relative w-full max-w-[1200px] mx-auto min-h-screen flex flex-col border-x border-white/10 px-4 md:px-8 lg:px-12 z-10 pt-4 pb-12">
+        
+        <!-- Tiny Corner Framing Markers -->
+        <div class="absolute top-0 left-[-2.5px] w-[4px] h-[4px] bg-white/40"></div>
+        <div class="absolute top-0 right-[-2.5px] w-[4px] h-[4px] bg-white/40"></div>
+        <div class="absolute bottom-0 left-[-2.5px] w-[4px] h-[4px] bg-white/40"></div>
+        <div class="absolute bottom-0 right-[-2.5px] w-[4px] h-[4px] bg-white/40"></div>
+
+        <!-- Header Section -->
+        <header class="w-full mb-10 flex flex-col md:flex-row md:items-end justify-between gap-8 border-b border-white/10 pb-8">
+            <div class="flex flex-col gap-6">
+                <!-- Brand -->
+                <div class="flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-white/10 backdrop-blur-md border border-white/20 flex items-center justify-center text-white shadow-[0_4px_12px_rgba(255,255,255,0.05)]">
+                        <iconify-icon icon="solar:box-minimalistic-linear" width="22" stroke-width="1.5"></iconify-icon>
+                    </div>
+                    <span class="text-xl font-medium text-white tracking-tight">Nexus</span>
+                </div>
+                
+                <!-- Section Context -->
+                <div>
+                    <!-- Context Pill -->
+                    <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-4 shadow-[0_2px_10px_rgba(255,255,255,0.02)]">
+                        <div class="w-1.5 h-1.5 rounded-full bg-blue-300 animate-pulse shadow-[0_0_8px_rgba(147,197,253,0.8)]"></div>
+                        <span class="text-xs font-normal text-white/80 tracking-wide uppercase">Atmospheric Intelligence Engine</span>
+                    </div>
+
+                    <h1 class="text-3xl md:text-4xl font-medium text-white tracking-tight mb-4">
+                        <i class="font-serif font-light text-white/90">Platform</i> Capabilities
+                    </h1>
+                    <div class="flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+                        <span class="text-white/50 font-normal">Explore:</span>
+                        <a href="#" class="text-white/70 hover:text-white font-normal transition-colors">Integrations</a>
+                        <a href="#" class="text-white/70 hover:text-white font-normal transition-colors">Changelog</a>
+                        <a href="#" class="text-white/70 hover:text-white font-normal transition-colors">Pricing</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-5">
+                <a href="#" class="text-sm font-normal text-white/70 hover:text-white transition-colors">Log in</a>
+                
+                <!-- Translucent Premium Button -->
+                <div class="rounded-full p-[1px] bg-gradient-to-b from-white/40 to-white/10 shadow-[0_8px_16px_rgba(0,0,0,0.1)] hover:shadow-[0_8px_24px_rgba(255,255,255,0.15)] transition-shadow duration-300">
+                    <a href="#" class="block bg-white/10 backdrop-blur-md hover:bg-white/20 text-white text-sm font-normal px-6 py-2.5 rounded-full transition-all">
+                        Start Building
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content Grid -->
+        <main class="flex-1 flex items-center justify-center w-full">
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Card 1: Universal Integration -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden">
+                        <div class="absolute w-48 h-48 rounded-full border border-white/5"></div>
+                        <div class="absolute w-64 h-64 rounded-full border border-white/[0.02]"></div>
+                        
+                        <!-- Rotating Orbit System -->
+                        <div id="orbit-ring" class="absolute w-40 h-40 rounded-full border border-white/20 border-dashed flex items-center justify-center">
+                            <div class="absolute -top-3 -left-1 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/20 orbit-icon text-white flex items-center justify-center"><iconify-icon icon="solar:laptop-minimalistic-linear" width="14"></iconify-icon></div>
+                            <div class="absolute top-8 -right-3 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/20 orbit-icon text-white flex items-center justify-center"><iconify-icon icon="solar:code-linear" width="14"></iconify-icon></div>
+                            <div class="absolute -bottom-2 right-4 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/20 orbit-icon text-white flex items-center justify-center"><iconify-icon icon="solar:chat-round-line-linear" width="14"></iconify-icon></div>
+                            <div class="absolute bottom-6 -left-3 bg-white/10 backdrop-blur-md p-1.5 rounded-full border border-white/20 orbit-icon text-white flex items-center justify-center"><iconify-icon icon="solar:folder-with-files-linear" width="14"></iconify-icon></div>
+                        </div>
+
+                        <!-- Central Hub -->
+                        <div class="relative w-16 h-16 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center text-white shadow-[0_0_20px_rgba(255,255,255,0.1)] z-10">
+                            <div class="absolute inset-0 bg-white/20 rounded-full animate-ping" style="animation-duration: 3s;"></div>
+                            <iconify-icon icon="solar:microphone-2-linear" width="28" stroke-width="1.5"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Universal Compatibility</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">Connects fluidly with every tool in your workflow, bridging minimal text editors and sophisticated environments.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Ultra-Low Latency -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden">
+                        
+                        <!-- Floating Tags -->
+                        <div class="absolute top-6 flex items-center gap-1.5 bg-white/10 backdrop-blur-md px-3 py-1.5 rounded-full shadow-[0_2px_8px_rgba(255,255,255,0.05)] border border-white/20" id="float-tag-1">
+                            <iconify-icon icon="solar:bolt-linear" width="12" class="text-white"></iconify-icon>
+                            <span class="text-xs font-normal text-white/90 uppercase tracking-wider">Instant Processing</span>
+                        </div>
+
+                        <div class="absolute bottom-8 left-10 flex items-center gap-2 bg-white/10 backdrop-blur-md px-3 py-2 rounded-xl border border-white/20">
+                            <iconify-icon icon="solar:clock-circle-linear" width="16" class="text-white"></iconify-icon>
+                            <div class="flex items-baseline gap-0.5">
+                                <span class="text-lg font-normal text-white">0.02</span>
+                                <span class="text-xs font-extralight text-white/50">sec</span>
+                            </div>
+                        </div>
+
+                        <div class="absolute bottom-8 right-10 flex flex-col items-end gap-0.5">
+                            <span class="text-xs font-normal text-white/80 uppercase tracking-wider">Real-Time</span>
+                            <span class="text-xs font-normal text-white/80 uppercase tracking-wider">Latency</span>
+                        </div>
+
+                        <!-- Waveform Animation -->
+                        <div class="flex items-center gap-1.5 h-20 w-48 justify-center">
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                            <div class="wave-bar w-2 bg-gradient-to-t from-white to-white/30 rounded-full"></div>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Ultra-Low Latency</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">Enjoy instantaneous response times that match your pace of thought, maintaining momentum without delay.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Smart Structuring -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden">
+                        
+                        <!-- Document UI -->
+                        <div class="w-[200px] bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-4 relative overflow-hidden z-10" style="transform: translateY(-10px);">
+                            <h4 class="text-xs font-normal text-white mb-3 flex items-center gap-1">Meeting Notes: <span class="text-white/80 font-serif italic">Project Alpha</span></h4>
+                            
+                            <div class="space-y-2 relative">
+                                <div class="flex items-start gap-1.5">
+                                    <div class="w-1 h-1 rounded-full bg-white/40 mt-1.5"></div>
+                                    <div class="h-2 w-24 bg-white/20 rounded mt-1"></div>
+                                </div>
+                                <div class="flex items-start gap-1.5">
+                                    <div class="w-1 h-1 rounded-full bg-white/40 mt-1.5"></div>
+                                    <div class="h-2 w-20 bg-white/20 rounded mt-1"></div>
+                                </div>
+                                <div class="flex items-start gap-1.5 relative z-20">
+                                    <div class="w-1 h-1 rounded-full bg-white/40 mt-1.5"></div>
+                                    <div class="text-xs font-extralight text-white/70 leading-none">Need to hire 2 engineers.</div>
+                                </div>
+                            </div>
+
+                            <!-- Scanning highlight line -->
+                            <div id="doc-scanner" class="absolute left-0 right-0 h-8 bg-gradient-to-b from-white/0 via-white/10 to-white/30 border-b border-white/40 z-10 pointer-events-none" style="top: 0px;"></div>
+                        </div>
+
+                        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-xs font-extralight text-white/30 space-y-1 text-center w-full">
+                            <p>action items</p>
+                            <p>review design mocks</p>
+                            <p>update marketing copy</p>
+                            <p>schedule team sync</p>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Smart Structuring</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">Intelligently processes formatting and structural syntax in real-time, leaving you free to focus on ideation.</p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Custom Vocabulary -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden">
+                        
+                        <svg class="absolute inset-0 w-full h-full pointer-events-none" viewBox="0 0 100 100" preserveAspectRatio="none">
+                            <defs>
+                                <linearGradient id="gradWhite" x1="0%" y1="0%" x2="100%" y2="0%">
+                                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0" />
+                                    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.3" />
+                                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0" />
+                                </linearGradient>
+                            </defs>
+                            <path d="M50,50 C30,40 25,35 25,25" stroke="url(#gradWhite)" stroke-width="0.5" fill="none" />
+                            <path d="M50,50 C70,40 75,35 75,25" stroke="url(#gradWhite)" stroke-width="0.5" fill="none" />
+                            <path d="M50,50 C50,70 50,75 50,85" stroke="url(#gradWhite)" stroke-width="0.5" fill="none" />
+                        </svg>
+
+                        <!-- Nodes -->
+                        <div class="absolute top-10 left-12 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                            <span class="text-xs font-normal text-white">Jargon</span>
+                        </div>
+                        
+                        <div class="absolute top-10 right-12 bg-white/5 backdrop-blur-md px-3 py-1 rounded-full border border-white/10">
+                            <span class="text-xs font-normal text-white">Nickname</span>
+                        </div>
+
+                        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 bg-white/10 backdrop-blur-md px-2.5 py-1 rounded-full border border-white/20 flex items-center gap-1.5">
+                            <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                            <span class="text-xs font-normal text-white">Acronym</span>
+                        </div>
+
+                        <!-- Central Hub -->
+                        <div class="relative w-14 h-14 bg-white/10 backdrop-blur-md border border-white/20 rounded-[14px] shadow-[0_8px_20px_rgba(255,255,255,0.1)] flex items-center justify-center text-white z-10" id="pulse-hub">
+                            <iconify-icon icon="solar:scanner-linear" width="24" stroke-width="1.5"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Custom Vocabulary</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">Adapt the system to your precise professional vocabulary, specialized acronyms, and internal team phrasing.</p>
+                    </div>
+                </div>
+
+                <!-- Card 5: Enterprise Security -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden [perspective:1000px]">
+                        
+                        <!-- 3D Floor Ripples -->
+                        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 mt-12">
+                            <div class="ripple absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 border-[2px] border-white/10 rounded-full" style="transform: rotateX(70deg);"></div>
+                            <div class="ripple absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-32 h-32 border-[2px] border-white/20 rounded-full" style="transform: rotateX(70deg);"></div>
+                            <div class="ripple absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 bg-white/10 rounded-full blur-md" style="transform: rotateX(70deg);"></div>
+                        </div>
+
+                        <!-- Floating Shield -->
+                        <div id="shield-icon" class="relative z-10 w-20 h-20 flex items-center justify-center bg-gradient-to-br from-white/30 to-white/5 backdrop-blur-md text-white rounded-2xl shadow-[0_16px_32px_rgba(255,255,255,0.05)]" style="clip-path: polygon(50% 0%, 100% 20%, 100% 70%, 50% 100%, 0% 70%, 0% 20%);">
+                            <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-white/30"></div>
+                            <iconify-icon icon="solar:check-read-linear" width="32" stroke-width="2" class="relative z-20"></iconify-icon>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Enterprise Security</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">All information remains locally encrypted and is strictly excluded from global model training procedures.</p>
+                    </div>
+                </div>
+
+                <!-- Card 6: Multilingual Support -->
+                <div class="bg-white/[0.03] backdrop-blur-md rounded-3xl p-1.5 shadow-[0_4px_24px_rgba(0,0,0,0.1)] border border-white/10 flex flex-col group hover:bg-white/[0.06] transition-colors duration-500">
+                    <div class="h-[260px] bg-gradient-to-b from-white/5 to-transparent rounded-[20px] relative flex items-center justify-center overflow-hidden">
+                        
+                        <!-- Keyboard Grid Background -->
+                        <div class="absolute inset-0 grid grid-cols-4 grid-rows-4 gap-2 p-8 opacity-40 pointer-events-none" style="transform: scale(1.2);">
+                            <div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div>
+                            <div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm opacity-0"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div>
+                            <div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div><div class="bg-white/5 rounded-xl border border-white/10 backdrop-blur-sm"></div>
+                        </div>
+
+                        <!-- Active Key -->
+                        <div class="relative z-10 w-24 h-24 bg-white/10 backdrop-blur-md rounded-2xl shadow-[0_12px_32px_rgba(255,255,255,0.05)] border border-white/20 flex flex-col items-center justify-center gap-3 transform transition-transform duration-300 hover:scale-105">
+                            <div class="w-6 h-6 rounded-full bg-white shadow-[inset_0_2px_4px_rgba(0,0,0,0.2)]"></div>
+                            <span class="text-xs font-extralight text-white/80 tracking-widest">こんにちは</span>
+                        </div>
+                    </div>
+                    <div class="px-5 pt-4 pb-6 flex-1">
+                        <h3 class="text-lg font-normal text-white tracking-tight mb-2">Multilingual Support</h3>
+                        <p class="text-sm font-extralight text-white/60 leading-[1.6]">Instantly identify and translate across fifty distinct languages with deep contextual awareness and precision.</p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const start = Date.now();
+            
+            // Interaction Elements
+            const orbitRing = document.getElementById('orbit-ring');
+            const orbitIcons = document.querySelectorAll('.orbit-icon');
+            const waves = document.querySelectorAll('.wave-bar');
+            const scanner = document.getElementById('doc-scanner');
+            const shield = document.getElementById('shield-icon');
+            const ripples = document.querySelectorAll('.ripple');
+            const floatTag1 = document.getElementById('float-tag-1');
+            const pulseHub = document.getElementById('pulse-hub');
+
+            // Ambient Clouds
+            const cloud1 = document.getElementById('cloud-1');
+            const cloud2 = document.getElementById('cloud-2');
+            const cloud3 = document.getElementById('cloud-3');
+            
+            function animate() {
+                const t = (Date.now() - start) / 1000;
+
+                // Clouds Drift
+                if(cloud1) cloud1.style.transform = `translate(${Math.sin(t * 0.15) * 5}%, ${Math.cos(t * 0.1) * 5}%)`;
+                if(cloud2) cloud2.style.transform = `translate(${Math.cos(t * 0.12) * -4}%, ${Math.sin(t * 0.15) * 6}%)`;
+                if(cloud3) cloud3.style.transform = `translate(${Math.sin(t * 0.1) * 3}%, ${Math.cos(t * 0.1) * -3}%)`;
+                
+                // 1. Orbits
+                if(orbitRing) {
+                    orbitRing.style.transform = `rotate(${t * 15}deg)`;
+                    orbitIcons.forEach(icon => {
+                        icon.style.transform = `rotate(${-t * 15}deg)`;
+                    });
+                }
+                
+                // 2. Waveform
+                waves.forEach((wave, i) => {
+                    const h = 45 + Math.sin(t * 5 + i * 0.8) * 35;
+                    wave.style.height = `${h}%`;
+                });
+                if(floatTag1) {
+                    floatTag1.style.transform = `translateY(${Math.sin(t*2) * 4}px)`;
+                }
+                
+                // 3. Document Scanner
+                if(scanner) {
+                    const scanPos = (Math.sin(t * 1.5) + 1) / 2 * 60;
+                    scanner.style.top = `${scanPos}px`;
+                }
+
+                // 4. Hub Pulse
+                if(pulseHub) {
+                    pulseHub.style.transform = `scale(${1 + Math.sin(t * 3) * 0.02})`;
+                }
+
+                // 5. Shield & Ripples
+                if(shield) {
+                    shield.style.transform = `translateY(${Math.sin(t * 2.5) * 6}px)`;
+                }
+                ripples.forEach((ripple, i) => {
+                    const phase = (t * 0.6 - i * 0.4) % 1;
+                    const scale = phase < 0 ? 0 : 0.2 + phase * 1.5;
+                    const opacity = phase < 0 ? 0 : 1 - phase;
+                    ripple.style.transform = `rotateX(70deg) scale(${scale})`;
+                    ripple.style.opacity = opacity * 0.6;
+                });
+
+                requestAnimationFrame(animate);
+            }
+            
+            requestAnimationFrame(animate);
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,50 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:41:09.286Z",
+  "skill": {
+    "id": "technical-wireframe-info-layout",
+    "label": "Technical Wireframe Info Layout",
+    "usage_count": 123,
+    "url": "https://neuform.ai/skill/technical-wireframe-info-layout"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "47eb7454-756f-44bd-a3a8-88b81de18660",
+    "slug": "system-ontology-diagnostic-view",
+    "title": "System Ontology // Diagnostic View",
+    "url": "https://neuform.ai/pages/system-ontology-diagnostic-view/index.html",
+    "view_count": 1424,
+    "favorite_count": 67,
+    "remix_count": 27
+  },
+  "html": {
+    "original_sha256": "4f51da43450783f0cb74542647573ad42e372586a4138b04ff44bd406756e9fc",
+    "bundled_sha256": "b205adc4a9e6006e000943d8210a328a731a6d9043970511f8e027025d3fd3d2",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 47486,
+        "file": "assets/page-01-fa51902b-c2a4-4c33-a96e-a8f1ef67edc6-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fa51902b-c2a4-4c33-a96e-a8f1ef67edc6_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "version": 1,
+  "provider": "Neuform",
+  "synced_at": "2026-07-18T06:40:50.816Z",
+  "skill": {
+    "id": "globe-particles",
+    "label": "Globe Particles",
+    "usage_count": 271,
+    "url": "https://neuform.ai/skill/globe-particles"
+  },
+  "ranking": {
+    "position": 1,
+    "order": [
+      "view_count desc",
+      "community_favorite_count desc",
+      "relation_created_at desc"
+    ],
+    "visible_design_count": 1
+  },
+  "design": {
+    "id": "be4035d4-5c54-4ad0-b8e5-4468f39075d4",
+    "slug": "neus-enterprise-brand-architecture",
+    "title": "NEUS | Enterprise Brand Architecture",
+    "url": "https://neuform.ai/pages/neus-enterprise-brand-architecture/index.html",
+    "view_count": 607,
+    "favorite_count": 21,
+    "remix_count": 6
+  },
+  "html": {
+    "original_sha256": "458f4f740e5263636e6174aa4e2fe06f9c06a11d82cab5b79865596df29745ec",
+    "bundled_sha256": "490bb35a198b983137c43d5b33826cccea6f217c9cdea2a6b69ef7d02a8694a9",
+    "runtime_dependencies": [
+      "https://cdn.tailwindcss.com",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js",
+      "https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js",
+      "https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js",
+      "https://fonts.googleapis.com",
+      "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Mono:wght@300;400&display=swap",
+      "https://fonts.gstatic.com"
+    ]
+  },
+  "assets": {
+    "preview": "assets/source-preview.jpg",
+    "bundled": [
+      {
+        "bytes": 47486,
+        "file": "assets/page-01-fa51902b-c2a4-4c33-a96e-a8f1ef67edc6-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/fa51902b-c2a4-4c33-a96e-a8f1ef67edc6_1600w.jpg"
+      },
+      {
+        "bytes": 217369,
+        "file": "assets/page-02-4f5668c5-fc4a-44e0-bc5e-a664189d3c31-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/4f5668c5-fc4a-44e0-bc5e-a664189d3c31_1600w.jpg"
+      },
+      {
+        "bytes": 298959,
+        "file": "assets/page-03-2f563338-39fa-47ea-9761-658d4f3f84db-1600w.jpg",
+        "original_url": "https://hoirqrkdgbmvpwutwuwj.supabase.co/storage/v1/object/public/assets/assets/2f563338-39fa-47ea-9761-658d4f3f84db_1600w.jpg"
+      }
+    ],
+    "skipped": []
+  }
+}

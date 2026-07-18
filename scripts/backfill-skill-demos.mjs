@@ -858,8 +858,10 @@ async function writeDemo(skillFile) {
   const kind = kindFor(skill.name, category);
   const demoDirectory = path.join(skillDirectory, "demo");
   await mkdir(demoDirectory, { recursive: true });
+  const sourceManifestFile = path.join(demoDirectory, "source.json");
+  const sourceDerived = existsSync(sourceManifestFile);
   const writeGenerated = async (file, content) => {
-    if (force || !existsSync(file)) await writeFile(file, content);
+    if (!sourceDerived && (force || !existsSync(file))) await writeFile(file, content);
   };
   await writeGenerated(path.join(demoDirectory, "PROMPT.md"), promptMarkdown(skill, kind));
   if (kind === "workflow") {
@@ -871,7 +873,11 @@ async function writeDemo(skillFile) {
   } else {
     await writeGenerated(path.join(demoDirectory, "index.html"), visualHtml(skill, category, kind));
   }
-  return { category, kind, name: skill.name, skillFile };
+  let demoSource = null;
+  if (sourceDerived) {
+    demoSource = JSON.parse(await readFile(sourceManifestFile, "utf8"));
+  }
+  return { category, kind, name: skill.name, skillFile, source: demoSource };
 }
 
 const demos = [];
@@ -895,6 +901,7 @@ const index = [
   "  demo/",
   "    index.html",
   "    PROMPT.md",
+  "    source.json          # Neuform provenance and ranking snapshot",
   "    assets/              # only when local assets are required",
   "    input.md             # workflow skills",
   "    expected-output.md   # workflow skills",
@@ -905,6 +912,7 @@ const index = [
   "- Use relative paths and no build step.",
   "- Keep the exact recreation prompt and a shorter remix prompt in demo/PROMPT.md.",
   "- Use fictional portable data in workflow examples.",
+  "- Neuform-sourced demos preserve the real generated HTML and may retain pinned CDN runtime dependencies.",
   "",
   "Run any demo with:",
   "",
@@ -918,7 +926,13 @@ const index = [
   "node scripts/backfill-skill-demos.mjs",
   fence,
   "",
-  "Use --force only when every generated demo should be intentionally regenerated.",
+  "Refresh exact Neuform matches from their current top-ranked public design:",
+  "",
+  fence + "bash",
+  "node scripts/sync-neuform-skill-demos.mjs",
+  fence,
+  "",
+  "Use --force only when every locally generated demo should be intentionally regenerated. Source-derived demos are never replaced by the generic backfill.",
   "",
   "## Library coverage",
   "",
@@ -927,11 +941,14 @@ const index = [
   "",
   "## Demo index",
   "",
-  "| Skill | Category | Demo | Prompt |",
-  "| --- | --- | --- | --- |",
+  "| Skill | Category | Demo | Prompt | Source |",
+  "| --- | --- | --- | --- | --- |",
   ...demos.map((demo) => {
     const base = path.dirname(demo.skillFile).replaceAll(path.sep, "/");
-    return "| " + demo.name + " | " + demo.category + " | [Open](" + base + "/demo/index.html) | [Prompt](" + base + "/demo/PROMPT.md) |";
+    const source = demo.source
+      ? "[Neuform #1 · " + new Intl.NumberFormat("en-US").format(Number(demo.source?.design?.view_count) || 0) + " views](" + base + "/demo/source.json)"
+      : "Local";
+    return "| " + demo.name + " | " + demo.category + " | [Open](" + base + "/demo/index.html) | [Prompt](" + base + "/demo/PROMPT.md) | " + source + " |";
   }),
   "",
 ].join("\n");

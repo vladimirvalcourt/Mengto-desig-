@@ -1,35 +1,438 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" href="data:,">
-  <title>Masked Reveal · Skill Demo</title>
-  <style>:root{--bg:#080a0f;--panel:rgba(18,21,29,.72);--panelStrong:#121620;--ink:#f2f5f7;--muted:#929aa7;--line:rgba(255,255,255,.14);--accent:hsl(111 92% 68%);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg)}
-*{box-sizing:border-box}html{background:var(--bg);scroll-behavior:smooth}body{min-width:320px;margin:0;background:radial-gradient(circle at var(--mx,76%) var(--my,16%),color-mix(in srgb,var(--accent) 16%,transparent),transparent 34%),var(--bg);color:var(--ink)}button,a{font:inherit;color:inherit}button{border:1px solid var(--line);border-radius:999px;padding:11px 15px;background:var(--panel);cursor:pointer}button:hover,button:focus-visible{border-color:var(--accent);outline:2px solid color-mix(in srgb,var(--accent) 42%,transparent);outline-offset:3px}.shell{width:min(1280px,calc(100% - 40px));min-height:100svh;margin:auto;padding:22px 0 40px}.topbar{display:flex;align-items:center;justify-content:space-between;padding:10px 0 30px;border-bottom:1px solid var(--line);font-size:11px;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.brand{display:flex;gap:9px;align-items:center}.brand i{width:9px;height:9px;border-radius:50%;background:var(--accent);box-shadow:0 0 24px var(--accent)}.topbar a{text-decoration:none}.intro{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(260px,.75fr);gap:44px;align-items:end;padding:clamp(54px,9vw,116px) 0 42px}.intro small{display:block;margin-bottom:22px;color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}.intro h1{max-width:11ch;margin:0;font-size:clamp(48px,8vw,112px);font-weight:580;letter-spacing:-.075em;line-height:.86}.intro p{max-width:48ch;margin:0;color:var(--muted);font-size:clamp(14px,1.2vw,18px);line-height:1.6}.showcase{position:relative;min-height:470px;overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--panel);isolation:isolate}.showcaseHeader{position:absolute;z-index:5;top:18px;right:18px;left:18px;display:flex;justify-content:space-between;color:var(--muted);font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}.layoutStudy{display:grid;grid-template-columns:1.15fr .85fr;min-height:470px}.layoutHero{display:flex;flex-direction:column;justify-content:flex-end;padding:clamp(28px,5vw,70px);border-right:1px solid var(--line)}.layoutHero>span,.kicker{color:var(--muted);font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase}.layoutHero h2,.landing h2{max-width:9ch;margin:18px 0;font-size:clamp(42px,6vw,84px);line-height:.9;letter-spacing:-.065em}.layoutHero p,.landing p{max-width:38ch;color:var(--muted);line-height:1.55}.layoutCards{display:grid;grid-template-rows:repeat(3,1fr)}.layoutCards article{display:flex;align-items:end;justify-content:space-between;padding:26px;border-bottom:1px solid var(--line)}.layoutCards article:last-child{border:0}.layoutCards b{color:var(--accent);font-size:34px}.layoutCards span{text-transform:uppercase;font-size:10px;letter-spacing:.15em}.pricing{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.pricing article{display:flex;flex-direction:column;padding:80px 28px 28px;background:var(--panelStrong)}.pricing article.featured{background:linear-gradient(160deg,color-mix(in srgb,var(--accent) 20%,var(--panelStrong)),var(--panelStrong))}.pricing p{font-size:11px;letter-spacing:.13em;text-transform:uppercase}.pricing strong{margin:24px 0 8px;font-size:56px;letter-spacing:-.06em}.pricing span{color:var(--muted)}.pricing button{margin-top:auto}.landing{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:clamp(40px,8vw,100px);background:radial-gradient(circle at 75% 36%,color-mix(in srgb,var(--accent) 45%,transparent),transparent 24%)}.landing .actions{display:flex;gap:10px;margin-top:24px}.landing .actions button:first-child{color:var(--bg);background:var(--ink)}.landing .proof{display:flex;gap:28px;margin-top:54px;color:var(--muted);font-size:11px}.marquee{display:flex;min-height:470px;align-items:center;overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent);mask-image:linear-gradient(90deg,transparent,#000 15%,#000 85%,transparent)}.marqueeTrack{display:flex;width:max-content;animation:marquee 18s linear infinite}.marqueeTrack span{min-width:220px;padding:34px;border:1px solid var(--line);font-size:22px;font-weight:700;letter-spacing:-.04em;text-align:center}.iconGrid,.contactSheet{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;min-height:470px;background:var(--line)}.iconGrid article,.contactSheet article{position:relative;padding:70px 28px 28px;background:var(--panelStrong)}.number{position:absolute;top:22px;right:22px;color:var(--accent);font-size:11px}.glyph{display:grid;width:110px;height:110px;place-items:center;margin:30px auto;border:1px solid var(--line);border-radius:34px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 20%,transparent),transparent);font-size:48px}.iconGrid h3{text-align:center}.contactSheet .asset{height:280px;margin-bottom:22px;border-radius:2px;background-size:cover}.assetOne{background:radial-gradient(circle at 70% 30%,#d9f7ff,transparent 20%),linear-gradient(145deg,#203962,#8db3d6 48%,#d7d5c8)}.assetTwo{background:radial-gradient(circle at 50% 28%,#f1c6a2 0 10%,transparent 11%),linear-gradient(120deg,#1b2738,#754c5a 52%,#e1a77f)}.assetThree{background:repeating-radial-gradient(circle at 30% 65%,#c8b8ff 0 9px,#4c4274 10px 18px,#151629 19px 29px)}.contactSheet b,.contactSheet span{display:block}.contactSheet span{margin-top:8px;color:var(--muted);font-size:11px}.surfaceStudy{display:grid;grid-template-columns:1.4fr .6fr;grid-template-rows:1fr auto;gap:18px;min-height:470px;padding:70px 24px 24px}.surfaceStudy article{border:1px solid var(--line);border-radius:20px;background:linear-gradient(145deg,color-mix(in srgb,var(--accent) 12%,var(--panelStrong)),var(--panelStrong))}.surfaceHero{display:flex;grid-row:1/3;flex-direction:column;justify-content:flex-end;padding:42px}.surfaceHero strong{max-width:8ch;margin-top:20px;font-size:clamp(40px,5vw,72px);line-height:.92;letter-spacing:-.06em}.surfaceHero span,.surfaceCard span{color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.surfaceCard{display:flex;flex-direction:column;padding:26px}.surfaceCard b{margin:auto 0 4px;font-size:56px}.surfaceCard small{color:var(--muted)}.surfaceControl{align-self:end}.motionStage{display:flex;min-height:470px;flex-direction:column;justify-content:center;padding:70px clamp(28px,7vw,90px)}.maskLine{overflow:hidden;margin:0;font-size:clamp(44px,7vw,98px);font-weight:600;letter-spacing:-.075em;line-height:.84}.maskLine span{display:block;transform:translateY(110%);animation:wordIn .8s cubic-bezier(.16,1,.3,1) forwards}.maskLine:nth-child(2) span{animation-delay:.12s}.maskLine:nth-child(3) span{animation-delay:.24s}.accentLine{color:var(--accent)}.timeline{display:flex;gap:8px;margin:42px 0 20px}.timeline i{width:58px;height:3px;background:var(--line);transform-origin:left;animation:grow .8s .42s both}.timeline i:nth-child(2){animation-delay:.54s}.timeline i:nth-child(3){animation-delay:.66s}.timeline i:nth-child(4){animation-delay:.78s}.replay{width:max-content}.visualization{position:relative;min-height:470px}.visualization canvas{position:absolute;inset:0;width:100%;height:100%}.vizMeta{position:absolute;right:28px;bottom:24px;left:28px;display:grid;grid-template-columns:1fr auto 1fr;align-items:end;color:var(--muted);font-size:10px;letter-spacing:.14em;text-transform:uppercase}.vizMeta strong{color:var(--ink);font-size:48px;letter-spacing:-.06em}.vizMeta span:last-child{text-align:right}.simulation{position:relative;min-height:470px}.goo{position:absolute;inset:0;width:100%;height:100%}.goo circle{fill:var(--accent)}.orbA{animation:orbA 4.4s ease-in-out infinite alternate}.orbB{animation:orbB 5.1s ease-in-out infinite alternate}.reset{position:absolute;right:24px;bottom:24px}.demoNote{display:flex;justify-content:space-between;gap:24px;padding:20px 2px;color:var(--muted);font-size:11px;line-height:1.5}.demoNote a{color:var(--ink)}
-.pricingWrap{min-height:470px;padding-top:52px}.billingBar{display:flex;align-items:center;justify-content:space-between;min-height:58px;padding:8px 20px;border-top:1px solid var(--line);color:var(--muted);font-size:10px;letter-spacing:.12em;text-transform:uppercase}.billingBar .billingToggle{padding:8px 12px;background:var(--panelStrong);font-size:10px}.pricingWrap .pricing{min-height:360px}.pricingWrap .pricing article{padding:42px 28px 28px}.vizMeta button{justify-self:end;padding:8px 11px;font-size:9px;letter-spacing:.1em;text-transform:uppercase}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiwi Floral | Artisan Botanical Design</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Config for specific font families -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        brand: {
+                            bg: '#F6F5F2',
+                            text: '#1C201C',
+                            muted: '#767873',
+                            dark: '#1B241A',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
 
-@keyframes marquee{to{transform:translateX(-50%)}}@keyframes wordIn{to{transform:translateY(0)}}@keyframes grow{from{transform:scaleX(0)}to{transform:scaleX(1)}}@keyframes orbA{to{transform:translate(-120px,70px)}}@keyframes orbB{to{transform:translate(80px,120px)}}@media(max-width:760px){.intro{grid-template-columns:1fr;padding-top:60px}.intro h1{font-size:54px}.layoutStudy,.pricing,.iconGrid,.contactSheet,.surfaceStudy{grid-template-columns:1fr}.layoutHero{border-right:0;border-bottom:1px solid var(--line)}.pricing article{min-height:320px}.surfaceHero{grid-row:auto}.showcase{min-height:540px}.topbar span:last-child{display:none}.demoNote{flex-direction:column}.landing .proof{flex-direction:column;gap:8px}.vizMeta{grid-template-columns:1fr auto}.vizMeta span:last-child{display:none}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.marqueeTrack,.maskLine span,.timeline i,.orbA,.orbB{animation:none;transform:none}}</style>
+    <!-- Iconify -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
-<body data-kind="motion" data-skill="masked-reveal">
-  <main class="shell">
-    <nav class="topbar" aria-label="Demo navigation"><a class="brand" href="#"><i></i>Masked Reveal</a><span>Standalone skill reference · 01</span></nav>
-    <header class="intro">
-      <div><small>web design / reference demo</small><h1>Masked Reveal</h1></div>
-      <p>Create masked staggered word reveals on scroll with GSAP ScrollTrigger. Use when headings, hero copy, section titles, or editorial text should reveal word-by-word through an overflow mask as they enter the viewport.</p>
-    </header>
-    <section class="showcase" aria-label="Masked Reveal demonstration">
-      <div class="showcaseHeader"><span>Live example</span><span>motion</span></div>
-<div class="motionStage">
-  <p class="maskLine"><span>Motion should</span></p>
-  <p class="maskLine"><span>explain the</span></p>
-  <p class="maskLine accentLine"><span>next state.</span></p>
-  <div class="timeline"><i></i><i></i><i></i><i></i></div>
-  <button class="replay">Replay sequence</button>
-</div>
-    </section>
-    <footer class="demoNote"><span>Open <strong>PROMPT.md</strong> for the exact recreation and remix prompts.</span><a href="PROMPT.md">Read prompt →</a></footer>
-  </main>
-  <script>const reduced=matchMedia("(prefers-reduced-motion: reduce)").matches;addEventListener("pointermove",event=>{document.body.style.setProperty("--mx",event.clientX+"px");document.body.style.setProperty("--my",event.clientY+"px")},{passive:true});const billing=document.querySelector(".billingToggle");if(billing)billing.addEventListener("click",()=>{const annual=billing.getAttribute("aria-pressed")!=="true";billing.setAttribute("aria-pressed",String(annual));billing.textContent=annual?"Show monthly pricing":"Show annual pricing";document.querySelectorAll(".pricing strong").forEach(price=>price.textContent=annual?price.dataset.annual:price.dataset.monthly)});const replay=document.querySelector(".replay");if(replay)replay.addEventListener("click",()=>{document.querySelectorAll(".maskLine span,.timeline i").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""})});const reset=document.querySelector(".reset");if(reset)reset.addEventListener("click",()=>document.querySelectorAll(".orbA,.orbB").forEach(node=>{node.style.animation="none";node.offsetHeight;node.style.animation=""}));const canvas=document.querySelector("canvas");if(canvas&&!reduced){const context=canvas.getContext("2d");let width=0,height=0,frame=0,time=0;const mode="field";const bodies=Array.from({length:14},(_,i)=>({x:80+(i%7)*92,y:40+Math.floor(i/7)*70,vx:(i%3-1)*.7,vy:0,r:12+(i%4)*5}));const resetBodies=()=>bodies.forEach((body,i)=>{body.x=40+(i%7)*Math.max(32,(width-80)/6);body.y=35+Math.floor(i/7)*58;body.vx=(i%3-1)*.7;body.vy=0});const resetBodiesButton=document.querySelector(".resetBodies");if(resetBodiesButton)resetBodiesButton.addEventListener("click",resetBodies);const resize=()=>{const rect=canvas.getBoundingClientRect();const ratio=Math.min(devicePixelRatio||1,2);width=rect.width;height=rect.height;canvas.width=Math.round(width*ratio);canvas.height=Math.round(height*ratio);context.setTransform(ratio,0,0,ratio,0,0)};const draw=()=>{frame=requestAnimationFrame(draw);time+=.008;context.clearRect(0,0,width,height);const accent=getComputedStyle(document.documentElement).getPropertyValue("--accent").trim();if(mode==="globe"){const radius=Math.min(width,height)*.29;const cx=width*.5,cy=height*.47;context.fillStyle=accent;for(let i=0;i<360;i++){const phi=Math.acos(1-2*(i+.5)/360);const theta=Math.PI*(1+Math.sqrt(5))*i+time;const x=Math.sin(phi)*Math.cos(theta);const y=Math.cos(phi);const z=Math.sin(phi)*Math.sin(theta);const scale=(z+1.7)/2.7;context.globalAlpha=.16+.74*scale;context.beginPath();context.arc(cx+x*radius,cy+y*radius,Math.max(.7,2.2*scale),0,Math.PI*2);context.fill()}context.globalAlpha=.16;context.strokeStyle=accent;context.beginPath();context.ellipse(cx,cy+radius*.18,radius*1.34,radius*.34,time*.4,0,Math.PI*2);context.stroke()}else if(mode==="object"){const size=Math.min(width,height)*.24,cx=width*.5,cy=height*.48;const vertices=[[-1,-1,-1],[1,-1,-1],[1,1,-1],[-1,1,-1],[-1,-1,1],[1,-1,1],[1,1,1],[-1,1,1]];const edges=[[0,1],[1,2],[2,3],[3,0],[4,5],[5,6],[6,7],[7,4],[0,4],[1,5],[2,6],[3,7]];const points=vertices.map(([x,y,z])=>{const a=time*1.1,b=time*.73;const x1=x*Math.cos(a)-z*Math.sin(a),z1=x*Math.sin(a)+z*Math.cos(a),y1=y*Math.cos(b)-z1*Math.sin(b),z2=y*Math.sin(b)+z1*Math.cos(b),p=3.8/(z2+5);return{x:cx+x1*size*p,y:cy+y1*size*p,z:z2,p}});context.strokeStyle=accent;context.lineWidth=1.4;context.shadowColor=accent;context.shadowBlur=12;for(const [a,b] of edges){context.globalAlpha=.25+.45*((points[a].z+points[b].z+4)/8);context.beginPath();context.moveTo(points[a].x,points[a].y);context.lineTo(points[b].x,points[b].y);context.stroke()}context.fillStyle=accent;for(const point of points){context.globalAlpha=.55+.35*(point.z+2)/4;context.beginPath();context.arc(point.x,point.y,3.2*point.p,0,Math.PI*2);context.fill()}context.shadowBlur=0}else if(mode==="matter"){context.fillStyle=accent;for(const body of bodies){body.vy+=.16;body.x+=body.vx;body.y+=body.vy;if(body.x<body.r||body.x>width-body.r){body.vx*=-.94;body.x=Math.max(body.r,Math.min(width-body.r,body.x))}if(body.y>height-body.r-30){body.y=height-body.r-30;body.vy*=-.78}context.globalAlpha=.28+.45*(body.r/32);context.beginPath();context.arc(body.x,body.y,body.r,0,Math.PI*2);context.fill()}context.globalAlpha=.22;context.fillRect(0,height-31,width,1)}else{context.strokeStyle=accent;context.lineWidth=1;for(let i=0;i<18;i++){const y=(i/17)*height;context.globalAlpha=.08+.12*Math.sin(time+i*.4);context.beginPath();for(let x=0;x<=width;x+=12){const wave=Math.sin(x*.012+i*.54+time*3)*18*Math.sin(i/17*Math.PI);context.lineTo(x,y+wave)}context.stroke()}context.globalAlpha=.65;const x=width*(.52+.16*Math.sin(time*.6));const gradient=context.createLinearGradient(x,0,x+2,0);gradient.addColorStop(0,"transparent");gradient.addColorStop(.5,"white");gradient.addColorStop(1,"transparent");context.fillStyle=gradient;context.fillRect(x,0,3,height)}};resize();new ResizeObserver(resize).observe(canvas);const visibility=()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0}else if(!frame)draw()};document.addEventListener("visibilitychange",visibility);draw();}</script>
+<body class="bg-brand-bg text-brand-text font-sans antialiased overflow-x-hidden selection:bg-brand-dark selection:text-white">
+
+    <!-- Container Lines Wrapper -->
+    <div class="relative max-w-[1400px] mx-auto border-x border-black/5 min-h-screen flex flex-col bg-brand-bg">
+        
+        <!-- Corner Markers -->
+        <div class="absolute top-0 -left-[3px] w-[5px] h-[5px] border border-black/15 bg-brand-bg z-50"></div>
+        <div class="absolute top-0 -right-[3px] w-[5px] h-[5px] border border-black/15 bg-brand-bg z-50"></div>
+
+        <!-- IMAGE FIRST GRID HERO -->
+        <main class="relative w-full h-[95vh] min-h-[700px] flex flex-col border-b border-black/5 overflow-hidden">
+            <!-- Immersive Background -->
+            <img src="assets/page-01-65695f80-23f9-46ee-8487-cbb6c93cc48b-3840w.webp" alt="Botanical elegance" class="absolute inset-0 w-full h-full object-cover object-top scale-105" style="transform-origin: top center;">
+            
+            <!-- Dark Gradient Washes -->
+            <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(10,12,10,0.95) 0%, rgba(10,12,10,0.4) 40%, rgba(10,12,10,0.1) 100%);"></div>
+            
+            <!-- Visible Grid Lines -->
+            <div class="absolute inset-0 flex justify-between px-6 md:px-12 pointer-events-none z-0 opacity-20">
+                <div class="w-[1px] h-full bg-white"></div>
+                <div class="w-[1px] h-full bg-white hidden md:block"></div>
+                <div class="w-[1px] h-full bg-white hidden lg:block"></div>
+                <div class="w-[1px] h-full bg-white"></div>
+            </div>
+
+            <!-- Header (Floating over Image) -->
+            <header class="w-full flex items-center justify-between px-6 py-8 md:px-12 relative z-20 text-white/90">
+                <nav class="hidden md:flex items-center gap-8 text-sm font-light">
+                    <a href="#" class="hover:text-white transition-colors">Collections</a>
+                    <a href="#" class="hover:text-white transition-colors">Philosophy</a>
+                    <a href="#" class="hover:text-white transition-colors">Journal</a>
+                </nav>
+                
+                <a href="#" class="absolute left-1/2 -translate-x-1/2 flex items-center gap-2 text-xl font-serif tracking-tight text-white">
+                    <iconify-icon icon="solar:leaf-line-duotone" width="24" height="24" stroke-width="1.5"></iconify-icon>
+                    KIWI FLORAL
+                </a>
+
+                <div class="flex items-center gap-6 text-sm font-light">
+                    <a href="#" class="hidden md:block hover:text-white transition-colors">Login</a>
+                    <!-- Skeuomorphic Button -->
+                    <a href="#" class="text-white px-5 py-2.5 rounded-full flex items-center gap-2 transition-all" style="background: linear-gradient(180deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%); box-shadow: inset 0 1px 1px rgba(255,255,255,0.2), inset 0 -1px 1px rgba(0,0,0,0.3), 0 4px 12px rgba(0,0,0,0.2); border: 1px solid rgba(255,255,255,0.1);">
+                        Order Now
+                        <iconify-icon icon="solar:arrow-right-linear" width="16" height="16"></iconify-icon>
+                    </a>
+                </div>
+            </header>
+
+            <!-- Bottom Anchored Grid Content -->
+            <div class="relative flex-grow flex items-end pb-16 px-6 md:px-12 z-10">
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8 w-full items-end">
+                    
+                    <div class="md:col-span-8 lg:col-span-7">
+                        <div class="flex items-center gap-6 text-white/50 mb-8">
+                            <iconify-icon icon="solar:star-fall-linear" width="20" height="20"></iconify-icon>
+                            <span class="text-xs tracking-widest uppercase font-normal">Vogue</span>
+                            <span class="text-xs tracking-widest uppercase font-normal">Kinfolk</span>
+                            <span class="text-xs tracking-widest uppercase font-normal">Cereal</span>
+                        </div>
+                        <h1 class="font-serif text-5xl md:text-7xl lg:text-[5.5rem] leading-[1.05] tracking-tight text-white reveal-text drop-shadow-lg">
+                            Artisan Floristry for Meaningful Moments
+                        </h1>
+                    </div>
+
+                    <div class="md:col-span-4 lg:col-span-4 lg:col-start-9 flex flex-col justify-end">
+                        <!-- Translucent Grid Box -->
+                        <div class="bg-white/5 backdrop-blur-md p-[1px] rounded-2xl" style="background: linear-gradient(145deg, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0.02) 100%);">
+                            <div class="bg-black/40 rounded-[calc(1rem-1px)] p-6 md:p-8 flex flex-col gap-6">
+                                <p class="text-sm text-white/80 font-light leading-relaxed">
+                                    Curated botanical arrangements designed to elevate your space and optimize emotional well-being. No synthetic fillers. Pure natural beauty.
+                                </p>
+                                <a href="#" class="inline-flex items-center justify-between group border-b border-white/20 pb-2 text-white hover:border-white/60 transition-colors">
+                                    <span class="text-sm font-normal">View Collections</span>
+                                    <iconify-icon icon="solar:arrow-right-up-linear" width="18" height="18" class="group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </main>
+
+        <!-- SPLIT LAYOUT SECTION: Philosophy -->
+        <section class="w-full border-b border-black/5 flex flex-col md:flex-row bg-brand-bg relative z-10">
+            <!-- Left Panel: Technical/Editorial -->
+            <div class="w-full md:w-1/2 p-8 md:p-16 lg:p-24 border-b md:border-b-0 md:border-r border-black/5 flex flex-col justify-between">
+                <div>
+                    <div class="flex items-center gap-4 mb-16">
+                        <div class="w-2 h-2 bg-brand-text"></div>
+                        <span class="text-xs font-mono tracking-widest uppercase text-brand-muted">01 // Architecture</span>
+                    </div>
+                    
+                    <h2 class="text-4xl md:text-5xl font-serif tracking-tight text-brand-text mb-8 reveal-text leading-[1.1]">
+                        Engineered Botanical Elegance.
+                    </h2>
+                    
+                    <p class="text-base text-brand-muted font-light leading-relaxed mb-12 max-w-md">
+                        Every stem is selected through a rigorous botanical protocol, ensuring spatial harmony and sustained vitality. We bridge the gap between organic unpredictability and architectural precision.
+                    </p>
+                </div>
+
+                <!-- Skeuomorphic Spec Card -->
+                <div class="p-[1px] rounded-[1.5rem] mt-12 md:mt-24 max-w-sm" style="background: linear-gradient(180deg, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.01) 100%);">
+                    <div class="rounded-[calc(1.5rem-1px)] p-6 relative overflow-hidden" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F4 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,1), inset 0 -1px 2px rgba(0,0,0,0.03), 0 8px 20px rgba(0,0,0,0.03);">
+                        <!-- Highlight Edge -->
+                        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-80"></div>
+                        
+                        <div class="flex justify-between items-center mb-4">
+                            <h4 class="text-sm font-normal text-brand-text tracking-tight">Sustainable Sourcing</h4>
+                            <iconify-icon icon="solar:leaf-linear" width="20" height="20" class="text-brand-muted"></iconify-icon>
+                        </div>
+                        <p class="text-xs text-brand-muted font-light leading-relaxed">
+                            Direct partnerships with regenerative micro-farms guarantee zero synthetic interference, maximizing vase life organically.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Panel: Immersive Media & Specs -->
+            <div class="w-full md:w-1/2 relative bg-[#151914] min-h-[500px] flex items-center justify-center p-8 md:p-16 overflow-hidden">
+                <img src="assets/page-02-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg" alt="Architectural Structure" class="absolute inset-0 w-full h-full object-cover opacity-50 mix-blend-luminosity">
+                <div class="absolute inset-0 bg-gradient-to-b from-transparent to-[#151914]/80"></div>
+                
+                <!-- Spec Table Overlaid -->
+                <div class="relative z-10 w-full max-w-md bg-black/20 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+                    <h3 class="text-lg font-serif tracking-tight text-white mb-6">Technical Parameters</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-end border-b border-white/10 pb-3">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-widest">Sourcing Radius</span>
+                            <span class="text-sm font-light text-white">Under 50 Miles</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b border-white/10 pb-3">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-widest">Preservation</span>
+                            <span class="text-sm font-light text-white">Climate-Sealed</span>
+                        </div>
+                        <div class="flex justify-between items-end border-b border-white/10 pb-3">
+                            <span class="text-xs font-mono text-white/50 uppercase tracking-widest">Curation Time</span>
+                            <span class="text-sm font-light text-white">48 Hours</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Collections: 3 Column Grid -->
+        <main class="w-full pt-24 pb-32 px-6 md:px-12 bg-brand-bg relative z-10 border-b border-black/5">
+            <div class="flex flex-col items-center text-center mb-16">
+                <div class="text-xs font-mono tracking-widest uppercase text-brand-muted mb-4">02 // The Collections</div>
+                <h2 class="font-serif text-4xl md:text-5xl tracking-tight text-brand-text reveal-text">
+                    Curated Arrangements
+                </h2>
+            </div>
+
+            <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+                
+                <!-- Card 1: Image -->
+                <div class="h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden relative group shadow-sm">
+                    <img src="assets/page-03-4734259a-bad7-422f-981e-ce01e79184f2-1600w.jpg" alt="Abstract floral interpretation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute bottom-6 left-6 bg-white/20 backdrop-blur-md px-4 py-2 rounded-full border border-white/30 flex items-center gap-2 text-white text-xs font-light">
+                        <iconify-icon icon="solar:sun-2-linear" width="14" height="14"></iconify-icon>
+                        Morning Harvest
+                    </div>
+                </div>
+
+                <!-- Card 2: Highly Skeuomorphic UI Card -->
+                <div class="h-[500px] md:h-[600px] rounded-[2rem] relative z-10 p-[1px]" style="background: linear-gradient(145deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.01) 100%);">
+                    <!-- Layered depth container -->
+                    <div class="rounded-[calc(2rem-1px)] h-full p-8 flex flex-col justify-between relative overflow-hidden" style="background: linear-gradient(180deg, #FFFFFF 0%, #F5F4F1 100%); box-shadow: inset 0 2px 3px rgba(255,255,255,1), inset 0 -2px 6px rgba(0,0,0,0.03), 0 10px 30px rgba(0,0,0,0.05);">
+                        
+                        <!-- Skeuomorphic Top Highlight -->
+                        <div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white to-transparent opacity-80"></div>
+
+                        <div>
+                            <div class="flex justify-between items-start mb-8">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center text-brand-dark" style="background: linear-gradient(180deg, #F6F5F2 0%, #EBE9E4 100%); box-shadow: inset 0 1px 2px rgba(255,255,255,0.9), 0 2px 4px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+                                    <iconify-icon icon="solar:box-linear" width="22" height="22"></iconify-icon>
+                                </div>
+                                <button class="w-10 h-10 rounded-full flex items-center justify-center text-brand-muted hover:text-red-500 transition-colors" style="background: linear-gradient(180deg, #FFFFFF 0%, #F6F5F2 100%); box-shadow: inset 0 1px 1px rgba(255,255,255,1), 0 2px 5px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);">
+                                    <iconify-icon icon="solar:heart-linear" width="20" height="20"></iconify-icon>
+                                </button>
+                            </div>
+                            <h3 class="text-2xl font-serif tracking-tight text-brand-text mb-3 drop-shadow-[0_1px_1px_rgba(255,255,255,1)]">The Ethereal Bouquet</h3>
+                            <p class="text-sm text-brand-muted font-light leading-relaxed">Rich in textural diversity for spatial balance. Engineered to evolve gracefully over its lifespan.</p>
+                        </div>
+
+                        <div class="space-y-4">
+                            <div class="flex justify-between items-end border-b border-black/5 pb-3">
+                                <span class="text-xs font-mono uppercase tracking-widest text-brand-muted/70">Longevity</span>
+                                <span class="text-sm font-light text-brand-text drop-shadow-[0_1px_0_rgba(255,255,255,0.8)]">10-14 days</span>
+                            </div>
+                            <div class="flex justify-between items-end border-b border-black/5 pb-3">
+                                <span class="text-xs font-mono uppercase tracking-widest text-brand-muted/70">Scent Profile</span>
+                                <span class="text-sm font-light text-brand-text drop-shadow-[0_1px_0_rgba(255,255,255,0.8)]">Subtle Jasmine</span>
+                            </div>
+                            <div class="flex justify-between items-end border-b border-black/5 pb-3">
+                                <span class="text-xs font-mono uppercase tracking-widest text-brand-muted/70">Vase Life Setup</span>
+                                <span class="text-sm font-light text-brand-text drop-shadow-[0_1px_0_rgba(255,255,255,0.8)]">Pre-trimmed</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Image -->
+                <div class="h-[500px] md:h-[600px] rounded-[2rem] overflow-hidden relative group shadow-sm">
+                    <img src="assets/page-04-005600e5-f6ab-4e59-bc86-eaeb02797dfa-1600w.jpg" alt="Botanical architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000 ease-out">
+                    <div class="absolute inset-0" style="background: linear-gradient(to top, rgba(27,36,26,0.8) 0%, transparent 60%);"></div>
+                    <div class="absolute bottom-8 left-8 right-8">
+                        <p class="text-white text-xl font-serif tracking-tight leading-snug">
+                            Complete natural elegance sourced directly from sustainable growers.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <!-- Quote Section -->
+        <section class="w-full bg-white py-32 md:py-48 border-b border-black/5 relative overflow-hidden">
+            <div class="absolute inset-0 flex justify-center pointer-events-none opacity-[0.03]">
+                <div class="w-[1px] h-full bg-black mx-10"></div>
+                <div class="w-[1px] h-full bg-black mx-10"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+                <iconify-icon icon="solar:quote-right-linear" width="48" height="48" class="text-brand-muted/20 mb-8 mx-auto block"></iconify-icon>
+                <h2 class="font-serif text-3xl md:text-5xl lg:text-6xl tracking-tight leading-tight text-brand-text reveal-text">
+                    "A systemic protocol engineered to restore spatial harmony and deliver sustained vitality without synthetic compromise."
+                </h2>
+            </div>
+        </section>
+
+        <!-- Slider Section -->
+        <section class="w-full pt-24 pb-32 px-6 md:px-12 bg-brand-bg relative border-b border-black/5">
+            <div class="flex items-end justify-between mb-12">
+                <div>
+                    <div class="text-xs font-mono tracking-widest uppercase text-brand-muted mb-2">03 // Components</div>
+                    <h2 class="font-serif text-3xl md:text-4xl tracking-tight text-brand-text">Core Botanicals</h2>
+                </div>
+                <div class="hidden md:flex gap-3">
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center text-brand-text transition-all hover:-translate-y-0.5" style="background: linear-gradient(180deg, #FFFFFF 0%, #F6F5F2 100%); box-shadow: inset 0 1px 1px rgba(255,255,255,1), 0 4px 10px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+                        <iconify-icon icon="solar:arrow-left-linear" width="20" height="20"></iconify-icon>
+                    </button>
+                    <button class="w-12 h-12 rounded-full flex items-center justify-center text-brand-text transition-all hover:-translate-y-0.5" style="background: linear-gradient(180deg, #FFFFFF 0%, #F6F5F2 100%); box-shadow: inset 0 1px 1px rgba(255,255,255,1), 0 4px 10px rgba(0,0,0,0.05); border: 1px solid rgba(0,0,0,0.03);">
+                        <iconify-icon icon="solar:arrow-right-linear" width="20" height="20"></iconify-icon>
+                    </button>
+                </div>
+            </div>
+
+            <div class="flex gap-6 overflow-x-auto pb-8 snap-x snap-mandatory scrollbar-hide" style="scrollbar-width: none;">
+                
+                <div class="min-w-[300px] md:min-w-[380px] snap-start flex flex-col gap-5">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden p-2" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F4 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,1), 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);">
+                         <img src="assets/page-02-724142aa-44a6-48d3-9cf3-761e00d05b78-1600w.jpg" alt="Structure" class="w-full h-full object-cover rounded-[1.5rem]">
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-base font-normal text-brand-text tracking-tight">Structural Stems</h4>
+                        <p class="text-xs text-brand-muted mt-1 font-light">Foundation Architecture</p>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[380px] snap-start flex flex-col gap-5">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden p-2" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F4 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,1), 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);">
+                         <img src="assets/page-04-005600e5-f6ab-4e59-bc86-eaeb02797dfa-1600w.jpg" alt="Lush" class="w-full h-full object-cover rounded-[1.5rem]">
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-base font-normal text-brand-text tracking-tight">Verdant Foliage</h4>
+                        <p class="text-xs text-brand-muted mt-1 font-light">Spatial Volume</p>
+                    </div>
+                </div>
+
+                <div class="min-w-[300px] md:min-w-[380px] snap-start flex flex-col gap-5">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden p-2" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F4 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,1), 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);">
+                         <img src="assets/page-05-e534354d-c5f2-4399-a1d9-2f50338e8c47-1600w.jpg" alt="Flow" class="w-full h-full object-cover rounded-[1.5rem]">
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-base font-normal text-brand-text tracking-tight">Statement Blooms</h4>
+                        <p class="text-xs text-brand-muted mt-1 font-light">Visual Focal Point</p>
+                    </div>
+                </div>
+
+                 <div class="min-w-[300px] md:min-w-[380px] snap-start flex flex-col gap-5">
+                    <div class="aspect-[4/5] rounded-[2rem] overflow-hidden p-2" style="background: linear-gradient(180deg, #FFFFFF 0%, #F8F7F4 100%); box-shadow: inset 0 2px 4px rgba(255,255,255,1), 0 8px 20px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.02);">
+                         <img src="assets/page-06-fb6415fd-bf4d-4ccf-8e9d-7ab445e99207-1600w.jpg" alt="Accent" class="w-full h-full object-cover rounded-[1.5rem]">
+                    </div>
+                    <div class="px-2">
+                        <h4 class="text-base font-normal text-brand-text tracking-tight">Textural Accents</h4>
+                        <p class="text-xs text-brand-muted mt-1 font-light">Micro Details</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- LUXURIOUS FOOTER -->
+        <footer class="w-full bg-brand-dark text-white pt-24 pb-12 px-6 md:px-12 relative flex-grow flex flex-col justify-end">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+                <div>
+                    <a href="#" class="flex items-center gap-2 text-2xl font-serif tracking-tight text-white mb-8">
+                        <iconify-icon icon="solar:leaf-line-duotone" width="28" height="28" stroke-width="1.5"></iconify-icon>
+                        KIWI FLORAL
+                    </a>
+                    <p class="text-sm text-white/50 font-light max-w-sm leading-relaxed">
+                        Redefining botanical integration for modern spaces. Engineered nature without compromise.
+                    </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="text-xs font-mono uppercase tracking-widest text-white/40 mb-6">Index</h4>
+                        <ul class="space-y-4 text-sm font-light text-white/80">
+                            <li><a href="#" class="hover:text-white transition-colors">Collections</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Philosophy</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Sourcing</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Journal</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-xs font-mono uppercase tracking-widest text-white/40 mb-6">Connect</h4>
+                        <ul class="space-y-4 text-sm font-light text-white/80">
+                            <li><a href="#" class="hover:text-white transition-colors">Instagram</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Pinterest</a></li>
+                            <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-xs font-mono text-white/30">
+                <p>&copy; 2024 Kiwi Floral System. All rights reserved.</p>
+                <div class="flex gap-6 mt-4 md:mt-0">
+                    <a href="#" class="hover:text-white/60 transition-colors">Privacy</a>
+                    <a href="#" class="hover:text-white/60 transition-colors">Terms</a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- Bottom Corner Markers -->
+        <div class="absolute bottom-0 -left-[3px] w-[5px] h-[5px] border border-black/15 bg-brand-bg z-50"></div>
+        <div class="absolute bottom-0 -right-[3px] w-[5px] h-[5px] border border-black/15 bg-brand-bg z-50"></div>
+    </div>
+
+    <!-- WebGL & GSAP Animation Logic -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.registerPlugin(ScrollTrigger);
+
+            const setupTextReveal = () => {
+                const revealElements = document.querySelectorAll('.reveal-text');
+                
+                revealElements.forEach(el => {
+                    const text = el.innerText;
+                    el.innerHTML = '';
+                    const words = text.split(' ');
+                    
+                    words.forEach(word => {
+                        const maskDiv = document.createElement('span');
+                        maskDiv.style.display = 'inline-flex';
+                        maskDiv.style.overflow = 'hidden';
+                        maskDiv.style.verticalAlign = 'top';
+                        maskDiv.style.paddingRight = '0.25em';
+                        maskDiv.style.paddingBottom = '0.1em';
+
+                        const innerSpan = document.createElement('span');
+                        innerSpan.innerText = word;
+                        innerSpan.style.display = 'inline-block';
+                        innerSpan.style.transform = 'translateY(110%) rotate(4deg)';
+                        innerSpan.style.transformOrigin = 'top left';
+                        innerSpan.classList.add('reveal-word-inner');
+
+                        maskDiv.appendChild(innerSpan);
+                        el.appendChild(maskDiv);
+                    });
+
+                    gsap.to(el.querySelectorAll('.reveal-word-inner'), {
+                        y: '0%',
+                        rotate: 0,
+                        duration: 1.2,
+                        stagger: 0.03,
+                        ease: 'power4.out',
+                        scrollTrigger: {
+                            trigger: el,
+                            start: 'top 90%',
+                            toggleActions: 'play none none reverse'
+                        }
+                    });
+                });
+            };
+
+            setTimeout(setupTextReveal, 100);
+        });
+    </script>
 </body>
 </html>
